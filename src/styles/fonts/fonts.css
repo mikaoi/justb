@@ -1,0 +1,17 @@
+
+@font-face {
+  font-family: 'SchemeRg-Bold';
+  src: local('SchemeRg-Bold'), url(../fonts/SchemeRg-Bold.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'SchemeRg-Regular';
+  src: local('SchemeRg-Regular'), url(../fonts/SchemeRg-Regular.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'SchemeLt-Regular';
+  src: local('SchemeLt-Regular'), url(../fonts/SchemeLt-Regular.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'SchemeBk-Regular';
+  src: local('SchemeBk-Regular'), url(../fonts/SchemeBk-Regular.woff2) format('truetype');
+}
