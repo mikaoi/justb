@@ -30,9 +30,10 @@ const MonthlyChallengesCard = () => {
           mb: "20px",
         }}
       >
-        {[1, 2, 3, 4].map((v) => {
+        {[1, 2, 3, 4].map((v, i) => {
           return (
             <Box
+              key={i}
               sx={{
                 background: "#fff",
                 height: "40px",

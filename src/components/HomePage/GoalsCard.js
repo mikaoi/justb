@@ -47,7 +47,7 @@ const GoalsCard = () => {
           <CustomBorderLinearProgress
             variant="determinate"
             value={80}
-            showValue
+            showvalue={"true"}
           />
         </Box>
         <Box

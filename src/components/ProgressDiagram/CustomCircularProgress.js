@@ -44,7 +44,6 @@ const CustomCircularProgress = (props) => {
       />
       <CircularProgress
         variant="determinate"
-        disableShrink
         sx={{
           color: theme.palette.secondary.main,
           animationDuration: "550ms",

@@ -23,7 +23,7 @@ const CustomBorderLinearProgress = (props) => {
           whiteSpace: "nowrap",
         }}
       >
-        {props.showValue && "12/15 Classes"}
+        {props.showvalue && "12/15 Classes"}
       </Box>
       <BorderLinearProgress {...props} />
     </Box>
