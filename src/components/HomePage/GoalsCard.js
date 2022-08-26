@@ -1,8 +1,8 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
-import goalsImg from "../styles/images/cardsImg/goals.png";
-import CustomCircularProgress from "./ProgressDiagram/CustomCircularProgress";
-import CustomBorderLinearProgress from "./ProgressDiagram/CustomBorderLinearProgress";
+import { Box } from "@mui/material";
+import goalsImg from "../../styles/images/cardsImg/goals.png";
+import CustomCircularProgress from "../ProgressDiagram/CustomCircularProgress";
+import CustomBorderLinearProgress from "../ProgressDiagram/CustomBorderLinearProgress";
 
 const GoalsCard = () => {
   return (

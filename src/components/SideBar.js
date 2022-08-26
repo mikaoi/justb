@@ -1,10 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
 import Link from "@mui/material/Link";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import { createStyles, makeStyles } from "@mui/styles";
 import { NavLink } from "react-router-dom";
 import { ReactComponent as Avatar } from "../styles/images/navImg/avatar.svg";
@@ -15,7 +12,7 @@ import find from "../styles/images/navImg/class.png";
 import fav from "../styles/images/navImg/fav.png";
 import settings from "../styles/images/navImg/settings.png";
 import help from "../styles/images/navImg/help.png";
-import { Card, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import CustomBorderLinearProgress from "./ProgressDiagram/CustomBorderLinearProgress";
 
 const drawerWidth = 380;

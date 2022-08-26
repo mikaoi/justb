@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
-import challengeImg from "../styles/images/cardsImg/challenge.png";
+import { Box } from "@mui/material";
+import challengeImg from "../../styles/images/cardsImg/challenge.png";
 
 const MonthlyChallengesCard = () => {
   return (

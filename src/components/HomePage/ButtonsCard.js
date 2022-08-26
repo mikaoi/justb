@@ -1,8 +1,8 @@
 import React from "react";
 import { Button, Box } from "@mui/material";
-import scan from "../styles/images/btnImages/bodyScan.png";
-import find from "../styles/images/btnImages/findAClass.png";
-import { ReactComponent as Arrow } from "../styles/images/btnImages/arrow.svg";
+import scan from "../../styles/images/btnImages/bodyScan.png";
+import find from "../../styles/images/btnImages/findAClass.png";
+import { ReactComponent as Arrow } from "../../styles/images/btnImages/arrow.svg";
 
 const ButtonsCard = () => {
   return (
