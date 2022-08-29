@@ -1,32 +1,41 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import { CardBox } from "../../styles/theme/styledComponents";
 import challengeImg from "../../styles/images/cardsImg/challenge.png";
+import { theme } from "../../styles/theme/theme";
 
 const MonthlyChallengesCard = () => {
   return (
-    <Box
+    <CardBox
       sx={{
-        background: "#F3F1F4",
-        borderRadius: "20px",
         padding: "14px 0 0 32px",
-        width: "50%",
+        width: { xs: "100%", sm: "50%" },
+        position: "relative",
+        boxShadow: theme.shadows[2],
       }}
     >
+      <img
+        src={challengeImg}
+        style={{ width: "50px", height: "50px", position: "absolute" }}
+        alt={"challenge"}
+      />
       <Box
-        sx={{ display: "flex", alignItems: "center", gap: "60px", mb: "50px" }}
+        sx={{
+          paddingTop: "10px",
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "50px",
+        }}
       >
-        <img
-          src={challengeImg}
-          style={{ width: "50px", height: "50px" }}
-          alt={"goals"}
-        />
-        <Box sx={{ fontSize: "30px" }}>Monthly Challenges</Box>
+        <Typography variant={"h2"} component={"span"}>
+          Monthly Challenges
+        </Typography>
       </Box>
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: "60px",
+          gap: "50px",
           mb: "20px",
         }}
       >
@@ -36,14 +45,14 @@ const MonthlyChallengesCard = () => {
               key={i}
               sx={{
                 background: "#fff",
-                height: "40px",
+                height: "50px",
                 borderRadius: "30px 0 0 30px",
               }}
             />
           );
         })}
       </Box>
-    </Box>
+    </CardBox>
   );
 };
 

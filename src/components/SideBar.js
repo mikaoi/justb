@@ -4,18 +4,18 @@ import Drawer from "@mui/material/Drawer";
 import Link from "@mui/material/Link";
 import { createStyles, makeStyles } from "@mui/styles";
 import { NavLink } from "react-router-dom";
-import { ReactComponent as Avatar } from "../styles/images/navImg/avatar.svg";
+import avatar from "../styles/images/navImg/avatar.svg";
 import { ReactComponent as Logo } from "../styles/images/logo.svg";
+import { ReactComponent as Close } from "../styles/images/navImg/closeBtn.svg";
 import bg from "../styles/images/navImg/navShapes.svg";
 import home from "../styles/images/navImg/home.png";
 import find from "../styles/images/navImg/class.png";
 import fav from "../styles/images/navImg/fav.png";
 import settings from "../styles/images/navImg/settings.png";
 import help from "../styles/images/navImg/help.png";
-import { Typography } from "@mui/material";
+import { Typography, Button, Avatar, Stack } from "@mui/material";
 import CustomBorderLinearProgress from "./ProgressDiagram/CustomBorderLinearProgress";
-
-const drawerWidth = 380;
+import { theme } from "../styles/theme/theme";
 
 const MyNavLink = React.forwardRef((props, ref) => (
   <NavLink
@@ -32,11 +32,16 @@ const MyNavLink = React.forwardRef((props, ref) => (
 const useStyles = makeStyles((theme) =>
   createStyles({
     link: {
-      fontSize: "30px",
+      fontSize: "23px",
       fontFamily: "SchemeLt-Regular",
       display: "flex",
+      alignItems: "center",
       gap: "17px",
       padding: "8px 30px",
+      "& span": {
+        lineHeight: 1,
+        marginTop: "5px",
+      },
     },
     activeLink: {
       backgroundColor: "#FFFFFF",
@@ -47,12 +52,7 @@ const useStyles = makeStyles((theme) =>
 );
 export default function SideBar(props) {
   const classes = useStyles();
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
+  const { window, mobileOpen, setMenu, width } = props;
 
   const linkInfo = [
     { text: "Home", icon: home },
@@ -65,27 +65,51 @@ export default function SideBar(props) {
   const drawer = (
     <Box>
       <Box
+        bgcolor={"primary.main"}
         sx={{
-          backgroundColor: "#FFCB12",
-          height: "30vh",
+          backgroundColor: theme.palette.background,
+          height: "200px",
           backgroundImage: `url(${bg})`,
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
+          position: "relative",
         }}
       >
-        <Logo style={{ position: "absolute", top: "25px", left: "20px" }} />
-        <Avatar style={{ position: "absolute", top: "15%", left: "25%" }} />
+        <NavLink to={"/"}>
+          <Logo
+            style={{
+              position: "absolute",
+              top: "16px",
+              left: "16px",
+            }}
+          />
+        </NavLink>
+        <Avatar
+          src={avatar}
+          sx={{
+            height: "170px",
+            width: "170px",
+            position: "absolute",
+            top: "40%",
+            left: "50%",
+            transform: "translateX(-50%)",
+          }}
+        />
       </Box>
-      <Box sx={{ textAlign: "center", paddingTop: "60px" }}>
-        Ms. Wilson’s Class
-        <Typography> 3rd Grade</Typography>
-      </Box>
+      <Stack spacing={1} sx={{ textAlign: "center", paddingTop: "60px" }}>
+        <Typography variant={"body1"} component={"div"}>
+          Ms. Wilson’s Class
+        </Typography>
+        <Typography variant={"caption"} component={"div"}>
+          3rd Grade
+        </Typography>
+      </Stack>
       <Box
         sx={{
-          padding: "40px 0 30px 35px",
+          padding: "30px 0 30px 35px",
           display: "flex",
           flexDirection: "column",
-          gap: "40px",
+          gap: "25px",
         }}
       >
         {linkInfo.map((link, index) => (
@@ -104,12 +128,13 @@ export default function SideBar(props) {
             <img
               src={link.icon}
               alt={link.text}
-              style={{ width: "38px", height: "38px" }}
+              style={{ width: "32px", height: "32px" }}
             />
-            {link.text}
+            <span>{link.text}</span>
           </Link>
         ))}
         <CustomBorderLinearProgress
+          sx={{ marginTop: 4 }}
           variant="determinate"
           value={80}
           width={"280px"}
@@ -126,7 +151,7 @@ export default function SideBar(props) {
       <Box
         component="nav"
         sx={{
-          width: { sm: drawerWidth },
+          width: { sm: width },
           flexShrink: { sm: 0 },
         }}
       >
@@ -134,7 +159,8 @@ export default function SideBar(props) {
           container={container}
           variant="temporary"
           open={mobileOpen}
-          onClose={handleDrawerToggle}
+          disableScrollLock={true}
+          onClose={setMenu}
           ModalProps={{
             keepMounted: true,
           }}
@@ -142,11 +168,9 @@ export default function SideBar(props) {
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: drawerWidth,
+              width: width,
               borderRadius: "0 20px 20px 0",
               border: "none",
-              backgroundColor: "#F3F1F4",
-              boxShadow: "0px 30px 20px rgba(0, 0, 0, 0.25)",
             },
           }}
         >
@@ -158,17 +182,32 @@ export default function SideBar(props) {
             display: { xs: "none", sm: "block" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: drawerWidth,
+              width: width,
+              height: "100vh",
               borderRadius: "0 20px 20px 0",
               border: "none",
-              backgroundColor: "#F3F1F4",
               boxShadow: "0px 30px 20px rgba(0, 0, 0, 0.25)",
+              position: "absolute",
             },
           }}
           open
         >
           {drawer}
         </Drawer>
+        {mobileOpen && (
+          <Button
+            onClick={setMenu}
+            sx={{
+              position: "absolute",
+              top: "20px",
+              left: width - 10,
+              zIndex: 1300,
+              display: { xs: "block", sm: "none" },
+            }}
+          >
+            <Close style={{ width: "20px", height: "20px" }} />
+          </Button>
+        )}
       </Box>
     </Box>
   );

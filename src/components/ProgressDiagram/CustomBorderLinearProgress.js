@@ -1,10 +1,10 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import BorderLinearProgress from "./BorderLinearProgress";
 
 const CustomBorderLinearProgress = (props) => {
   return (
-    <Box sx={{ position: "relative", width: props.width || "220px" }}>
+    <Box sx={{ position: "relative", width: props.width || "210px" }}>
       <Box
         sx={{
           top: "50%",
@@ -23,7 +23,9 @@ const CustomBorderLinearProgress = (props) => {
           whiteSpace: "nowrap",
         }}
       >
-        {props.showvalue && "12/15 Classes"}
+        <Typography variant={"bold"} component={"span"}>
+          {props.showvalue && "12/15 Classes"}
+        </Typography>
       </Box>
       <BorderLinearProgress {...props} />
     </Box>

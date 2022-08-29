@@ -1,21 +1,28 @@
 import React from "react";
-import { Box, Button } from "@mui/material";
+import { Box, Button, Typography, Stack } from "@mui/material";
 import { ReactComponent as HeartIcon } from "../styles/images/heart.svg";
 import { ReactComponent as ArrowIcon } from "../styles/images/arrow.svg";
 import { theme } from "../styles/theme/theme";
 import VideoCard from "../components/FavoritePage/VideoCard";
+import { CardBox } from "../styles/theme/styledComponents";
 
 const Favorites = () => {
+  const classes = [
+    "Deactivating Classes",
+    "Activating Classes",
+    "Neutral Classes",
+  ];
+
   return (
-    <Box
+    <CardBox
       sx={{
-        background: "#F3F1F4",
-        borderRadius: "20px",
-        padding: "14px 32px",
+        padding: "15px 70px",
         display: "flex",
         flexDirection: "column",
+        justifyContent: "space-between",
         width: "100%",
-        margin: "20px 20px 20px 0",
+        height: "100%",
+        boxShadow: theme.shadows[2],
       }}
     >
       <Box
@@ -34,51 +41,47 @@ const Favorites = () => {
           }}
         >
           <HeartIcon />
-          Favorites
+          <Typography variant={"h2"} component={"span"}>
+            Favorites
+          </Typography>
         </Box>
         <Button
           sx={{
-            width: "50px",
-            background: "none",
+            color: "transparent",
+            backgroundColor: "transparent",
             alignSelf: "flex-end",
+            "&:hover, &:active": {
+              opacity: 0.8,
+              outline: "none",
+              backgroundColor: "transparent",
+            },
           }}
           endIcon={<ArrowIcon />}
         />
       </Box>
-      Deactivating Classes
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-        }}
-      >
-        {[1, 2, 3].map((v, i) => {
-          return <VideoCard key={i} />;
+      <Stack spacing={"20px"} marginBottom={2}>
+        {classes.map((value, i) => {
+          return (
+            <Stack key={i} spacing={1}>
+              <Typography>{value}</Typography>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
+                {[1, 2, 3].map((v, i) => {
+                  return <VideoCard key={i} />;
+                })}
+              </Box>
+            </Stack>
+          );
         })}
-      </Box>
-      Activating Classes
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-        }}
-      >
-        {[1, 2, 3].map((v, i) => {
-          return <VideoCard key={i} />;
-        })}
-      </Box>
-      Neutral Classes
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-        }}
-      >
-        {[1, 2, 3].map((v, i) => {
-          return <VideoCard key={i} />;
-        })}
-      </Box>
-    </Box>
+      </Stack>
+      <Typography variant={"caption"} component={"span"}>
+        Showing 6 of 70 Classes
+      </Typography>
+    </CardBox>
   );
 };
 

@@ -2,7 +2,7 @@ import React from "react";
 import CircularProgress, {
   circularProgressClasses,
 } from "@mui/material/CircularProgress";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { theme } from "../../styles/theme/theme";
 
 const CustomCircularProgress = (props) => {
@@ -10,32 +10,40 @@ const CustomCircularProgress = (props) => {
     <Box sx={{ position: "relative", width: "fit-content" }}>
       <Box
         sx={{
-          top: "50%",
+          top: "53%",
           left: "50%",
           bottom: 0,
           right: 0,
           transform: "translate(-50%, -50%)",
           position: "absolute",
           textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          gap: "10px",
         }}
       >
         <Box
           sx={{
-            display: "block",
-            fontSize: "50px",
             fontFamily: "SchemeLt-Regular",
+            fontSize: "45px",
+            color: theme.palette.fontColor.dark,
           }}
         >
           {props.value}
         </Box>
-        <Box>minutes</Box>
+        <Box
+          sx={{
+            fontFamily: "SchemeLt-Regular",
+            fontSize: "25px",
+          }}
+        >
+          Minutes
+        </Box>
       </Box>
       <CircularProgress
         variant="determinate"
         sx={{
           color: "#FFCC1259",
-          // color: (theme) =>
-          //   theme.palette.grey[theme.palette.mode === "light" ? 200 : 800],
         }}
         size={200}
         thickness={1.2}

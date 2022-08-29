@@ -1,28 +1,39 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import goalsImg from "../../styles/images/cardsImg/goals.png";
 import CustomCircularProgress from "../ProgressDiagram/CustomCircularProgress";
 import CustomBorderLinearProgress from "../ProgressDiagram/CustomBorderLinearProgress";
+import { CardBox } from "../../styles/theme/styledComponents";
+import { theme } from "../../styles/theme/theme";
 
 const GoalsCard = () => {
   return (
-    <Box
+    <CardBox
       sx={{
-        background: "#F3F1F4",
-        borderRadius: "20px",
         padding: "14px 32px",
-        width: "50%",
+        width: { xs: "100%", sm: "50%" },
         display: "flex",
         flexDirection: "column",
+        position: "relative",
+        boxShadow: theme.shadows[2],
       }}
     >
-      <Box sx={{ display: "flex", alignItems: "center", gap: "60px" }}>
-        <img
-          src={goalsImg}
-          style={{ width: "50px", height: "50px" }}
-          alt={"goals"}
-        />
-        <Box sx={{ fontSize: "30px" }}> Weekly Goals</Box>
+      <img
+        src={goalsImg}
+        style={{ width: "50px", height: "50px", position: "absolute" }}
+        alt={"goals"}
+      />
+      <Box
+        sx={{
+          paddingTop: "10px",
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: 3,
+        }}
+      >
+        <Typography variant={"h2"} component={"span"}>
+          Weekly Goals
+        </Typography>
       </Box>
       <Box
         sx={{
@@ -40,10 +51,14 @@ const GoalsCard = () => {
             alignItems: "center",
           }}
         >
-          <Box sx={{ fontFamily: "SchemeBk-Regular", textAlign: "center" }}>
-            <Box>Classes Completed</Box>
-            <Box>12/15</Box>
-          </Box>
+          <Stack spacing={1} alignItems={"center"} sx={{ marginBottom: "3px" }}>
+            <Typography variant={"h4"} component={"span"}>
+              Classes Completed
+            </Typography>
+            <Typography variant={"h4"} component={"span"}>
+              12/15
+            </Typography>
+          </Stack>
           <CustomBorderLinearProgress
             variant="determinate"
             value={80}
@@ -58,13 +73,11 @@ const GoalsCard = () => {
             gap: "20px",
           }}
         >
-          <Box sx={{ fontFamily: "SchemeBk-Regular", textAlign: "center" }}>
-            Monthly Move Minutes
-          </Box>
+          <Typography variant={"h3"}>Monthly Move Minutes</Typography>
           <CustomCircularProgress value={60} />
         </Box>
       </Box>
-    </Box>
+    </CardBox>
   );
 };
 
