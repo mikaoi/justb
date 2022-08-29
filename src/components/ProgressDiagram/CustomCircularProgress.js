@@ -2,7 +2,7 @@ import React from "react";
 import CircularProgress, {
   circularProgressClasses,
 } from "@mui/material/CircularProgress";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { theme } from "../../styles/theme/theme";
 
 const CustomCircularProgress = (props) => {

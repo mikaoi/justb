@@ -1,7 +1,5 @@
 import { styled } from "@mui/material/styles";
 import { Box, Button, Select, TextField } from "@mui/material";
-import { ReactComponent as SelectArrow } from "../images/selectArrow.svg";
-import React from "react";
 
 export const CardBox = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,

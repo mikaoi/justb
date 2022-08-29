@@ -62,8 +62,7 @@ const App = () => {
             }}
           >
             <Toolbar>
-              <img src={logo} width={"40px"} />
-
+              <img src={logo} width={"40px"} alt={"Logo"} />
               <Button
                 sx={{
                   color: theme.palette.secondary.main,
