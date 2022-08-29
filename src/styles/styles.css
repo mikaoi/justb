@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'SchemeRg-Regular';
+  font-display: swap;
+  src: url("../styles/fonts/SchemeRg-Regular.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'SchemeRg-Bold';
+  font-display: swap;
+  src: url("../styles/fonts/SchemeRg-Bold.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'SchemeLt-Regular';
+  font-display: swap;
+  src: url("../styles/fonts/SchemeLt-Regular.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'SchemeBk-Regular';
+  font-display: swap;
+  src: url("../styles/fonts/SchemeBk-Regular.woff2") format('woff2');
+}

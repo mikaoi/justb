@@ -8,6 +8,7 @@ import {
   AppBar,
   Button,
   Toolbar,
+  Typography,
 } from "@mui/material";
 import logo from "./styles/images/logo.svg";
 import bg from "./styles/images/bg.png";
@@ -39,6 +40,7 @@ const App = () => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           display: "flex",
+          fontFamily: "Scheme",
           // flexDirection: { xs: "column", sm: "row" },
         }}
       >
@@ -81,6 +83,7 @@ const App = () => {
               height: "100%",
             }}
           >
+            <Typography fontFamily={"Scheme"}>Scheme</Typography>
             <Routes>
               <Route path={"/"} element={<Home />} />
               <Route path={"/findaclass"} element={<FindAClass />} />

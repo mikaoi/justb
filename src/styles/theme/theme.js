@@ -1,6 +1,5 @@
 import { createTheme } from "@mui/material/styles";
-// import SchemeRegular from "../fonts/SchemeRg-Regular.woff2";
-import myFontArray from "../SchemeFont";
+import SchemeRegular from "../fonts/SchemeRg-Regular.woff2";
 
 const breakpoints = {
   values: {
@@ -35,38 +34,45 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily:
-      "SchemeRg-Regular, SchemeRg-Bold, SchemeLt-Regular, SchemeBk-Regular, 'Roboto', sans-serif",
+    fontFamily: "Scheme",
+    // "SchemeRg-Regular, SchemeRg-Bold, SchemeLt-Regular, SchemeBk-Regular, 'Roboto', sans-serif",
   },
   components: {
     MuiCssBaseline: {
-      "@global": {
-        "@font-face": [...myFontArray],
-      },
-      styleOverrides: {
-        body: {
-          margin: "0",
-          minHeight: "100vh",
-          minWidth: "100vw",
-          color: "#31476E",
-          fontSize: "20px",
-          fontFamily: "SchemeRg-Regular",
-        },
+      // styleOverrides: {
+      //   body: {
+      //     margin: "0",
+      //     minHeight: "100vh",
+      //     minWidth: "100vw",
+      //     color: "#31476E",
+      //     fontSize: "20px",
+      //     fontFamily: "Scheme",
+      //   }
+      // },
+      styleOverrides: `
+          @font-face {
+          font-family: 'Scheme';
+          font-style: normal;
+          font-display: swap;
+          font-weight: 400;
+          src: local('SchemeRg'), local('SchemeRg-Regular'), url(${SchemeRegular}) format('woff2');
+          unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
+        }
+      `,
+    },
+  },
+  MuiLink: {
+    styleOverrides: {
+      root: {
+        textDecoration: "none",
+        color: "#31476E",
       },
     },
-    MuiLink: {
-      styleOverrides: {
-        root: {
-          textDecoration: "none",
-          color: "#31476E",
-        },
-      },
-    },
-    MuiInputLabel: {
-      styleOverrides: {
-        root: {
-          marginLeft: "5px",
-        },
+  },
+  MuiInputLabel: {
+    styleOverrides: {
+      root: {
+        marginLeft: "5px",
       },
     },
   },
