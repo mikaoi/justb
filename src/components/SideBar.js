@@ -151,8 +151,8 @@ export default function SideBar(props) {
       <Box
         component="nav"
         sx={{
-          width: { sm: width },
-          flexShrink: { sm: 0 },
+          width: { "2xl": width },
+          flexShrink: { "2xl": 0 },
         }}
       >
         <Drawer
@@ -165,7 +165,7 @@ export default function SideBar(props) {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: "block", sm: "none" },
+            display: { xs: "block", "2xl": "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: width,
@@ -179,7 +179,7 @@ export default function SideBar(props) {
         <Drawer
           variant="permanent"
           sx={{
-            display: { xs: "none", sm: "block" },
+            display: { xs: "none", "2xl": "block" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: width,
@@ -202,7 +202,7 @@ export default function SideBar(props) {
               top: "20px",
               left: width - 10,
               zIndex: 1300,
-              display: { xs: "block", sm: "none" },
+              display: { xs: "block", "2xl": "none" },
             }}
           >
             <Close style={{ width: "20px", height: "20px" }} />

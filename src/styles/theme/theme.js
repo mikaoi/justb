@@ -1,6 +1,19 @@
 import { createTheme } from "@mui/material/styles";
 
+const breakpoints = {
+  values: {
+    xs: 0,
+    sm: 380,
+    md: 426,
+    lg: 575,
+    xl: 767,
+    "2xl": 991,
+    "3xl": 1199,
+  },
+};
+
 export const theme = createTheme({
+  breakpoints: breakpoints,
   palette: {
     background: {
       paper: "#F3F1F4",

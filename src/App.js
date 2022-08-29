@@ -58,7 +58,7 @@ const App = () => {
             sx={{
               position: "sticky",
               height: "60px",
-              display: { xs: "flex", sm: "none" },
+              display: { xs: "flex", "2xl": "none" },
             }}
           >
             <Toolbar>
