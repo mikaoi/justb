@@ -134,6 +134,9 @@ theme.typography.subtitle2 = {
   fontSize: "17px",
   fontFamily: "Roboto",
   fontWeight: 400,
+  [theme.breakpoints.down("lg")]: {
+    fontSize: "15px",
+  },
 };
 
 theme.shadows[1] = "0px 4px 4px rgba(0, 0, 0, 0.25)";

@@ -37,9 +37,9 @@ const Tooltip = () => {
     <Box
       sx={{
         marginTop: "-20px",
-        padding: "16px 24px",
+        padding: { xs: "12px 16px", md: "16px 24px" },
         background: theme.palette.lightColor.light,
-        maxWidth: "350px",
+        maxWidth: "340px",
         borderRadius: "20px",
       }}
     >

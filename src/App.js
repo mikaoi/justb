@@ -19,6 +19,7 @@ import Settings from "./pages/Settings";
 import HelpPage from "./pages/HelpPage";
 import SideBar from "./components/SideBar";
 import * as React from "react";
+import Category from "./pages/Category";
 
 const App = () => {
   const drawerWidth = 350;
@@ -103,6 +104,7 @@ const App = () => {
               <Route path={"/favorites"} element={<Favorites />} />
               <Route path={"/settings"} element={<Settings />} />
               <Route path={"/help&resources"} element={<HelpPage />} />
+              <Route path={"/category"} element={<Category />} />
             </Routes>
           </Box>
         </Box>

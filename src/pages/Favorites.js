@@ -5,6 +5,7 @@ import { ReactComponent as ArrowIcon } from "../styles/images/arrow.svg";
 import { theme } from "../styles/theme/theme";
 import VideoCard from "../components/FavoritePage/VideoCard";
 import { CardBox } from "../styles/theme/styledComponents";
+import { NavLink } from "react-router-dom";
 
 const Favorites = () => {
   const classes = [
@@ -65,7 +66,12 @@ const Favorites = () => {
         {classes.map((value, i) => {
           return (
             <Stack key={i} spacing={1}>
-              <Typography>{value}</Typography>
+              <NavLink
+                to={"/category"}
+                style={{ textDecoration: "none", color: "#31476E" }}
+              >
+                {value}
+              </NavLink>
               <Box
                 sx={{
                   display: "flex",
