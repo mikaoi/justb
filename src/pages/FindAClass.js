@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import VideoCard from "../components/FavoritePage/VideoCard";
 import { ReactComponent as SelectArrow } from "../styles/images/selectArrow.svg";
+import { theme } from "../styles/theme/theme";
 
 const FindAClass = () => {
   const [duration, setDuration] = React.useState("");
@@ -48,7 +49,9 @@ const FindAClass = () => {
     >
       <SearchInput placeholder={"Search"} sx={{ alignSelf: "center" }} />
       <Stack>
-        <Typography marginBottom={"10px"}>Filters</Typography>
+        <Typography variant={"bold"} marginBottom={"10px"}>
+          Filters
+        </Typography>
         <Box sx={{ display: "flex", gap: 4 }}>
           <Box sx={{ maxWidth: "210px", width: "100%" }}>
             <FormControl fullWidth focused={false}>
@@ -60,12 +63,12 @@ const FindAClass = () => {
                 label="Duration"
                 onChange={handleDurationChange}
                 IconComponent={() => (
-                  <SelectArrow style={{ fill: "#31476E" }} />
+                  <SelectArrow style={{ fill: theme.palette.fontColor.main }} />
                 )}
               >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
+                <MenuItem value={1}>Option 1</MenuItem>
+                <MenuItem value={2}>Option 2</MenuItem>
+                <MenuItem value={3}>Option 3</MenuItem>
               </CustomSelect>
             </FormControl>
           </Box>
@@ -79,7 +82,7 @@ const FindAClass = () => {
                 label="Activation"
                 onChange={handleActivationChange}
                 IconComponent={() => (
-                  <SelectArrow style={{ fill: "#31476E" }} />
+                  <SelectArrow style={{ fill: theme.palette.fontColor.main }} />
                 )}
               >
                 <MenuItem value={1}>Option 1</MenuItem>
@@ -98,7 +101,7 @@ const FindAClass = () => {
                 label="Skills"
                 onChange={handleSkillsChange}
                 IconComponent={() => (
-                  <SelectArrow style={{ fill: "#31476E" }} />
+                  <SelectArrow style={{ fill: theme.palette.fontColor.main }} />
                 )}
               >
                 <MenuItem value={1}>Option 1</MenuItem>
@@ -110,7 +113,7 @@ const FindAClass = () => {
           <Box sx={{ maxWidth: "210px", width: "100%" }}>
             <FormControl fullWidth focused={false}>
               <InputLabel
-                sx={{ color: "#fff" }}
+                sx={{ color: theme.palette.lightColor.light }}
                 variant={restrictions ? "standard" : "outlined"}
               >
                 Restrictions
@@ -120,8 +123,15 @@ const FindAClass = () => {
                 defaultValue={"Restrictions"}
                 label="Restrictions"
                 onChange={handleRestrictionsChange}
-                IconComponent={() => <SelectArrow style={{ fill: "#fff" }} />}
-                sx={{ backgroundColor: "secondary.main", color: "#fff" }}
+                IconComponent={() => (
+                  <SelectArrow
+                    style={{ fill: theme.palette.lightColor.light }}
+                  />
+                )}
+                sx={{
+                  backgroundColor: "secondary.main",
+                  color: "lightColor.light",
+                }}
               >
                 <MenuItem value={1}>Option 1</MenuItem>
                 <MenuItem value={2}>Option 2</MenuItem>
@@ -131,26 +141,34 @@ const FindAClass = () => {
           </Box>
         </Box>
       </Stack>
-      <Stack spacing={4} marginBottom={2}>
+      <Stack gap={1}>
         <Typography variant={"subtitle1"} component={"span"}>
           justb faves
         </Typography>
-        {[1, 2].map((value, i) => {
-          return (
-            <Stack key={i} spacing={2}>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                }}
-              >
-                {[1, 2, 3].map((v, i) => {
-                  return <VideoCard key={i} />;
-                })}
-              </Box>
-            </Stack>
-          );
-        })}
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 4,
+          }}
+        >
+          {[1, 2].map((value, i) => {
+            return (
+              <Stack key={i} spacing={2}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  {[1, 2, 3].map((v, i) => {
+                    return <VideoCard key={i} />;
+                  })}
+                </Box>
+              </Stack>
+            );
+          })}
+        </Box>
       </Stack>
       <Typography variant={"caption"} component={"span"}>
         Showing 6 of 70 Classes

@@ -3,6 +3,7 @@ import ButtonsCard from "../components/HomePage/ButtonsCard";
 import GoalsCard from "../components/HomePage/GoalsCard";
 import { Box } from "@mui/material";
 import MonthlyChallengesCard from "../components/HomePage/MonthlyChallengesCard";
+import Tooltip from "../components/HomePage/Tooltip";
 
 const Home = () => {
   return (
@@ -12,15 +13,16 @@ const Home = () => {
         height: "100%",
         display: "flex",
         flexDirection: "column",
-        gap: "50px",
+        gap: "10px",
       }}
     >
+      <Tooltip />
       <ButtonsCard />
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", sm: "row" },
-          gap: "60px",
+          flexDirection: { xs: "column", xl: "row" },
+          gap: { xs: "30px", "3xl": "60px" },
           height: "100%",
         }}
       >

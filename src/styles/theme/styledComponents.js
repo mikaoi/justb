@@ -8,7 +8,7 @@ export const CardBox = styled(Box)(({ theme }) => ({
 
 export const CustomButton = styled(Button)(({ theme }) => ({
   textTransform: "none",
-  fontFamily: "inherit",
+  fontFamily: "SchemeRg-Regular",
   background: theme.palette.primary.main,
   fontSize: "25px",
   borderRadius: "20px",
@@ -18,13 +18,25 @@ export const CustomButton = styled(Button)(({ theme }) => ({
   color: "inherit",
   justifyContent: "flex-start",
   padding: "6px 30px",
+  [theme.breakpoints.down("3xl")]: {
+    gap: "10px",
+    fontSize: "20px",
+  },
+  [theme.breakpoints.down("xl")]: {
+    gap: "40px",
+    justifyContent: "center",
+  },
+  [theme.breakpoints.down("md")]: {
+    gap: "30px",
+    fontSize: "18px",
+  },
 }));
 
 export const SearchInput = styled(TextField)(({ theme }) => ({
   outline: "none",
   border: "none",
   borderRadius: "10px",
-  background: "#fff",
+  background: theme.palette.lightColor.light,
   boxShadow: theme.shadows[1],
   maxWidth: "520px",
   width: "100%",

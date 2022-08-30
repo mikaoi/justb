@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./styles/theme/theme";
 import {
@@ -6,10 +6,10 @@ import {
   CssBaseline,
   Box,
   AppBar,
-  Button,
+  IconButton,
   Toolbar,
-  Typography,
 } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import logo from "./styles/images/logo.svg";
 import bg from "./styles/images/bg.png";
 import Home from "./pages/Home";
@@ -41,7 +41,6 @@ const App = () => {
           backgroundRepeat: "no-repeat",
           display: "flex",
           fontFamily: "Scheme",
-          // flexDirection: { xs: "column", sm: "row" },
         }}
       >
         <SideBar
@@ -53,37 +52,51 @@ const App = () => {
           component="main"
           sx={{
             flexGrow: 1,
-            width: { sm: `calc(100% - ${drawerWidth}px)` },
+            width: {
+              xs: `calc(100% - ${drawerWidth - 50}px)`,
+              "3xl": `calc(100% - ${drawerWidth}px)`,
+            },
           }}
         >
           <AppBar
             sx={{
-              position: "sticky",
               height: "60px",
               display: { xs: "flex", "2xl": "none" },
             }}
           >
             <Toolbar>
-              <img src={logo} width={"40px"} alt={"Logo"} />
-              <Button
-                sx={{
-                  color: theme.palette.secondary.main,
-                  width: "50px",
-                  marginLeft: "auto",
-                }}
+              <NavLink to={"/"} style={{ height: "40px" }}>
+                <img src={logo} width={"40px"} alt={"Logo"} />
+              </NavLink>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
                 onClick={handleDrawerToggle}
+                sx={{
+                  color: "lightColor.main",
+                  marginLeft: "auto",
+                  paddingRight: 0,
+                }}
               >
-                text
-              </Button>
+                <MenuIcon
+                  sx={{
+                    width: "30px",
+                    height: "30px",
+                  }}
+                />
+              </IconButton>
             </Toolbar>
           </AppBar>
           <Box
             sx={{
-              padding: "25px 30px",
+              padding: {
+                xs: "90px 20px 20px 20px",
+                "2xl": "25px 30px",
+              },
               height: "100%",
             }}
           >
-            <Typography fontFamily={"Scheme"}>Scheme</Typography>
             <Routes>
               <Route path={"/"} element={<Home />} />
               <Route path={"/findaclass"} element={<FindAClass />} />

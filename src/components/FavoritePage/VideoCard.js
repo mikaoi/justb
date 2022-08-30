@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Button } from "@mui/material";
 import { ReactComponent as PlayButton } from "../../styles/images/playBtn.svg";
+import { theme } from "../../styles/theme/theme";
 
 const VideoCard = () => {
   return (
@@ -14,6 +15,10 @@ const VideoCard = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        transition: "all .4s",
+        "&:hover": {
+          boxShadow: theme.shadows[2],
+        },
       }}
     >
       <Button

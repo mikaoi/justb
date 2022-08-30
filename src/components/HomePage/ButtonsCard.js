@@ -10,16 +10,21 @@ const ButtonsCard = () => {
   return (
     <CardBox
       sx={{
-        minHeight: "230px",
+        padding: { xs: "50px 20px", "3xl": "60px 40px" },
         display: "flex",
-        flexDirection: { xs: "column", sm: "row" },
-        padding: "40px",
+        flexDirection: { xs: "column", xl: "row" },
         alignItems: "center",
         justifyContent: "space-around",
         boxShadow: theme.shadows[1],
+        marginBottom: { xs: 2, "3xl": 3 },
+        gap: "30px",
       }}
     >
-      <CustomButton sx={{ minWidth: { xs: "350px", sm: "43%" } }}>
+      <CustomButton
+        sx={{
+          minWidth: { xs: "80%", xl: "250px", "3xl": "43%" },
+        }}
+      >
         <img
           src={scan}
           style={{ width: "40px", height: "40px" }}
@@ -30,7 +35,11 @@ const ButtonsCard = () => {
           <Arrow />
         </Box>
       </CustomButton>
-      <CustomButton sx={{ minWidth: { xs: "350px", sm: "43%" } }}>
+      <CustomButton
+        sx={{
+          minWidth: { xs: "80%", xl: "250px", "3xl": "43%" },
+        }}
+      >
         <img
           src={find}
           style={{ width: "40px", height: "40px" }}

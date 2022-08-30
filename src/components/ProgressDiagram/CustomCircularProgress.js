@@ -3,7 +3,6 @@ import CircularProgress, {
   circularProgressClasses,
 } from "@mui/material/CircularProgress";
 import { Box } from "@mui/material";
-import { theme } from "../../styles/theme/theme";
 
 const CustomCircularProgress = (props) => {
   return (
@@ -26,7 +25,7 @@ const CustomCircularProgress = (props) => {
           sx={{
             fontFamily: "SchemeLt-Regular",
             fontSize: "45px",
-            color: theme.palette.fontColor.dark,
+            color: "fontColor.dark",
           }}
         >
           {props.value}
@@ -43,7 +42,7 @@ const CustomCircularProgress = (props) => {
       <CircularProgress
         variant="determinate"
         sx={{
-          color: "#FFCC1259",
+          color: "primary.light",
         }}
         size={200}
         thickness={1.2}
@@ -53,7 +52,7 @@ const CustomCircularProgress = (props) => {
       <CircularProgress
         variant="determinate"
         sx={{
-          color: theme.palette.secondary.main,
+          color: "secondary.main",
           animationDuration: "550ms",
           position: "absolute",
           left: 0,

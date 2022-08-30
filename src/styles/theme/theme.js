@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material/styles";
-import SchemeRegular from "../fonts/SchemeRg-Regular.woff2";
 
 const breakpoints = {
   values: {
@@ -20,12 +19,15 @@ export const theme = createTheme({
       paper: "#F3F1F4",
     },
     primary: {
+      light: "#FFCC1259",
       main: "#FFCB12",
     },
     secondary: {
+      light: "#F5D0C5",
       main: "#F05656",
     },
-    greyColor: {
+    lightColor: {
+      light: "#fff",
       main: "#F3F1F4",
     },
     fontColor: {
@@ -34,45 +36,34 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Scheme",
-    // "SchemeRg-Regular, SchemeRg-Bold, SchemeLt-Regular, SchemeBk-Regular, 'Roboto', sans-serif",
+    fontFamily: ["Scheme", "-apple-system", "Roboto", "sans-serif"].join(","),
   },
   components: {
     MuiCssBaseline: {
-      // styleOverrides: {
-      //   body: {
-      //     margin: "0",
-      //     minHeight: "100vh",
-      //     minWidth: "100vw",
-      //     color: "#31476E",
-      //     fontSize: "20px",
-      //     fontFamily: "Scheme",
-      //   }
-      // },
-      styleOverrides: `
-          @font-face {
-          font-family: 'Scheme';
-          font-style: normal;
-          font-display: swap;
-          font-weight: 400;
-          src: local('SchemeRg'), local('SchemeRg-Regular'), url(${SchemeRegular}) format('woff2');
-          unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
-        }
-      `,
-    },
-  },
-  MuiLink: {
-    styleOverrides: {
-      root: {
-        textDecoration: "none",
-        color: "#31476E",
+      styleOverrides: {
+        body: {
+          margin: "0",
+          minHeight: "100vh",
+          minWidth: "100vw",
+          color: "#31476E",
+          fontSize: "20px",
+          fontFamily: "Scheme",
+        },
       },
     },
-  },
-  MuiInputLabel: {
-    styleOverrides: {
-      root: {
-        marginLeft: "5px",
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          textDecoration: "none",
+          color: "#31476E",
+        },
+      },
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          marginLeft: "5px",
+        },
       },
     },
   },
@@ -82,6 +73,9 @@ theme.typography.body1 = {
   fontFamily: "SchemeRg-Regular",
   fontSize: "inherit",
   color: theme.palette.fontColor.main,
+  [theme.breakpoints.down("3xl")]: {
+    fontSize: "17px",
+  },
 };
 
 theme.typography.h1 = {
@@ -90,14 +84,20 @@ theme.typography.h1 = {
 };
 
 theme.typography.h2 = {
-  fontSize: "25px",
-  fontFamily: "inherit",
+  fontSize: "20px",
+  fontFamily: "SchemeRg-Regular",
+  [theme.breakpoints.up("3xl")]: {
+    fontSize: "25px",
+  },
 };
 
 theme.typography.h3 = {
   fontFamily: "SchemeBk-Regular",
   fontSize: "25px",
   fontWeight: 400,
+  [theme.breakpoints.down("3xl")]: {
+    fontSize: "20px",
+  },
 };
 
 theme.typography.h4 = {
@@ -114,12 +114,21 @@ theme.typography.caption = {
   color: theme.palette.fontColor.main,
   fontSize: "17px",
   fontFamily: "SchemeLt-Regular",
+  [theme.breakpoints.down("2xl")]: {
+    fontSize: "15px",
+  },
 };
 
 theme.typography.subtitle1 = {
   fontSize: "17px",
   fontFamily: "Roboto",
   fontWeight: 700,
+};
+
+theme.typography.subtitle2 = {
+  fontSize: "17px",
+  fontFamily: "Roboto",
+  fontWeight: 400,
 };
 
 theme.shadows[1] = "0px 4px 4px rgba(0, 0, 0, 0.25)";

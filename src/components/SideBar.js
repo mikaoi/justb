@@ -5,7 +5,7 @@ import Link from "@mui/material/Link";
 import { createStyles, makeStyles } from "@mui/styles";
 import { NavLink } from "react-router-dom";
 import avatar from "../styles/images/navImg/avatar.svg";
-import { ReactComponent as Logo } from "../styles/images/logo.svg";
+import logo, { ReactComponent as Logo } from "../styles/images/logo.svg";
 import { ReactComponent as Close } from "../styles/images/navImg/closeBtn.svg";
 import bg from "../styles/images/navImg/navShapes.svg";
 import home from "../styles/images/navImg/home.png";
@@ -32,7 +32,6 @@ const MyNavLink = React.forwardRef((props, ref) => (
 const useStyles = makeStyles((theme) =>
   createStyles({
     link: {
-      fontSize: "23px",
       fontFamily: "SchemeLt-Regular",
       display: "flex",
       alignItems: "center",
@@ -44,13 +43,14 @@ const useStyles = makeStyles((theme) =>
       },
     },
     activeLink: {
-      backgroundColor: "#FFFFFF",
+      backgroundColor: theme.palette.lightColor.light,
       fontFamily: "SchemeRg-Bold",
       borderRadius: "20px 0 0 20px",
     },
   })
 );
 export default function SideBar(props) {
+  const mobileWidth = 270;
   const classes = useStyles();
   const { window, mobileOpen, setMenu, width } = props;
 
@@ -68,7 +68,7 @@ export default function SideBar(props) {
         bgcolor={"primary.main"}
         sx={{
           backgroundColor: theme.palette.background,
-          height: "200px",
+          height: { xs: "170px", "2xl": "200px" },
           backgroundImage: `url(${bg})`,
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
@@ -76,8 +76,11 @@ export default function SideBar(props) {
         }}
       >
         <NavLink to={"/"}>
-          <Logo
-            style={{
+          <Avatar
+            src={logo}
+            sx={{
+              height: { xs: "50px", "3xl": "70px" },
+              width: { xs: "50px", "3xl": "70px" },
               position: "absolute",
               top: "16px",
               left: "16px",
@@ -87,8 +90,8 @@ export default function SideBar(props) {
         <Avatar
           src={avatar}
           sx={{
-            height: "170px",
-            width: "170px",
+            height: { xs: "140px", "2xl": "170px" },
+            width: { xs: "140px", "2xl": "170px" },
             position: "absolute",
             top: "40%",
             left: "50%",
@@ -96,7 +99,10 @@ export default function SideBar(props) {
           }}
         />
       </Box>
-      <Stack spacing={1} sx={{ textAlign: "center", paddingTop: "60px" }}>
+      <Stack
+        spacing={1}
+        sx={{ textAlign: "center", paddingTop: { xs: "50px", "2xl": "60px" } }}
+      >
         <Typography variant={"body1"} component={"div"}>
           Ms. Wilson’s Class
         </Typography>
@@ -106,10 +112,10 @@ export default function SideBar(props) {
       </Stack>
       <Box
         sx={{
-          padding: "30px 0 30px 35px",
+          padding: { xs: "25px 0 25px 20px", "2xl": "30px 0 30px 35px" },
           display: "flex",
           flexDirection: "column",
-          gap: "25px",
+          gap: { xs: "15px", "3xl": "25px" },
         }}
       >
         {linkInfo.map((link, index) => (
@@ -124,6 +130,7 @@ export default function SideBar(props) {
                 ? ""
                 : link.text.replace(/\s/g, "").toLowerCase()
             }`}
+            sx={{ fontSize: { xs: "18px", "3xl": "23px" } }}
           >
             <img
               src={link.icon}
@@ -134,10 +141,10 @@ export default function SideBar(props) {
           </Link>
         ))}
         <CustomBorderLinearProgress
-          sx={{ marginTop: 4 }}
+          sx={{ marginTop: { xs: 2, "2xl": 4 } }}
           variant="determinate"
           value={80}
-          width={"280px"}
+          width={{ xs: "230px", "3xl": "280px" }}
         />
       </Box>
     </Box>
@@ -151,7 +158,7 @@ export default function SideBar(props) {
       <Box
         component="nav"
         sx={{
-          width: { "2xl": width },
+          width: { "2xl": width - 50, "3xl": width },
           flexShrink: { "2xl": 0 },
         }}
       >
@@ -168,7 +175,7 @@ export default function SideBar(props) {
             display: { xs: "block", "2xl": "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: width,
+              width: mobileWidth,
               borderRadius: "0 20px 20px 0",
               border: "none",
             },
@@ -182,7 +189,7 @@ export default function SideBar(props) {
             display: { xs: "none", "2xl": "block" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: width,
+              width: { xs: width - 50, "3xl": width },
               height: "100vh",
               borderRadius: "0 20px 20px 0",
               border: "none",
@@ -200,7 +207,7 @@ export default function SideBar(props) {
             sx={{
               position: "absolute",
               top: "20px",
-              left: width - 10,
+              left: mobileWidth - 10,
               zIndex: 1300,
               display: { xs: "block", "2xl": "none" },
             }}

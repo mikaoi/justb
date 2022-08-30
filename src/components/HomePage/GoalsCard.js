@@ -10,8 +10,8 @@ const GoalsCard = () => {
   return (
     <CardBox
       sx={{
-        padding: "14px 32px",
-        width: { xs: "100%", sm: "50%" },
+        padding: { xs: "14px 20px", "3xl": "14px 32px" },
+        width: { xs: "100%", xl: "50%" },
         display: "flex",
         flexDirection: "column",
         position: "relative",
@@ -42,6 +42,7 @@ const GoalsCard = () => {
           alignItems: "center",
           justifyContent: "space-between",
           height: "100%",
+          gap: { xs: "25px", xl: "10px" },
         }}
       >
         <Box
