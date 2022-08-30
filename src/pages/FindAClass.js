@@ -38,9 +38,12 @@ const FindAClass = () => {
   return (
     <CardBox
       sx={{
-        padding: "40px 70px 15px 70px",
+        paddingTop: "40px",
+        paddingBottom: "15px",
+        paddingX: { xs: "30px", "2xl": "40px", "3xl": "50px" },
         display: "flex",
         flexDirection: "column",
+        gap: { xs: "40px", "2xl": "50px" },
         justifyContent: "space-between",
         width: "100%",
         height: "100%",
@@ -52,92 +55,136 @@ const FindAClass = () => {
         <Typography variant={"bold"} marginBottom={"10px"}>
           Filters
         </Typography>
-        <Box sx={{ display: "flex", gap: 4 }}>
-          <Box sx={{ maxWidth: "210px", width: "100%" }}>
-            <FormControl fullWidth focused={false}>
-              <InputLabel variant={duration ? "standard" : "outlined"}>
-                Duration
-              </InputLabel>
-              <CustomSelect
-                value={duration}
-                label="Duration"
-                onChange={handleDurationChange}
-                IconComponent={() => (
-                  <SelectArrow style={{ fill: theme.palette.fontColor.main }} />
-                )}
-              >
-                <MenuItem value={1}>Option 1</MenuItem>
-                <MenuItem value={2}>Option 2</MenuItem>
-                <MenuItem value={3}>Option 3</MenuItem>
-              </CustomSelect>
-            </FormControl>
+        <Box
+          sx={{
+            display: "flex",
+            gap: { xs: 2, "3xl": 3 },
+            flexDirection: { xs: "column", md: "row" },
+          }}
+        >
+          <Box
+            sx={{
+              width: "100%",
+              display: "flex",
+              gap: { xs: 2, "3xl": 3 },
+              flexDirection: { xs: "column", "3xl": "row" },
+            }}
+          >
+            <Box sx={{ maxWidth: "350px", width: "100%" }}>
+              <FormControl fullWidth focused={false}>
+                <InputLabel
+                  variant={"outlined"}
+                  sx={{ display: duration && "none" }}
+                >
+                  Duration
+                </InputLabel>
+                <CustomSelect
+                  value={duration}
+                  label="Duration"
+                  onChange={handleDurationChange}
+                  IconComponent={() => (
+                    <SelectArrow
+                      style={{ fill: theme.palette.fontColor.main }}
+                    />
+                  )}
+                >
+                  <MenuItem value={1}>Option 1</MenuItem>
+                  <MenuItem value={2}>Option 2</MenuItem>
+                  <MenuItem value={3}>Option 3</MenuItem>
+                </CustomSelect>
+              </FormControl>
+            </Box>
+            <Box sx={{ maxWidth: "350px", width: "100%" }}>
+              <FormControl fullWidth focused={false}>
+                <InputLabel
+                  variant={"outlined"}
+                  sx={{
+                    display: activation && "none",
+                  }}
+                >
+                  Activation Need
+                </InputLabel>
+                <CustomSelect
+                  value={activation}
+                  label="Activation"
+                  onChange={handleActivationChange}
+                  IconComponent={() => (
+                    <SelectArrow
+                      style={{ fill: theme.palette.fontColor.main }}
+                    />
+                  )}
+                >
+                  <MenuItem value={1}>Option 1</MenuItem>
+                  <MenuItem value={2}>Option 2</MenuItem>
+                  <MenuItem value={3}>Option 3</MenuItem>
+                </CustomSelect>
+              </FormControl>
+            </Box>
           </Box>
-          <Box sx={{ maxWidth: "210px", width: "100%" }}>
-            <FormControl fullWidth focused={false}>
-              <InputLabel variant={activation ? "standard" : "outlined"}>
-                Activation Need
-              </InputLabel>
-              <CustomSelect
-                value={activation}
-                label="Activation"
-                onChange={handleActivationChange}
-                IconComponent={() => (
-                  <SelectArrow style={{ fill: theme.palette.fontColor.main }} />
-                )}
-              >
-                <MenuItem value={1}>Option 1</MenuItem>
-                <MenuItem value={2}>Option 2</MenuItem>
-                <MenuItem value={3}>Option 3</MenuItem>
-              </CustomSelect>
-            </FormControl>
-          </Box>
-          <Box sx={{ maxWidth: "210px", width: "100%" }}>
-            <FormControl fullWidth focused={false}>
-              <InputLabel variant={skills ? "standard" : "outlined"}>
-                Skills
-              </InputLabel>
-              <CustomSelect
-                value={skills}
-                label="Skills"
-                onChange={handleSkillsChange}
-                IconComponent={() => (
-                  <SelectArrow style={{ fill: theme.palette.fontColor.main }} />
-                )}
-              >
-                <MenuItem value={1}>Option 1</MenuItem>
-                <MenuItem value={2}>Option 2</MenuItem>
-                <MenuItem value={3}>Option 3</MenuItem>
-              </CustomSelect>
-            </FormControl>
-          </Box>
-          <Box sx={{ maxWidth: "210px", width: "100%" }}>
-            <FormControl fullWidth focused={false}>
-              <InputLabel
-                sx={{ color: theme.palette.lightColor.light }}
-                variant={restrictions ? "standard" : "outlined"}
-              >
-                Restrictions
-              </InputLabel>
-              <CustomSelect
-                value={restrictions}
-                defaultValue={"Restrictions"}
-                label="Restrictions"
-                onChange={handleRestrictionsChange}
-                IconComponent={() => (
-                  <SelectArrow
-                    style={{ fill: theme.palette.lightColor.light }}
-                  />
-                )}
-                sx={{
-                  backgroundColor: "secondary.main",
-                  color: "lightColor.light",
-                }}
-              >
-                <MenuItem value={1}>Option 1</MenuItem>
-                <MenuItem value={2}>Option 2</MenuItem>
-                <MenuItem value={3}>Option 3</MenuItem>
-              </CustomSelect>
-            </FormControl>
+          <Box
+            sx={{
+              width: "100%",
+              display: "flex",
+              gap: { xs: 2, "3xl": 3 },
+              flexDirection: { xs: "column", "3xl": "row" },
+            }}
+          >
+            <Box sx={{ maxWidth: "350px", width: "100%" }}>
+              <FormControl fullWidth focused={false}>
+                <InputLabel
+                  variant={"outlined"}
+                  sx={{ display: skills && "none" }}
+                >
+                  Skills
+                </InputLabel>
+                <CustomSelect
+                  value={skills}
+                  label="Skills"
+                  onChange={handleSkillsChange}
+                  IconComponent={() => (
+                    <SelectArrow
+                      style={{ fill: theme.palette.fontColor.main }}
+                    />
+                  )}
+                >
+                  <MenuItem value={1}>Option 1</MenuItem>
+                  <MenuItem value={2}>Option 2</MenuItem>
+                  <MenuItem value={3}>Option 3</MenuItem>
+                </CustomSelect>
+              </FormControl>
+            </Box>
+            <Box sx={{ maxWidth: "350px", width: "100%" }}>
+              <FormControl fullWidth focused={false}>
+                <InputLabel
+                  variant={"outlined"}
+                  sx={{
+                    display: restrictions && "none",
+                    color: theme.palette.lightColor.light,
+                  }}
+                >
+                  Restrictions
+                </InputLabel>
+                <CustomSelect
+                  value={restrictions}
+                  defaultValue={"Restrictions"}
+                  label="Restrictions"
+                  onChange={handleRestrictionsChange}
+                  IconComponent={() => (
+                    <SelectArrow
+                      style={{ fill: theme.palette.lightColor.light }}
+                    />
+                  )}
+                  sx={{
+                    backgroundColor: "secondary.main",
+                    color: "lightColor.light",
+                  }}
+                >
+                  <MenuItem value={1}>Option 1</MenuItem>
+                  <MenuItem value={2}>Option 2</MenuItem>
+                  <MenuItem value={3}>Option 3</MenuItem>
+                </CustomSelect>
+              </FormControl>
+            </Box>
           </Box>
         </Box>
       </Stack>
@@ -152,22 +199,21 @@ const FindAClass = () => {
             gap: 4,
           }}
         >
-          {[1, 2].map((value, i) => {
-            return (
-              <Stack key={i} spacing={2}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  {[1, 2, 3].map((v, i) => {
-                    return <VideoCard key={i} />;
-                  })}
-                </Box>
-              </Stack>
-            );
-          })}
+          <Stack spacing={2}>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: { xs: "center", xl: "space-between" },
+                flexWrap: "wrap",
+                gap: "20px",
+              }}
+            >
+              {[1, 2, 3, 4, 5, 6].map((v, i) => {
+                return <VideoCard key={i} />;
+              })}
+            </Box>
+          </Stack>
         </Box>
       </Stack>
       <Typography variant={"caption"} component={"span"}>

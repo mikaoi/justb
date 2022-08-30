@@ -61,11 +61,15 @@ export const theme = createTheme({
       },
     },
     MuiInputLabel: {
-      styleOverrides: {
-        root: {
-          marginLeft: "5px",
+      variants: [
+        {
+          props: { variant: "outlined" },
+          style: {
+            marginTop: "-5px",
+            fontSize: "17px",
+          },
         },
-      },
+      ],
     },
   },
 });

@@ -56,19 +56,14 @@ export const SearchInput = styled(TextField)(({ theme }) => ({
 export const CustomSelect = styled(Select)(({ theme }) => ({
   outline: "none",
   border: "none",
+  fontSize: "18px",
   borderRadius: "10px",
+  maxHeight: "45px",
   background: theme.palette.primary.main,
   boxShadow: theme.shadows[1],
   maxWidth: "520px",
+  verticalAlign: "center",
   width: "100%",
-  "& input": {
-    "&::placeholder": {
-      textOverflow: "ellipsis !important",
-      color: "#31476E",
-      opacity: 1,
-      fontSize: "17px",
-    },
-  },
   "& fieldset": {
     border: "none",
   },
