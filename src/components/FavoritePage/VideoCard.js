@@ -79,6 +79,7 @@ const VideoCard = () => {
                 width: "100%",
                 borderRadius: "20px",
               }}
+              title={"Title"}
               src={"//player.vimeo.com/video/24858420"}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
               allowFullScreen={true}
