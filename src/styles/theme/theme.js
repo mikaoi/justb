@@ -29,6 +29,7 @@ export const theme = createTheme({
     lightColor: {
       light: "#fff",
       main: "#F3F1F4",
+      dark: "#EAEAEA",
     },
     fontColor: {
       main: "#31476E",

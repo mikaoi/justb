@@ -7,11 +7,11 @@ const VideoCard = () => {
   return (
     <Box
       sx={{
-        background: "#FFFFFF",
+        background: theme.palette.lightColor.light,
         borderRadius: "10px",
         border: "1px solid #EAEAEA",
         height: "170px",
-        width: "220px",
+        width: { xs: "220px", xl: "27%" },
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

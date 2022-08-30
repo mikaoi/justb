@@ -5,7 +5,7 @@ import Link from "@mui/material/Link";
 import { createStyles, makeStyles } from "@mui/styles";
 import { NavLink } from "react-router-dom";
 import avatar from "../styles/images/navImg/avatar.svg";
-import logo, { ReactComponent as Logo } from "../styles/images/logo.svg";
+import logo from "../styles/images/logo.svg";
 import { ReactComponent as Close } from "../styles/images/navImg/closeBtn.svg";
 import bg from "../styles/images/navImg/navShapes.svg";
 import home from "../styles/images/navImg/home.png";

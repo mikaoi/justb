@@ -16,7 +16,8 @@ const Favorites = () => {
   return (
     <CardBox
       sx={{
-        padding: "15px 70px",
+        paddingY: "15px",
+        paddingX: { xs: "30px", "2xl": "40px", "3xl": "60px" },
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -29,6 +30,7 @@ const Favorites = () => {
         sx={{
           display: "flex",
           color: theme.palette.secondary.main,
+          marginBottom: { xs: "15px", xl: 0 },
         }}
       >
         <Box
@@ -56,7 +58,7 @@ const Favorites = () => {
               backgroundColor: "transparent",
             },
           }}
-          endIcon={<ArrowIcon />}
+          endIcon={<ArrowIcon style={{ width: "30px" }} />}
         />
       </Box>
       <Stack spacing={"20px"} marginBottom={2}>
@@ -67,7 +69,10 @@ const Favorites = () => {
               <Box
                 sx={{
                   display: "flex",
-                  justifyContent: "space-between",
+                  alignItems: "center",
+                  justifyContent: { xs: "center", xl: "space-between" },
+                  flexWrap: "wrap",
+                  gap: "20px",
                 }}
               >
                 {[1, 2, 3].map((v, i) => {
