@@ -8,7 +8,8 @@ const MonthlyChallengesCard = () => {
   return (
     <CardBox
       sx={{
-        padding: { xs: "14px 0 0 20px", "3xl": "14px 0 0 32px" },
+        paddingTop: "14px",
+        paddingLeft: { xs: "20px", "3xl": "32px" },
         width: { xs: "100%", xl: "50%" },
         position: "relative",
         boxShadow: theme.shadows[2],

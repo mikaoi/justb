@@ -10,7 +10,8 @@ const GoalsCard = () => {
   return (
     <CardBox
       sx={{
-        padding: { xs: "14px 20px", "3xl": "14px 32px" },
+        paddingY: "14px",
+        paddingX: { xs: "20px", "3xl": "32px" },
         width: { xs: "100%", xl: "50%" },
         display: "flex",
         flexDirection: "column",

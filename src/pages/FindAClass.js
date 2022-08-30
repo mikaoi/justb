@@ -38,7 +38,7 @@ const FindAClass = () => {
   return (
     <CardBox
       sx={{
-        paddingTop: "40px",
+        paddingTop: { xs: "30px", "2xl": "40px" },
         paddingBottom: "15px",
         paddingX: { xs: "30px", "2xl": "40px", "3xl": "50px" },
         display: "flex",

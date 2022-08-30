@@ -17,7 +17,7 @@ const Favorites = () => {
     <CardBox
       sx={{
         paddingY: "15px",
-        paddingX: { xs: "30px", "2xl": "40px", "3xl": "60px" },
+        paddingX: { xs: "30px", "2xl": "40px", "3xl": "50px" },
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",

@@ -58,6 +58,7 @@ export const CustomSelect = styled(Select)(({ theme }) => ({
   border: "none",
   fontSize: "18px",
   borderRadius: "10px",
+  color: "inherit",
   maxHeight: "45px",
   background: theme.palette.primary.main,
   boxShadow: theme.shadows[1],
