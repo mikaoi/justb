@@ -1,10 +1,10 @@
 import React from "react";
-import { Box, Button, Typography, Stack } from "@mui/material";
+import { Box, Typography, Stack } from "@mui/material";
 import { ReactComponent as HeartIcon } from "../styles/images/heart.svg";
 import { ReactComponent as ArrowIcon } from "../styles/images/arrow.svg";
 import { theme } from "../styles/theme/theme";
 import VideoCard from "../components/FavoritePage/VideoCard";
-import { CardBox } from "../styles/theme/styledComponents";
+import { CardBox, UnStyledButton } from "../styles/theme/styledComponents";
 import { NavLink } from "react-router-dom";
 
 const Favorites = () => {
@@ -48,26 +48,14 @@ const Favorites = () => {
             Favorites
           </Typography>
         </Box>
-        <Button
-          sx={{
-            color: "transparent",
-            backgroundColor: "transparent",
-            alignSelf: "flex-end",
-            "&:hover, &:active": {
-              opacity: 0.8,
-              outline: "none",
-              backgroundColor: "transparent",
-            },
-          }}
-          endIcon={<ArrowIcon style={{ width: "30px" }} />}
-        />
+        <UnStyledButton endIcon={<ArrowIcon style={{ width: "30px" }} />} />
       </Box>
       <Stack spacing={"20px"} marginBottom={2}>
         {classes.map((value, i) => {
           return (
             <Stack key={i} spacing={1}>
               <NavLink
-                to={"/category"}
+                to={"/favorites/:category"}
                 style={{ textDecoration: "none", color: "#31476E" }}
               >
                 {value}

@@ -31,6 +31,16 @@ export const CustomButton = styled(Button)(({ theme }) => ({
     fontSize: "18px",
   },
 }));
+export const UnStyledButton = styled(Button)(({ theme }) => ({
+  color: "transparent",
+  backgroundColor: "transparent",
+  alignSelf: "flex-end",
+  "&:hover, &:active": {
+    opacity: 0.8,
+    outline: "none",
+    backgroundColor: "transparent",
+  },
+}));
 
 export const SearchInput = styled(TextField)(({ theme }) => ({
   outline: "none",

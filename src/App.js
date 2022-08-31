@@ -18,13 +18,12 @@ import Favorites from "./pages/Favorites";
 import Settings from "./pages/Settings";
 import HelpPage from "./pages/HelpPage";
 import SideBar from "./components/SideBar";
-import * as React from "react";
 import Category from "./pages/Category";
+import { useState } from "react";
 
 const App = () => {
   const drawerWidth = 350;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-
+  const [mobileOpen, setMobileOpen] = useState(false);
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -104,7 +103,8 @@ const App = () => {
               <Route path={"/favorites"} element={<Favorites />} />
               <Route path={"/settings"} element={<Settings />} />
               <Route path={"/help&resources"} element={<HelpPage />} />
-              <Route path={"/category"} element={<Category />} />
+              {/*<Route path={"/category"} element={<Category />} />*/}
+              <Route path={"/favorites/:category"} element={<Category />} />
             </Routes>
           </Box>
         </Box>

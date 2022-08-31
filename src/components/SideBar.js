@@ -212,7 +212,13 @@ export default function SideBar(props) {
               display: { xs: "block", "2xl": "none" },
             }}
           >
-            <Close style={{ width: "20px", height: "20px" }} />
+            <Close
+              style={{
+                width: "20px",
+                height: "20px",
+                fill: theme.palette.lightColor.light,
+              }}
+            />
           </Button>
         )}
       </Box>

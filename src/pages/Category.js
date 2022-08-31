@@ -3,8 +3,10 @@ import { CardBox } from "../styles/theme/styledComponents";
 import { theme } from "../styles/theme/theme";
 import { Box, Stack, Typography } from "@mui/material";
 import VideoCard from "../components/FavoritePage/VideoCard";
+import { useParams } from "react-router-dom";
 
 const Category = () => {
+  // const { category } = useParams();
   return (
     <CardBox
       sx={{
@@ -12,6 +14,7 @@ const Category = () => {
         paddingX: { xs: "30px", "2xl": "40px", "3xl": "50px" },
         display: "flex",
         flexDirection: "column",
+        gap: "10px",
         justifyContent: "space-between",
         width: "100%",
         height: "100%",
