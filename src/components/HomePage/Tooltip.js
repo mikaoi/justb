@@ -38,9 +38,9 @@ const Tooltip = () => {
       sx={{
         marginTop: "-20px",
         padding: { xs: "12px 16px", md: "16px 24px" },
-        background: theme.palette.lightColor.light,
-        maxWidth: "340px",
-        borderRadius: "20px",
+        background: theme.palette.lightColor.dark,
+        maxWidth: "100%",
+        borderRadius: "10px",
       }}
     >
       <Typography variant={"subtitle2"}>
