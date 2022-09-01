@@ -23,9 +23,6 @@ const CustomBorderLinearProgress = (props) => {
           whiteSpace: "nowrap",
         }}
       >
-        <Typography variant={"bold"} component={"span"}>
-          {props.showvalue && "12/15 Classes"}
-        </Typography>
       </Box>
       <BorderLinearProgress {...props} />
     </Box>
