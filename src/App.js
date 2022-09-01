@@ -34,7 +34,6 @@ const App = () => {
       <Container
         style={{
           padding: "0",
-          backgroundImage: `url(${bg})`,
           minHeight: "100vh",
           minWidth: "100%",
           backgroundSize: "cover",
