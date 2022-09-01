@@ -5,12 +5,13 @@ import find from "../../styles/images/btnImages/findAClass.png";
 import { ReactComponent as Arrow } from "../../styles/images/btnImages/arrow.svg";
 import { CustomButton, CardBox } from "../../styles/theme/styledComponents";
 import { theme } from "../../styles/theme/theme";
+import MonthlyChallengesCard from "./MonthlyChallengesCard";
 
 const ButtonsCard = () => {
   return (
     <CardBox
       sx={{
-        padding: { xs: "50px 20px", "3xl": "60px 40px" },
+        padding: { xs: "50px 20px", "3xl": "100px 40px" },
         display: "flex",
         flexDirection: { xs: "column", xl: "row" },
         alignItems: "center",
@@ -51,6 +52,7 @@ const ButtonsCard = () => {
         </Box>
       </CustomButton>
     </CardBox>
+  
   );
 };
 
