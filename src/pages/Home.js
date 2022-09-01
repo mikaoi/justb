@@ -13,7 +13,7 @@ const Home = () => {
         height: "100%",
         display: "flex",
         flexDirection: "column",
-        gap: "10px",
+        gap: "50px",
       }}
     >
       <Tooltip />
@@ -23,7 +23,7 @@ const Home = () => {
           display: "flex",
           flexDirection: { xs: "column", xl: "row" },
           gap: { xs: "30px", "3xl": "60px" },
-          height: "100%",
+          height: "50%",
         }}
       >
         <GoalsCard />
