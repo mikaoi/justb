@@ -26,7 +26,7 @@ const MonthlyChallengesCard = () => {
           paddingTop: "10px",
           display: "flex",
           justifyContent: "center",
-          marginBottom: "50px",
+          marginBottom: "100px",
         }}
       >
         <Typography variant={"h2"} component={"span"}>
