@@ -11,7 +11,7 @@ const ButtonsCard = () => {
   return (
     <CardBox
       sx={{
-        padding: { xs: "50px 20px", "3xl": "100px 40px" },
+        padding: { xs: "50px 20px", "1xl": "100px 40px" },
         display: "flex",
         flexDirection: { xs: "column", xl: "row" },
         alignItems: "center",

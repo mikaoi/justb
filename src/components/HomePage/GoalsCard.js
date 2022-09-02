@@ -11,7 +11,7 @@ const GoalsCard = () => {
     <CardBox
       sx={{
         paddingY: "14px",
-        paddingX: { xs: "20px", "3xl": "32px" },
+        paddingX: { xs: "100px", "3xl": "32px" },
         width: { xs: "100%", xl: "50%" },
         display: "flex",
         flexDirection: "column",
@@ -33,7 +33,7 @@ const GoalsCard = () => {
         }}
       >
         <Typography variant={"h2"} component={"span"}>
-          Weekly Goals
+          Weekly Move Minutes
         </Typography>
       </Box>
       <Box
