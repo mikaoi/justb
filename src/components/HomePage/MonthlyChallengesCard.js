@@ -38,7 +38,7 @@ const MonthlyChallengesCard = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: "80px",
+          gap: "70px",
           mb: "5px",
         }}
       >
@@ -56,7 +56,7 @@ const MonthlyChallengesCard = () => {
           );
         })}
         
-         <TextField id="standard-basic" label="Teacher Challenge" variant="outlined" color="secondary" placeholder="Enter your own custom challenge!"/>
+         <TextField id="standard" label="Teacher Challenge" variant="standard" color='secondary' placeholder="Enter your own custom challenge!"/>
       </Box>
       
     </CardBox>

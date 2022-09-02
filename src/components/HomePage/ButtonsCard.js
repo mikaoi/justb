@@ -20,7 +20,7 @@ const ButtonsCard = () => {
         gap: "30px",
       }}
     >
-      <CustomButton variant="contained"
+      <CustomButton variant="outlined"
         sx={{
           minWidth: { xs: "80%", xl: "250px", "3xl": "43%" },
         }}
@@ -35,10 +35,10 @@ const ButtonsCard = () => {
           <Arrow />
         </Box>
       </CustomButton>
-      <CustomButton variant="contained"
+      <CustomButton variant="outlined"
         sx={{
           minWidth: { xs: "80%", xl: "250px", "3xl": "43%" },
-          bgcolor: 'secondary.main'
+          
         }}
       >
         <img
