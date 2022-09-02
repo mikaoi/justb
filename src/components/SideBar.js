@@ -141,6 +141,19 @@ export default function SideBar(props) {
             <span>{link.text}</span>
           </Link>
         ))}
+        <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+        }}
+        >
+        <Typography variant={"body1"} component={"div"}>
+          Classes Completed</Typography>
+          <Typography variant={"caption"} component={"div"}>
+            12/15
+          </Typography>
+        </Box>
+        
         <CustomBorderLinearProgress
           sx={{ marginTop: { xs: 2, "2xl": 4 } }}
           variant="determinate"
@@ -223,6 +236,7 @@ export default function SideBar(props) {
           </Button>
         )}
       </Box>
+      
     </Box>
   );
 }

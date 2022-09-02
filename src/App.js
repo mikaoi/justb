@@ -11,7 +11,6 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from "./styles/images/logo.svg";
-import bg from "./styles/images/bg.png";
 import Home from "./pages/Home";
 import FindAClass from "./pages/FindAClass";
 import Favorites from "./pages/Favorites";
@@ -20,6 +19,7 @@ import HelpPage from "./pages/HelpPage";
 import SideBar from "./components/SideBar";
 import Category from "./pages/Category";
 import { useState } from "react";
+import bg from "./styles/images/bg.png";
 
 const App = () => {
   const drawerWidth = 350;
@@ -34,6 +34,7 @@ const App = () => {
       <Container
         style={{
           padding: "0",
+          backgroundImage: `url(${bg})`,
           minHeight: "100vh",
           minWidth: "100%",
           backgroundSize: "cover",
