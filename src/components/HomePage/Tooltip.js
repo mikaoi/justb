@@ -45,7 +45,7 @@ const Tooltip = () => {
     >
       <Typography variant={"subtitle2"}>
         {month + " " + today + ", " + year + ", Let’s get "}
-        <Box sx={{ color: "secondary.main" }} component={"span"}>
+        <Box sx={{ color: "main.dark" }} component={"span"}>
           moving!
         </Box>
       </Typography>
