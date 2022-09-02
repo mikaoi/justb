@@ -9,15 +9,15 @@ export const CardBox = styled(Box)(({ theme }) => ({
 export const CustomButton = styled(Button)(({ theme }) => ({
   textTransform: "none",
   fontFamily: "SchemeRg-Regular",
-  background: theme.palette.primary.main,
+  borderWidth: '3px',
   fontSize: "25px",
-  borderRadius: "20px",
-  boxShadow: "0px 4px 0px #BE9500",
+  borderRadius: "50px",
+  
   display: "flex",
   gap: "40px",
   color: "inherit",
   justifyContent: "flex-start",
-  padding: "6px 30px",
+  padding: "20px 30px",
   [theme.breakpoints.down("3xl")]: {
     gap: "10px",
     fontSize: "20px",

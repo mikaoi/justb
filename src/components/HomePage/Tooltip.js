@@ -39,7 +39,7 @@ const Tooltip = () => {
         marginTop: "-20px",
         padding: { xs: "12px 16px", md: "16px 24px" },
         background: theme.palette.lightColor.dark,
-        maxWidth: "100%",
+        width: '100%',
         borderRadius: "10px",
       }}
     >
