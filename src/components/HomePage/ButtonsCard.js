@@ -36,7 +36,7 @@ const ButtonsCard = () => {
           <Arrow />
         </Box>
       </CustomButton>
-      <CustomButton
+      <CustomButton variant="outlined"
         sx={{
           minWidth: { xs: "80%", xl: "250px", "3xl": "43%" },
         }}

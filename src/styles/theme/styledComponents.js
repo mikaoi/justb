@@ -12,7 +12,6 @@ export const CustomButton = styled(Button)(({ theme }) => ({
   borderWidth: '3px',
   fontSize: "25px",
   borderRadius: "50px",
-  
   display: "flex",
   gap: "40px",
   color: "inherit",
