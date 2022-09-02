@@ -41,6 +41,7 @@ const Tooltip = () => {
         background: theme.palette.lightColor.dark,
         width: '100%',
         borderRadius: "10px",
+        boxShadow:4
       }}
     >
       <Typography variant={"subtitle2"}>

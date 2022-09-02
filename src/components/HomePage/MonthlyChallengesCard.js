@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 import { CardBox } from "../../styles/theme/styledComponents";
 import challengeImg from "../../styles/images/cardsImg/challenge.png";
 import { theme } from "../../styles/theme/theme";
-import {TextField} from "@mui/material";
+import { TextField } from "@mui/material";
 import GoalList from "./GoalList";
 
 const MonthlyChallengesCard = () => {
@@ -42,7 +42,6 @@ const MonthlyChallengesCard = () => {
           mb: "5px",
         }}
       >
-       
         {[1, 2].map((v, i) => {
           return (
             <Box
@@ -53,12 +52,18 @@ const MonthlyChallengesCard = () => {
                 borderRadius: "30px 0 0 30px",
               }}
             />
+
           );
         })}
-        
-         <TextField id="standard" label="Teacher Challenge" variant="standard" color='secondary' placeholder="Enter your own custom challenge!"/>
+
+        <TextField
+          id="standard"
+          label="Teacher Challenge"
+          variant="standard"
+          color="info"
+          placeholder="Enter your own custom challenge!"
+        />
       </Box>
-      
     </CardBox>
   );
 };
