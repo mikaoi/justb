@@ -16,6 +16,7 @@ import help from "../styles/images/navImg/help.png";
 import { Typography, Button, Avatar, Stack } from "@mui/material";
 import CustomBorderLinearProgress from "./ProgressDiagram/CustomBorderLinearProgress";
 import { theme } from "../styles/theme/theme";
+import { CustomButton } from "../styles/theme/styledComponents";
 
 const MyNavLink = React.forwardRef((props, ref) => (
   <NavLink
