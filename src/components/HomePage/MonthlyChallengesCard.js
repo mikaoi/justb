@@ -4,6 +4,7 @@ import { CardBox } from "../../styles/theme/styledComponents";
 import challengeImg from "../../styles/images/cardsImg/challenge.png";
 import { theme } from "../../styles/theme/theme";
 import {TextField} from "@mui/material";
+import GoalList from "./GoalList";
 
 const MonthlyChallengesCard = () => {
   return (
@@ -54,8 +55,10 @@ const MonthlyChallengesCard = () => {
             />
           );
         })}
+        
          <TextField id="standard-basic" label="Teacher Challenge" variant="outlined" color="secondary" placeholder="Enter your own custom challenge!"/>
       </Box>
+      
     </CardBox>
   );
 };

@@ -5,13 +5,12 @@ import find from "../../styles/images/btnImages/findAClass.png";
 import { ReactComponent as Arrow } from "../../styles/images/btnImages/arrow.svg";
 import { CustomButton, CardBox } from "../../styles/theme/styledComponents";
 import { theme } from "../../styles/theme/theme";
-import MonthlyChallengesCard from "./MonthlyChallengesCard";
 
 const ButtonsCard = () => {
   return (
     <CardBox
       sx={{
-        padding: { xs: "50px 20px", "1xl": "100px 40px" },
+        padding: { xs: "50px 20px", "3xl": "60px 40px" },
         display: "flex",
         flexDirection: { xs: "column", xl: "row" },
         alignItems: "center",
@@ -21,14 +20,14 @@ const ButtonsCard = () => {
         gap: "30px",
       }}
     >
-      <CustomButton variant="outlined"
+      <CustomButton variant="contained"
         sx={{
           minWidth: { xs: "80%", xl: "250px", "3xl": "43%" },
         }}
       >
         <img
           src={scan}
-          style={{ width: "40px", height: "40px", resize: 'contained'}}
+          style={{ width: "40px", height: "40px" }}
           alt={"scan body"}
         />
         <Box sx={{ display: "flex", gap: "10px", alignItems: "center" }}>
@@ -36,9 +35,10 @@ const ButtonsCard = () => {
           <Arrow />
         </Box>
       </CustomButton>
-      <CustomButton variant="outlined"
+      <CustomButton variant="contained"
         sx={{
           minWidth: { xs: "80%", xl: "250px", "3xl": "43%" },
+          bgcolor: 'secondary.main'
         }}
       >
         <img
@@ -52,7 +52,6 @@ const ButtonsCard = () => {
         </Box>
       </CustomButton>
     </CardBox>
-  
   );
 };
 
