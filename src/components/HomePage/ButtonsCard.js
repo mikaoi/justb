@@ -28,7 +28,7 @@ const ButtonsCard = () => {
       >
         <img
           src={scan}
-          style={{ width: "40px", height: "40px" }}
+          style={{ width: "40px", height: "40px", resize: 'contained'}}
           alt={"scan body"}
         />
         <Box sx={{ display: "flex", gap: "10px", alignItems: "center" }}>

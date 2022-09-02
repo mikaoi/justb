@@ -75,7 +75,7 @@ const GoalsCard = () => {
             gap: "20px",
           }}
         >
-          <Typography variant={"h3"}>Monthly Move Minutes</Typography>
+          <Typography variant={"h3"}>Weekly Move Minutes</Typography>
           <CustomCircularProgress value={60} />
         </Box>
       </Box>
