@@ -23,7 +23,7 @@ const Home = () => {
           display: "flex",
           flexDirection: { xs: "column", xl: "row" },
           gap: { xs: "30px", "3xl": "60px" },
-          height: "50%",
+          height: "100%",
         }}
       >
         <GoalsCard />

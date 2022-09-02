@@ -45,7 +45,7 @@ const CustomCircularProgress = (props) => {
           color: "primary.light",
         }}
         size={200}
-        thickness={1.2}
+        thickness={5}
         {...props}
         value={100}
       />
@@ -61,7 +61,7 @@ const CustomCircularProgress = (props) => {
           },
         }}
         size={200}
-        thickness={1.2}
+        thickness={5}
         {...props}
         value={props.value}
       />
