@@ -18,10 +18,6 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
   <h3 align="center">justb movement dashboard</h3>
 
@@ -72,9 +68,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![CleanShot 2022-09-05 at 14 18 48@2x](https://user-images.githubusercontent.com/102714188/188499818-ca2f48af-6b47-4c02-b798-ab86342f8ae7.png)
-The purpose of this project is to build a native web application.
+![CleanShot 2022-09-05 at 14 20 49@2x](https://user-images.githubusercontent.com/102714188/188499916-a2dd522f-3547-4b52-aa70-8e8cba89014e.png)
 
+### The purpose of this project is to build a native web application.
 justb is hiring Marcus Harrell to write well designed, testable, efficient code, using the best software development practices to create website layout/user interfaces and integrate data from various back-end services and databases. justb is taking a phased approach to the development of the web application to ensure to prioritize building the foundations of the web application before adding additional features. Phase one involves planning and building a functional web applications and systems for justb to host it’s users on. Phase one of this project should take no longer than 4 months to complete and remain within
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -85,65 +81,16 @@ justb is hiring Marcus Harrell to write well designed, testable, efficient code,
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![Next][Next.js]][Next-url]
+<!-- * [![Next][Next.js]][Next-url] -->
 * [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
+<!-- * [![Vue][Vue.js]][Vue-url] -->
+<!-- * [![Angular][Angular.io]][Angular-url]
 * [![Svelte][Svelte.dev]][Svelte-url]
 * [![Laravel][Laravel.com]][Laravel-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![JQuery][JQuery.com]][JQuery-url] -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -166,6 +113,15 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+##### Figma & UI Design
+<a href="https://github.com/marcusharrell"><strong>Marcus Harrell</strong></a>
+
+
+##### Front-End & React
+<a href="https://github.com/Marnikilis"><strong>Marnikilis</strong></a>
+<br>
+<a href="https://github.com/marcusharrell"><strong>Marcus Harrell</strong></a>
+
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
@@ -192,7 +148,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Your Name - Marcus Harrell - marcusharrell597@icloud.com
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
