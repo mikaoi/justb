@@ -10,7 +10,7 @@ const MonthlyChallengesCard = () => {
   return (
     <CardBox
       sx={{
-        paddingTop: "14px",
+        paddingY: "14px",
         paddingLeft: { xs: "20px", "3xl": "32px" },
         width: { xs: "100%", xl: "50%" },
         boxShadow: theme.shadows[2],
@@ -26,7 +26,7 @@ const MonthlyChallengesCard = () => {
           paddingTop: "10px",
           display: "flex",
           justifyContent: "center",
-          marginBottom: "100px",
+          marginBottom: "80px",
         }}
       >
         <Typography variant={"h2"} component={"span"}>
@@ -37,7 +37,7 @@ const MonthlyChallengesCard = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: "70px",
+          gap: "50px",
           mb: "5px",
         }}
       >

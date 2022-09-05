@@ -71,7 +71,7 @@ const GoalsCard = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: "20px",
+            gap: "10px",
           }}
         >
           <Typography variant={"h3"}>Weekly Move Minutes</Typography>

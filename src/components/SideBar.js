@@ -2,27 +2,26 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Link from "@mui/material/Link";
-import { createStyles, makeStyles } from "@mui/styles";
-import { NavLink } from "react-router-dom";
+import {createStyles, makeStyles} from "@mui/styles";
+import {NavLink} from "react-router-dom";
 import avatar from "../styles/images/navImg/avatar.svg";
 import logo from "../styles/images/logo.svg";
-import { ReactComponent as Close } from "../styles/images/navImg/closeBtn.svg";
+import {ReactComponent as Close} from "../styles/images/navImg/closeBtn.svg";
 import bg from "../styles/images/navImg/navShapes.svg";
 import home from "../styles/images/navImg/home.png";
 import find from "../styles/images/navImg/class.png";
 import fav from "../styles/images/navImg/fav.png";
 import settings from "../styles/images/navImg/settings.png";
 import help from "../styles/images/navImg/help.png";
-import { Typography, Button, Avatar, Stack } from "@mui/material";
+import {Typography, Button, Avatar, Stack} from "@mui/material";
 import CustomBorderLinearProgress from "./ProgressDiagram/CustomBorderLinearProgress";
-import { theme } from "../styles/theme/theme";
-import { CustomButton } from "../styles/theme/styledComponents";
+import {theme} from "../styles/theme/theme";
 
 const MyNavLink = React.forwardRef((props, ref) => (
   <NavLink
     ref={ref}
     to={props.to}
-    className={({ isActive }) =>
+    className={({isActive}) =>
       `${props.className} ${isActive ? props.activeClassName : ""}`
     }
   >
@@ -36,8 +35,8 @@ const useStyles = makeStyles((theme) =>
       fontFamily: "SchemeLt-Regular",
       display: "flex",
       alignItems: "center",
-      gap: "17px",
-      padding: "8px 30px",
+      gap: "16px",
+      padding: "5px 30px",
       "& span": {
         lineHeight: 1,
         marginTop: "5px",
@@ -53,14 +52,14 @@ const useStyles = makeStyles((theme) =>
 export default function SideBar(props) {
   const mobileWidth = 270;
   const classes = useStyles();
-  const { window, mobileOpen, setMenu, width } = props;
+  const {window, mobileOpen, setMenu, width} = props;
 
   const linkInfo = [
-    { text: "Home", icon: home },
-    { text: "Find a class", icon: find },
-    { text: "Favorites", icon: fav },
-    { text: "Settings", icon: settings },
-    { text: "Help & Resources", icon: help },
+    {text: "Home", icon: home},
+    {text: "Find a class", icon: find},
+    {text: "Favorites", icon: fav},
+    {text: "Settings", icon: settings},
+    {text: "Help & Resources", icon: help},
   ];
 
   const drawer = (
@@ -69,7 +68,7 @@ export default function SideBar(props) {
         bgcolor={"primary.main"}
         sx={{
           backgroundColor: theme.palette.background,
-          height: { xs: "170px", "2xl": "200px" },
+          height: {xs: "170px", "2xl": "190px"},
           backgroundImage: `url(${bg})`,
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
@@ -80,8 +79,8 @@ export default function SideBar(props) {
           <Avatar
             src={logo}
             sx={{
-              height: { xs: "50px", "3xl": "70px" },
-              width: { xs: "50px", "3xl": "70px" },
+              height: {xs: "50px", "3xl": "70px"},
+              width: {xs: "50px", "3xl": "70px"},
               position: "absolute",
               top: "16px",
               left: "16px",
@@ -91,8 +90,8 @@ export default function SideBar(props) {
         <Avatar
           src={avatar}
           sx={{
-            height: { xs: "140px", "2xl": "170px" },
-            width: { xs: "140px", "2xl": "170px" },
+            height: {xs: "140px", "2xl": "150px"},
+            width: {xs: "140px", "2xl": "150px"},
             position: "absolute",
             top: "40%",
             left: "50%",
@@ -102,7 +101,7 @@ export default function SideBar(props) {
       </Box>
       <Stack
         spacing={1}
-        sx={{ textAlign: "center", paddingTop: { xs: "50px", "2xl": "60px" } }}
+        sx={{textAlign: "center", paddingTop: {xs: "45px", "2xl": "50px"}}}
       >
         <Typography variant={"body1"} component={"div"}>
           Ms. Wilson’s Class
@@ -111,43 +110,66 @@ export default function SideBar(props) {
           3rd Grade
         </Typography>
       </Stack>
-      <Box
-        sx={{
-          padding: { xs: "25px 0 25px 20px", "2xl": "30px 0 30px 35px" },
-          display: "flex",
-          flexDirection: "column",
-          gap: { xs: "15px", "3xl": "25px" },
-        }}
-      >
-        {linkInfo.map((link, index) => (
-          <Link
-            component={MyNavLink}
-            key={index}
-            className={classes.link}
-            activeClassName={classes.activeLink}
-            disablePadding
-            to={`/${
-              link.text === "Home"
-                ? ""
-                : link.text.replace(/\s/g, "").toLowerCase()
-            }`}
-            sx={{ fontSize: { xs: "18px", "3xl": "23px" } }}
+      <Box sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        gap: "10px",
+        height: "60%"
+      }}>
+        <Box
+          sx={{
+            padding: {xs: "20px 0 0 20px", "2xl": "25px 0 0 35px"},
+            display: "flex",
+            flexDirection: "column",
+            gap: {xs: "15px", "3xl": "20px"},
+          }}
+        >
+          {linkInfo.map((link, index) => (
+            <Link
+              component={MyNavLink}
+              key={index}
+              className={classes.link}
+              activeClassName={classes.activeLink}
+              disablePadding
+              to={`/${
+                link.text === "Home"
+                  ? ""
+                  : link.text.replace(/\s/g, "").toLowerCase()
+              }`}
+              sx={{fontSize: {xs: "18px", "3xl": "22px"}}}
+            >
+              <img
+                src={link.icon}
+                alt={link.text}
+                style={{width: "32px", height: "32px"}}
+              />
+              <span>{link.text}</span>
+            </Link>
+          ))}
+        </Box>
+        <Box
+          sx={{
+            padding: {xs: "0 0 25px 20px", "2xl": "0 0 30px 35px"},
+            display: "flex",
+            flexDirection: "column",
+            gap: "10px",
+          }}
+        >
+          <CustomBorderLinearProgress
+            variant="determinate"
+            value={80}
+            width={{xs: "230px", "3xl": "280px"}}
+          />
+          <Box
+            sx={{
+              fontSize: "17px",
+              paddingLeft: {xs: "30px", "2xl": "35px"},
+            }}
           >
-            <img
-              src={link.icon}
-              alt={link.text}
-              style={{ width: "32px", height: "32px" }}
-            />
-            <span>{link.text}</span>
-          </Link>
-        ))}
-        
-        <CustomBorderLinearProgress
-          sx={{ marginTop: { xs: 2, "2xl": 4 } }}
-          variant="determinate"
-          value={80}
-          width={{ xs: "230px", "3xl": "280px" }}
-        />
+            <Typography>12/15 classes completed</Typography>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
@@ -156,12 +178,12 @@ export default function SideBar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box>
+    <Box sx={{position: "relative", minHeight: "100%"}}>
       <Box
         component="nav"
         sx={{
-          width: { "2xl": width - 50, "3xl": width },
-          flexShrink: { "2xl": 0 },
+          width: {"2xl": width - 50, "3xl": width},
+          flexShrink: {"2xl": 0},
         }}
       >
         <Drawer
@@ -174,12 +196,13 @@ export default function SideBar(props) {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: "block", "2xl": "none" },
+            display: {xs: "block", "2xl": "none"},
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: mobileWidth,
               borderRadius: "0 20px 20px 0",
               border: "none",
+              minHeight: "100%"
             },
           }}
         >
@@ -188,15 +211,16 @@ export default function SideBar(props) {
         <Drawer
           variant="permanent"
           sx={{
-            display: { xs: "none", "2xl": "block" },
+            display: {xs: "none", "2xl": "block"},
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: { xs: width - 50, "3xl": width },
+              width: {xs: width - 50, "3xl": width},
               height: "100vh",
               borderRadius: "0 20px 20px 0",
               border: "none",
               boxShadow: theme.shadows[3],
               position: "absolute",
+              minHeight: "100%"
             },
           }}
           open
@@ -211,7 +235,7 @@ export default function SideBar(props) {
               top: "20px",
               left: mobileWidth - 10,
               zIndex: 1300,
-              display: { xs: "block", "2xl": "none" },
+              display: {xs: "block", "2xl": "none"},
             }}
           >
             <Close
@@ -224,7 +248,7 @@ export default function SideBar(props) {
           </Button>
         )}
       </Box>
-      
+
     </Box>
   );
 }

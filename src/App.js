@@ -1,6 +1,6 @@
-import { NavLink, Route, Routes } from "react-router-dom";
-import { ThemeProvider } from "@mui/material/styles";
-import { theme } from "./styles/theme/theme";
+import {NavLink, Route, Routes} from "react-router-dom";
+import {ThemeProvider} from "@mui/material/styles";
+import {theme} from "./styles/theme/theme";
 import {
   Container,
   CssBaseline,
@@ -18,8 +18,9 @@ import Settings from "./pages/Settings";
 import HelpPage from "./pages/HelpPage";
 import SideBar from "./components/SideBar";
 import Category from "./pages/Category";
-import { useState } from "react";
+import React, {useState} from "react";
 import bg from "./styles/images/bg.png";
+import Tooltip from "./components/HomePage/Tooltip";
 
 const App = () => {
   const drawerWidth = 350;
@@ -30,7 +31,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
+      <CssBaseline/>
       <Container
         style={{
           padding: "0",
@@ -41,6 +42,7 @@ const App = () => {
           backgroundRepeat: "no-repeat",
           display: "flex",
           fontFamily: "Scheme",
+          position: "relative"
         }}
       >
         <SideBar
@@ -50,23 +52,17 @@ const App = () => {
         />
         <Box
           component="main"
-          sx={{
-            flexGrow: 1,
-            width: {
-              xs: `calc(100% - ${drawerWidth - 50}px)`,
-              "3xl": `calc(100% - ${drawerWidth}px)`,
-            },
-          }}
+          sx={{width: "100%"}}
         >
           <AppBar
             sx={{
               height: "60px",
-              display: { xs: "flex", "2xl": "none" },
+              display: {xs: "flex", "2xl": "none"},
             }}
           >
             <Toolbar>
-              <NavLink to={"/"} style={{ height: "40px" }}>
-                <img src={logo} width={"40px"} alt={"Logo"} />
+              <NavLink to={"/"} style={{height: "40px"}}>
+                <img src={logo} width={"40px"} alt={"Logo"}/>
               </NavLink>
               <IconButton
                 color="inherit"
@@ -95,16 +91,17 @@ const App = () => {
                 "2xl": "25px 30px",
               },
               height: "100%",
+              marginLeft: "auto"
             }}
           >
             <Routes>
-              <Route path={"/"} element={<Home />} />
-              <Route path={"/findaclass"} element={<FindAClass />} />
-              <Route path={"/favorites"} element={<Favorites />} />
-              <Route path={"/settings"} element={<Settings />} />
-              <Route path={"/help&resources"} element={<HelpPage />} />
+              <Route path={"/"} element={<Home/>}/>
+              <Route path={"/findaclass"} element={<FindAClass/>}/>
+              <Route path={"/favorites"} element={<Favorites/>}/>
+              <Route path={"/settings"} element={<Settings/>}/>
+              <Route path={"/help&resources"} element={<HelpPage/>}/>
               {/*<Route path={"/category"} element={<Category />} />*/}
-              <Route path={"/favorites/:category"} element={<Category />} />
+              <Route path={"/favorites/:category"} element={<Category/>}/>
             </Routes>
           </Box>
         </Box>
