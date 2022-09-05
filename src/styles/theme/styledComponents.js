@@ -1,5 +1,6 @@
 import {styled} from "@mui/material/styles";
 import {Box, Button, Select, TextField} from "@mui/material";
+import {theme} from "./theme";
 
 export const CardBox = styled(Box)(({theme}) => ({
   backgroundColor: theme.palette.background.paper,
@@ -90,4 +91,19 @@ export const CustomSelect = styled(Select)(({theme}) => ({
     right: "15px",
     pointerEvents: "none",
   },
+}));
+
+export const ListItem = styled(Box)(({theme}) => ({
+  background: theme.palette.lightColor.light,
+  height: "50px",
+  borderRadius: "30px 0 0 30px",
+  padding: "18px 25px",
+  color: theme.palette.fontColor.dark,
+  display: "flex",
+  gap: "35px",
+  alignItems: "center",
+  [theme.breakpoints.down("md")]: {
+  gap: "10px",
+  fontSize: "18px",
+},
 }));

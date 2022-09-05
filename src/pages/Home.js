@@ -17,6 +17,7 @@ const Home = () => {
           flexDirection: "column",
           gap: "50px",
           paddingTop: {xs: "60px", "2xl": "60px"},
+          paddingX: {xs: 0, "3xl": "40px"}
         }}
       >
         <ButtonsCard/>
