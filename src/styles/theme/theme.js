@@ -98,10 +98,10 @@ theme.typography.h2 = {
 
 theme.typography.h3 = {
   fontFamily: "SchemeBk-Regular",
-  fontSize: "25px",
+  fontSize: "22px",
   fontWeight: 400,
   [theme.breakpoints.down("3xl")]: {
-    fontSize: "20px",
+    fontSize: "18px",
   },
 };
 

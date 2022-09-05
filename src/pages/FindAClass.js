@@ -43,7 +43,7 @@ const FindAClass = () => {
         paddingX: { xs: "30px", "2xl": "40px", "3xl": "50px" },
         display: "flex",
         flexDirection: "column",
-        gap: { xs: "40px", "2xl": "50px" },
+        gap: { xs: "40px", "2xl": "20px" },
         justifyContent: "space-between",
         width: "100%",
         height: "100%",

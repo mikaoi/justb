@@ -1,12 +1,15 @@
-import { styled } from "@mui/material/styles";
-import { Box, Button, Select, TextField } from "@mui/material";
+import {styled} from "@mui/material/styles";
+import {Box, Button, Select, TextField} from "@mui/material";
+import {theme} from "./theme";
 
-export const CardBox = styled(Box)(({ theme }) => ({
+export const CardBox = styled(Box)(({theme}) => ({
   backgroundColor: theme.palette.background.paper,
   borderRadius: "20px",
+  position: "relative",
+  margin: "0px",
 }));
 
-export const CustomButton = styled(Button)(({ theme }) => ({
+export const CustomButton = styled(Button)(({theme}) => ({
   textTransform: "none",
   fontFamily: "SchemeRg-Regular",
   borderWidth: '3px',
@@ -16,21 +19,27 @@ export const CustomButton = styled(Button)(({ theme }) => ({
   gap: "40px",
   color: "inherit",
   justifyContent: "flex-start",
-  padding: "20px 30px",
+  padding: 0,
+  "&:hover, &:active": {
+    opacity: 0.8,
+    borderWidth: "3px",
+    backgroundColor: "transparent",
+  },
   [theme.breakpoints.down("3xl")]: {
     gap: "10px",
     fontSize: "20px",
   },
   [theme.breakpoints.down("xl")]: {
-    gap: "40px",
-    justifyContent: "center",
+    gap: "30px",
+    textAlign: "center",
   },
   [theme.breakpoints.down("md")]: {
-    gap: "30px",
+    gap: "10px",
     fontSize: "18px",
+    width: "100%"
   },
 }));
-export const UnStyledButton = styled(Button)(({ theme }) => ({
+export const UnStyledButton = styled(Button)(({theme}) => ({
   color: "transparent",
   backgroundColor: "transparent",
   alignSelf: "flex-end",
@@ -41,7 +50,7 @@ export const UnStyledButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-export const SearchInput = styled(TextField)(({ theme }) => ({
+export const SearchInput = styled(TextField)(({theme}) => ({
   outline: "none",
   border: "none",
   borderRadius: "10px",
@@ -62,7 +71,7 @@ export const SearchInput = styled(TextField)(({ theme }) => ({
   },
 }));
 
-export const CustomSelect = styled(Select)(({ theme }) => ({
+export const CustomSelect = styled(Select)(({theme}) => ({
   outline: "none",
   border: "none",
   fontSize: "18px",
@@ -82,4 +91,19 @@ export const CustomSelect = styled(Select)(({ theme }) => ({
     right: "15px",
     pointerEvents: "none",
   },
+}));
+
+export const ListItem = styled(Box)(({theme}) => ({
+  background: theme.palette.lightColor.light,
+  height: "50px",
+  borderRadius: "30px 0 0 30px",
+  padding: "18px 25px",
+  color: theme.palette.fontColor.dark,
+  display: "flex",
+  gap: "35px",
+  alignItems: "center",
+  [theme.breakpoints.down("md")]: {
+  gap: "10px",
+  fontSize: "18px",
+},
 }));

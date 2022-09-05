@@ -17,7 +17,7 @@ const Favorites = () => {
   return (
     <CardBox
       sx={{
-        paddingY: "15px",
+        paddingY: "10px",
         paddingX: { xs: "30px", "2xl": "40px", "3xl": "50px" },
         display: "flex",
         flexDirection: "column",
@@ -50,7 +50,7 @@ const Favorites = () => {
         </Box>
         <UnStyledButton endIcon={<ArrowIcon style={{ width: "30px" }} />} />
       </Box>
-      <Stack spacing={"20px"} marginBottom={2}>
+      <Stack spacing={"12px"} marginBottom={2}>
         {classes.map((value, i) => {
           return (
             <Stack key={i} spacing={1}>

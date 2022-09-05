@@ -1,27 +1,26 @@
 import React from "react";
-import { Box, Stack, Typography } from "@mui/material";
+import {Box, Stack, Typography} from "@mui/material";
 import goalsImg from "../../styles/images/cardsImg/goals.png";
 import CustomCircularProgress from "../ProgressDiagram/CustomCircularProgress";
 import CustomBorderLinearProgress from "../ProgressDiagram/CustomBorderLinearProgress";
-import { CardBox } from "../../styles/theme/styledComponents";
-import { theme } from "../../styles/theme/theme";
+import {CardBox} from "../../styles/theme/styledComponents";
+import {theme} from "../../styles/theme/theme";
 
 const GoalsCard = () => {
   return (
     <CardBox
       sx={{
         paddingY: "14px",
-        paddingX: { xs: "100px", "3xl": "32px" },
-        width: { xs: "100%", xl: "50%" },
+        paddingX: {xs: "20px", "3xl": "32px"},
+        width: {xs: "100%", xl: "50%"},
         display: "flex",
         flexDirection: "column",
-        position: "relative",
         boxShadow: theme.shadows[2],
       }}
     >
       <img
         src={goalsImg}
-        style={{ width: "50px", height: "50px", position: "absolute" }}
+        style={{width: "50px", height: "50px", position: "absolute"}}
         alt={"goals"}
       />
       <Box
@@ -32,7 +31,7 @@ const GoalsCard = () => {
           marginBottom: 3,
         }}
       >
-        <Typography variant={"h2"} component={"span"}>
+        <Typography variant={"h2"} component={"span"} sx={{paddingLeft: "35px"}}>
           Weekly Move Minutes
         </Typography>
       </Box>
@@ -43,7 +42,7 @@ const GoalsCard = () => {
           alignItems: "center",
           justifyContent: "space-between",
           height: "100%",
-          gap: { xs: "25px", xl: "10px" },
+          gap: {xs: "25px", xl: "10px"},
         }}
       >
         <Box
@@ -53,7 +52,7 @@ const GoalsCard = () => {
             alignItems: "center",
           }}
         >
-          <Stack spacing={1} alignItems={"center"} sx={{ marginBottom: "3px" }}>
+          <Stack spacing={1} alignItems={"center"} sx={{marginBottom: "3px"}}>
             <Typography variant={"h4"} component={"span"}>
               Classes Completed
             </Typography>
@@ -72,11 +71,11 @@ const GoalsCard = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: "20px",
+            gap: "10px",
           }}
         >
           <Typography variant={"h3"}>Weekly Move Minutes</Typography>
-          <CustomCircularProgress value={60} />
+          <CustomCircularProgress value={60}/>
         </Box>
       </Box>
     </CardBox>

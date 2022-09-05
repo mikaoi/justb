@@ -1,25 +1,42 @@
-import React from "react";
-import { Box, Typography } from "@mui/material";
-import { CardBox } from "../../styles/theme/styledComponents";
+import React, {useState, useEffect} from "react";
+import {Box, Typography} from "@mui/material";
+import {CardBox, ListItem} from "../../styles/theme/styledComponents";
 import challengeImg from "../../styles/images/cardsImg/challenge.png";
-import { theme } from "../../styles/theme/theme";
-import { TextField } from "@mui/material";
+import {theme} from "../../styles/theme/theme";
+import {ReactComponent as ListMark} from "../../styles/images/listMark.svg";
+import {ReactComponent as Close} from "../../styles/images/navImg/closeBtn.svg";
+import {TextField} from "@mui/material";
 import GoalList from "./GoalList";
 
 const MonthlyChallengesCard = () => {
+  const [teacherChallenge, setTeacherChallenge] = useState('')
+
+  useEffect(() => {
+    setTeacherChallenge(window.sessionStorage.getItem("teacherChallenge"));
+  }, []);
+
+  useEffect(() => {
+    window.sessionStorage.setItem("teacherChallenge", teacherChallenge);
+  }, [teacherChallenge]);
+
+  const onChallengeHandler = (e) => {
+    if (e.key === "Enter") {
+      setTeacherChallenge(e.target.value)
+    }
+  }
+
   return (
     <CardBox
       sx={{
-        paddingTop: "14px",
-        paddingLeft: { xs: "20px", "3xl": "32px" },
-        width: { xs: "100%", xl: "50%" },
-        position: "relative",
+        paddingY: "14px",
+        paddingLeft: {xs: "20px", "3xl": "32px"},
+        width: {xs: "100%", xl: "50%"},
         boxShadow: theme.shadows[2],
       }}
     >
       <img
         src={challengeImg}
-        style={{ width: "50px", height: "50px", position: "absolute" }}
+        style={{width: "50px", height: "50px", position: "absolute"}}
         alt={"challenge"}
       />
       <Box
@@ -27,7 +44,7 @@ const MonthlyChallengesCard = () => {
           paddingTop: "10px",
           display: "flex",
           justifyContent: "center",
-          marginBottom: "100px",
+          marginBottom: "80px",
         }}
       >
         <Typography variant={"h2"} component={"span"}>
@@ -38,31 +55,42 @@ const MonthlyChallengesCard = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: "70px",
+          gap: "50px",
           mb: "5px",
         }}
       >
         {[1, 2].map((v, i) => {
           return (
-            <Box
-              key={i}
-              sx={{
-                background: theme.palette.lightColor.light,
-                height: "50px",
-                borderRadius: "30px 0 0 30px",
-              }}
-            />
-
+            <ListItem key={i}>
+              <ListMark/>
+            </ListItem>
           );
         })}
-
-        <TextField
-          id="standard"
-          label="Teacher Challenge"
-          variant="standard"
-          color="info"
-          placeholder="Enter your own custom challenge!"
-        />
+        {teacherChallenge
+          ? <ListItem>
+            <ListMark/>
+            <Typography variant={"h2"} component={"span"}>
+              {teacherChallenge}
+            </Typography>
+            <Close onClick={() => setTeacherChallenge('')}
+                   style={{
+                     cursor: "pointer",
+                     marginLeft: "auto",
+                     width: "15px",
+                     height: "15px",
+                     fill: theme.palette.secondary.main,
+                   }}
+            />
+          </ListItem>
+          : <TextField
+            id="standard"
+            label="Teacher Challenge"
+            variant="standard"
+            color="info"
+            placeholder="Enter your own custom challenge!"
+            onKeyUp={(e) => onChallengeHandler(e)}
+          />
+        }
       </Box>
     </CardBox>
   );
