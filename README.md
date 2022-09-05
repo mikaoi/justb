@@ -1,14 +1,3 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -83,8 +72,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
+![CleanShot 2022-09-05 at 14 18 48@2x](https://user-images.githubusercontent.com/102714188/188499818-ca2f48af-6b47-4c02-b798-ab86342f8ae7.png)
 The purpose of this project is to build a native web application.
 
 justb is hiring Marcus Harrell to write well designed, testable, efficient code, using the best software development practices to create website layout/user interfaces and integrate data from various back-end services and databases. justb is taking a phased approach to the development of the web application to ensure to prioritize building the foundations of the web application before adding additional features. Phase one involves planning and building a functional web applications and systems for justb to host it’s users on. Phase one of this project should take no longer than 4 months to complete and remain within
