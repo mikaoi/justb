@@ -88,7 +88,7 @@ const App = () => {
             sx={{
               padding: {
                 xs: "90px 20px 20px 20px",
-                "2xl": "25px 30px",
+                "2xl": "20px 30px",
               },
               height: "100%",
               marginLeft: "auto"
