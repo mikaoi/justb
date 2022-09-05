@@ -115,7 +115,7 @@ export default function SideBar(props) {
         flexDirection: "column",
         justifyContent: "space-between",
         gap: "10px",
-        height: "60%"
+        height: "calc(100vh - 300px)"
       }}>
         <Box
           sx={{
