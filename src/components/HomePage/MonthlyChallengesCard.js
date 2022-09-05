@@ -13,7 +13,6 @@ const MonthlyChallengesCard = () => {
         paddingTop: "14px",
         paddingLeft: { xs: "20px", "3xl": "32px" },
         width: { xs: "100%", xl: "50%" },
-        position: "relative",
         boxShadow: theme.shadows[2],
       }}
     >
