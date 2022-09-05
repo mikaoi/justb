@@ -46,10 +46,11 @@ const Tooltip = () => {
         width: '100%',
         boxShadow: 4,
         display: "flex",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        gap: "10px"
       }}
     >
-      <Typography variant={"body1"} sx={{fontSize: "17px"}}>
+      <Typography variant={"body1"} sx={{fontSize: {xs: "14px", xl: "17px"}}}>
         Welcome Back, Ms. Wilson’s Class.
         {" It's " + month + " " + today + ", " + year}!
       </Typography>
