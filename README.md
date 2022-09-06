@@ -148,7 +148,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - Marcus Harrell - marcusharrell597@icloud.com
+Marcus Harrell - marcusharrell597@icloud.com
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
