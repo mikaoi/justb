@@ -32,7 +32,7 @@ const GoalsCard = () => {
         }}
       >
         <Typography variant={"h2"} component={"span"} sx={{paddingLeft: "35px"}}>
-          Weekly Move Minutes
+          Weekly Challenges
         </Typography>
       </Box>
       <Box

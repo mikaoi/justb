@@ -36,29 +36,19 @@ const Tooltip = () => {
 
   return (
     <Box
-      sx={{
-        position: "absolute",
-        top: {xs: "60px", "2xl": "0px"},
-        left: 0,
-        zIndex: {xs: 900, "2xl": 1200},
-        padding: {xs: "12px 16px", md: "16px 24px"},
-        background: theme.palette.lightColor.dark,
-        width: '100%',
-        boxShadow: 4,
-        display: "flex",
-        justifyContent: "space-between",
-        gap: "10px"
+    sx={{
+      marginTop: "-20px",
+      padding: { xs: "12px 16px", md: "16px 24px" },
+      background: theme.palette.lightColor.dark,
+      width: '100%',
+      borderRadius: "10px",
+      boxShadow:4
       }}
     >
       <Typography variant={"body1"} sx={{fontSize: {xs: "14px", xl: "17px"}}}>
         Welcome Back, Ms. Wilson’s Class.
         {" It's " + month + " " + today + ", " + year}!
       </Typography>
-      <NavLink to={'/settings'} style={{textDecoration: "none"}}>
-        <Typography variant={"body1"} sx={{fontSize: "17px"}}>
-          Settings
-        </Typography>
-      </NavLink>
     </Box>
   );
 };
