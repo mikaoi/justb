@@ -1,7 +1,6 @@
 import React from "react";
 import {Box, Typography} from "@mui/material";
 import {theme} from "../../styles/theme/theme";
-import {NavLink} from "react-router-dom";
 
 const Tooltip = () => {
   const monthNames = [
@@ -37,28 +36,18 @@ const Tooltip = () => {
   return (
     <Box
       sx={{
-        position: "absolute",
-        top: {xs: "60px", "2xl": "0px"},
-        left: 0,
-        zIndex: {xs: 900, "2xl": 1200},
         padding: {xs: "12px 16px", md: "16px 24px"},
-        background: theme.palette.lightColor.dark,
-        width: '100%',
-        boxShadow: 4,
-        display: "flex",
-        justifyContent: "space-between",
-        gap: "10px"
+        background: theme.palette.lightColor.light,
+        maxWidth: "340px",
+        borderRadius: "20px",
       }}
     >
-      <Typography variant={"body1"} sx={{fontSize: {xs: "14px", xl: "17px"}}}>
-        Welcome Back, Ms. Wilson’s Class.
-        {" It's " + month + " " + today + ", " + year}!
+      <Typography variant={"subtitle2"}>
+        {month + " " + today + ", " + year + ", Let’s get "}
+        <Box sx={{color: "secondary.main"}} component={"span"}>
+          moving!
+        </Box>
       </Typography>
-      <NavLink to={'/settings'} style={{textDecoration: "none"}}>
-        <Typography variant={"body1"} sx={{fontSize: "17px"}}>
-          Settings
-        </Typography>
-      </NavLink>
     </Box>
   );
 };

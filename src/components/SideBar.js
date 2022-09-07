@@ -13,8 +13,8 @@ import find from "../styles/images/navImg/class.png";
 import fav from "../styles/images/navImg/fav.png";
 import settings from "../styles/images/navImg/settings.png";
 import help from "../styles/images/navImg/help.png";
+import character from '../styles/images/navImg/yellowCharacter.png'
 import {Typography, Button, Avatar, Stack} from "@mui/material";
-import CustomBorderLinearProgress from "./ProgressDiagram/CustomBorderLinearProgress";
 import {theme} from "../styles/theme/theme";
 
 const MyNavLink = React.forwardRef((props, ref) => (
@@ -137,38 +137,17 @@ export default function SideBar(props) {
                   ? ""
                   : link.text.replace(/\s/g, "").toLowerCase()
               }`}
-              sx={{fontSize: {xs: "18px", "3xl": "22px"}}}
+              sx={{fontSize: {xs: "18px", "3xl": "20px"}}}
             >
               <img
                 src={link.icon}
                 alt={link.text}
-                style={{width: "32px", height: "32px"}}
+                style={{width: "30px"}}
               />
               <span>{link.text}</span>
             </Link>
           ))}
-        </Box>
-        <Box
-          sx={{
-            padding: {xs: "0 0 25px 20px", "2xl": "0 0 30px 35px"},
-            display: "flex",
-            flexDirection: "column",
-            gap: "10px",
-          }}
-        >
-          <CustomBorderLinearProgress
-            variant="determinate"
-            value={80}
-            width={{xs: "230px", "3xl": "280px"}}
-          />
-          <Box
-            sx={{
-              fontSize: "17px",
-              paddingLeft: {xs: "30px", "2xl": "35px"},
-            }}
-          >
-            <Typography>12/15 classes completed</Typography>
-          </Box>
+          <img src={character} alt={"Character"} style={{width: "182px"}}/>
         </Box>
       </Box>
     </Box>

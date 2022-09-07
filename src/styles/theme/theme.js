@@ -92,22 +92,22 @@ theme.typography.h2 = {
   fontSize: "20px",
   fontFamily: "SchemeRg-Regular",
   [theme.breakpoints.up("3xl")]: {
-    fontSize: "25px",
+    fontSize: "20px",
   },
 };
 
 theme.typography.h3 = {
   fontFamily: "SchemeBk-Regular",
-  fontSize: "22px",
+  fontSize: "18px",
   fontWeight: 400,
   [theme.breakpoints.down("3xl")]: {
-    fontSize: "18px",
+    fontSize: "16px",
   },
 };
 
 theme.typography.h4 = {
   fontFamily: "SchemeBk-Regular",
-  fontSize: "inherit",
+  fontSize: "18px",
 };
 
 theme.typography.bold = {

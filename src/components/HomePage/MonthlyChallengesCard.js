@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import {Box, Typography} from "@mui/material";
 import {CardBox, ListItem} from "../../styles/theme/styledComponents";
 import challengeImg from "../../styles/images/cardsImg/challenge.png";
+import character from '../../styles/images/cardsImg/greyCharacter.png'
 import {theme} from "../../styles/theme/theme";
 import {ReactComponent as ListMark} from "../../styles/images/listMark.svg";
 import {ReactComponent as Close} from "../../styles/images/navImg/closeBtn.svg";
@@ -44,7 +45,7 @@ const MonthlyChallengesCard = () => {
           paddingTop: "10px",
           display: "flex",
           justifyContent: "center",
-          marginBottom: "80px",
+          marginBottom: "50px",
         }}
       >
         <Typography variant={"h2"} component={"span"}>
@@ -55,7 +56,7 @@ const MonthlyChallengesCard = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: "50px",
+          gap: "30px",
           mb: "5px",
         }}
       >
@@ -87,11 +88,13 @@ const MonthlyChallengesCard = () => {
             label="Teacher Challenge"
             variant="standard"
             color="info"
+            focused={true}
             placeholder="Enter your own custom challenge!"
             onKeyUp={(e) => onChallengeHandler(e)}
           />
         }
       </Box>
+      <img src={character} alt={"character"} style={{width: "182px", marginLeft: "-45px"}}/>
     </CardBox>
   );
 };

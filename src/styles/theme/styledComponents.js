@@ -13,7 +13,7 @@ export const CustomButton = styled(Button)(({theme}) => ({
   textTransform: "none",
   fontFamily: "SchemeRg-Regular",
   borderWidth: '3px',
-  fontSize: "25px",
+  fontSize: "20px",
   borderRadius: "50px",
   display: "flex",
   gap: "40px",
@@ -27,7 +27,7 @@ export const CustomButton = styled(Button)(({theme}) => ({
   },
   [theme.breakpoints.down("3xl")]: {
     gap: "10px",
-    fontSize: "20px",
+    fontSize: "18px",
   },
   [theme.breakpoints.down("xl")]: {
     gap: "30px",
@@ -35,7 +35,6 @@ export const CustomButton = styled(Button)(({theme}) => ({
   },
   [theme.breakpoints.down("md")]: {
     gap: "10px",
-    fontSize: "18px",
     width: "100%"
   },
 }));
@@ -95,9 +94,9 @@ export const CustomSelect = styled(Select)(({theme}) => ({
 
 export const ListItem = styled(Box)(({theme}) => ({
   background: theme.palette.lightColor.light,
-  height: "50px",
+  height: "40px",
   borderRadius: "30px 0 0 30px",
-  padding: "18px 25px",
+  padding: "15px 25px",
   color: theme.palette.fontColor.dark,
   display: "flex",
   gap: "35px",

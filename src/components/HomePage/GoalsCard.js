@@ -28,11 +28,11 @@ const GoalsCard = () => {
           paddingTop: "10px",
           display: "flex",
           justifyContent: "center",
-          marginBottom: 3,
+          marginBottom: 4,
         }}
       >
         <Typography variant={"h2"} component={"span"} sx={{paddingLeft: "35px"}}>
-          Weekly Move Minutes
+          Weekly Challenges
         </Typography>
       </Box>
       <Box
@@ -40,9 +40,8 @@ const GoalsCard = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "space-between",
           height: "100%",
-          gap: {xs: "25px", xl: "10px"},
+          gap: {xs: "25px", xl: "60px"},
         }}
       >
         <Box

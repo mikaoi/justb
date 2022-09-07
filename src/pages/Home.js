@@ -8,18 +8,17 @@ import Tooltip from "../components/HomePage/Tooltip";
 const Home = () => {
   return (
     <>
-      <Tooltip/>
       <Box
         sx={{
           width: "100%",
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          gap: "50px",
-          paddingTop: {xs: "60px", "2xl": "60px"},
+          gap: "10px",
           paddingX: {xs: 0, "3xl": "40px"}
         }}
       >
+        <Tooltip/>
         <ButtonsCard/>
         <Box
           sx={{

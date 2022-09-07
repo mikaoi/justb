@@ -2,7 +2,6 @@ import React from "react";
 import {Box} from "@mui/material";
 import scan from "../../styles/images/btnImages/bodyScan.png";
 import find from "../../styles/images/btnImages/findAClass.png";
-import {ReactComponent as Arrow} from "../../styles/images/btnImages/arrow.svg";
 import {CustomButton, CardBox} from "../../styles/theme/styledComponents";
 import {theme} from "../../styles/theme/theme";
 
@@ -18,26 +17,27 @@ const ButtonsCard = () => {
         justifyContent: "space-around",
         boxShadow: theme.shadows[1],
         gap: "30px",
+        marginBottom: {xs: "20px", "3xl": "50px"},
       }}
     >
       <CustomButton variant="outlined"
                     sx={{
-                      minWidth: {xs: "80%", xl: "260px", "3xl": "35%"},
+                      minWidth: {xs: "80%", xl: "260px", "3xl": "32%"},
                       borderColor: theme.palette.primary.main,
                     }}
       >
         <img
           src={scan}
-          style={{width: "60px", height: "auto", scale: "1.15"}}
+          style={{width: "50px", height: "auto", scale: "1.15"}}
           alt={"scan body"}
         />
         <Box sx={{display: "flex", gap: "10px", alignItems: "center"}}>
-          Do a Body Scan!
+          Do a Body Scan
         </Box>
       </CustomButton>
       <CustomButton variant="outlined"
                     sx={{
-                      minWidth: {xs: "80%", xl: "260px", "3xl": "35%"},
+                      minWidth: {xs: "80%", xl: "260px", "3xl": "32%"},
                       borderColor: theme.palette.secondary.main,
                       "&:hover, &:active": {
                         borderColor: theme.palette.secondary.main,
@@ -46,11 +46,11 @@ const ButtonsCard = () => {
       >
         <img
           src={find}
-          style={{width: "60px", height: "auto", scale: "1.19"}}
+          style={{width: "50px", height: "auto", scale: "1.19"}}
           alt={"find a class"}
         />
         <Box sx={{display: "flex", gap: "10px", alignItems: "center"}}>
-          Find a class!
+          Find a Class
         </Box>
       </CustomButton>
     </CardBox>
