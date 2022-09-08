@@ -37,6 +37,7 @@ const GoalsCard = () => {
       </Box>
       <Box
         sx={{
+        
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
