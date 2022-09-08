@@ -42,7 +42,7 @@ const CustomCircularProgress = (props) => {
       <CircularProgress
         variant="determinate"
         sx={{
-          color: "primary.light",
+          color: "secondary.light",
         }}
         size={300}
         thickness={3.5}
