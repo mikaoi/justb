@@ -18,7 +18,7 @@ const CustomBorderLinearProgress = (props) => {
           justifyContent: "center",
           textAlign: "center",
           zIndex: 40,
-          color: "secondary.light",
+          color: "lightColor.light",
           fontSize: "20px",
           whiteSpace: "nowrap",
         }}
