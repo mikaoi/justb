@@ -35,21 +35,11 @@ const Tooltip = () => {
 
   return (
     <Box
-<<<<<<< HEAD
       sx={{
         padding: {xs: "12px 16px", md: "16px 24px"},
         background: theme.palette.lightColor.light,
         maxWidth: "340px",
         borderRadius: "20px",
-=======
-    sx={{
-      marginTop: "-20px",
-      padding: { xs: "12px 16px", md: "16px 24px" },
-      background: theme.palette.lightColor.dark,
-      width: '100%',
-      borderRadius: "10px",
-      boxShadow:4
->>>>>>> main
       }}
     >
       <Typography variant={"subtitle2"}>
