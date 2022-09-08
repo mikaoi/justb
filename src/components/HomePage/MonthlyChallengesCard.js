@@ -94,7 +94,7 @@ const MonthlyChallengesCard = () => {
           />
         }
       </Box>
-      <img src={character} alt={"character"} style={{width: "182px", marginLeft: "-45px"}}/>
+      <img src={character} alt={"character"} style={{width: "180px", marginLeft: "-45px"}}/>
     </CardBox>
   );
 };

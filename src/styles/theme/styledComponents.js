@@ -26,15 +26,13 @@ export const CustomButton = styled(Button)(({theme}) => ({
     backgroundColor: "transparent",
   },
   [theme.breakpoints.down("3xl")]: {
-    gap: "10px",
     fontSize: "18px",
   },
   [theme.breakpoints.down("xl")]: {
-    gap: "30px",
     textAlign: "center",
   },
   [theme.breakpoints.down("md")]: {
-    gap: "10px",
+    gap: "20px",
     width: "100%"
   },
 }));

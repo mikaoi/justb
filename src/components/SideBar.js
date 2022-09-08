@@ -68,7 +68,7 @@ export default function SideBar(props) {
         bgcolor={"primary.main"}
         sx={{
           backgroundColor: theme.palette.background,
-          height: {xs: "170px", "2xl": "190px"},
+          height: {xs: "150px", lg: "170px", "2xl": "190px"},
           backgroundImage: `url(${bg})`,
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
@@ -80,7 +80,7 @@ export default function SideBar(props) {
             src={logo}
             sx={{
               height: {xs: "50px", "3xl": "70px"},
-              width: {xs: "50px", "3xl": "70px"},
+              width: "auto",
               position: "absolute",
               top: "16px",
               left: "16px",
@@ -90,8 +90,8 @@ export default function SideBar(props) {
         <Avatar
           src={avatar}
           sx={{
-            height: {xs: "140px", "2xl": "150px"},
-            width: {xs: "140px", "2xl": "150px"},
+            height: {xs: "120px", lg: "140px", "2xl": "150px"},
+            width: "auto",
             position: "absolute",
             top: "40%",
             left: "50%",
@@ -101,7 +101,7 @@ export default function SideBar(props) {
       </Box>
       <Stack
         spacing={1}
-        sx={{textAlign: "center", paddingTop: {xs: "45px", "2xl": "50px"}}}
+        sx={{textAlign: "center", paddingTop: {xs: "40px", lg: "45px", "2xl": "50px"}}}
       >
         <Typography variant={"body1"} component={"div"}>
           Ms. Wilson’s Class
@@ -122,7 +122,7 @@ export default function SideBar(props) {
             padding: {xs: "20px 0 0 20px", "2xl": "25px 0 0 35px"},
             display: "flex",
             flexDirection: "column",
-            gap: {xs: "15px", "3xl": "20px"},
+            gap: {xs: "10px", lg: "15px", "3xl": "20px"},
           }}
         >
           {linkInfo.map((link, index) => (
@@ -137,7 +137,7 @@ export default function SideBar(props) {
                   ? ""
                   : link.text.replace(/\s/g, "").toLowerCase()
               }`}
-              sx={{fontSize: {xs: "18px", "3xl": "20px"}}}
+              sx={{fontSize: {xs: "16px", lg: "18px", "3xl": "20px"}}}
             >
               <img
                 src={link.icon}
@@ -147,7 +147,9 @@ export default function SideBar(props) {
               <span>{link.text}</span>
             </Link>
           ))}
-          <img src={character} alt={"Character"} style={{width: "182px"}}/>
+          <Box sx={{width: {xs: "140px", "2xl": "180px"}}}>
+            <img src={character} alt={"Character"} style={{width: "100%"}}/>
+          </Box>
         </Box>
       </Box>
     </Box>
@@ -227,7 +229,6 @@ export default function SideBar(props) {
           </Button>
         )}
       </Box>
-
     </Box>
   );
 }
