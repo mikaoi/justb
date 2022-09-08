@@ -9,6 +9,14 @@ import {ReactComponent as Close} from "../../styles/images/navImg/closeBtn.svg";
 import {TextField} from "@mui/material";
 import GoalList from "./GoalList";
 
+
+const styles = theme => ({
+  textFieldColor:{
+      color:'#31476E'
+  }
+});
+
+
 const MonthlyChallengesCard = () => {
   const [teacherChallenge, setTeacherChallenge] = useState('')
 
@@ -79,7 +87,7 @@ const MonthlyChallengesCard = () => {
                      marginLeft: "auto",
                      width: "15px",
                      height: "15px",
-                     fill: theme.palette.secondary.main,
+                     fill: theme.palette.fontColor.main,
                    }}
             />
           </ListItem>
@@ -87,14 +95,15 @@ const MonthlyChallengesCard = () => {
             id="standard"
             label="Teacher Challenge"
             variant="standard"
-            color="info"
+            color="info" //need to change the text input field to #31476E
             focused={true}
             placeholder="Enter your own custom challenge!"
             onKeyUp={(e) => onChallengeHandler(e)}
+          
           />
         }
       </Box>
-      <img src={character} alt={"character"} style={{width: "180px", marginLeft: "-45px"}}/>
+      <img src={character} alt={"character"} style={{width: "275px", marginLeft: "-45px", marginTop: "50px"}}/>
     </CardBox>
   );
 };
