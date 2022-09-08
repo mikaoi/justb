@@ -16,6 +16,7 @@ import help from "../styles/images/navImg/help.png";
 import character from '../styles/images/navImg/yellowCharacter.png'
 import {Typography, Button, Avatar, Stack} from "@mui/material";
 import {theme} from "../styles/theme/theme";
+import CustomBorderLinearProgress from "./ProgressDiagram/CustomBorderLinearProgress";
 
 const MyNavLink = React.forwardRef((props, ref) => (
   <NavLink
@@ -150,6 +151,17 @@ export default function SideBar(props) {
           <Box sx={{width: {xs: "140px", "2xl": "180px"}}}>
             <img src={character} alt={"Character"} style={{width: "100%"}}/>
           </Box>
+          <CustomBorderLinearProgress
+            variant="determinate"
+            value={80}
+            showvalue={"true"}
+            width={250}
+          />
+          <Typography sx={{
+            display: "flex",
+            textAlign: "center",
+            alignContent: "center"
+          }}>Classes Completed</Typography>
         </Box>
       </Box>
     </Box>
