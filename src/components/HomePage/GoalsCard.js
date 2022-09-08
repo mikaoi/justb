@@ -28,10 +28,10 @@ const GoalsCard = () => {
       >
         <img
         src={goalsImg}
-        style={{width: "50px", height: "50px", position: "absolute", top: '10px', left: '175px'}}
+        style={{width: "50px", height: "50px", position: "absolute", top: '10px', left: '125px'}}
         alt={"goals"}
       />
-        <Typography variant={"h2"} component={"span"} sx={{paddingLeft: "35px"}}>
+        <Typography variant={"h5"} component={"span"} sx={{paddingLeft: "35px"}}>
           Weekly Challenges
         </Typography>
       </Box>

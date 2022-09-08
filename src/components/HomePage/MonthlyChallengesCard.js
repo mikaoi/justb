@@ -45,10 +45,10 @@ const MonthlyChallengesCard = () => {
       >
         <img
         src={challengeImg}
-        style={{width: "50px", height: "50px", position: "absolute", top: '10px', left: '175px'}}
+        style={{width: "50px", height: "50px", position: "absolute", top: '10px', left: '125px'}}
         alt={"challenge"}
       />
-        <Typography variant={"h2"} component={"span"}>
+        <Typography variant={"h5"} component={"span"}>
           Monthly Challenges
         </Typography>
       </Box>
