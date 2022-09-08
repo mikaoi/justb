@@ -44,7 +44,7 @@ const CustomCircularProgress = (props) => {
         sx={{
           color: "primary.light",
         }}
-        size={180}
+        size={350}
         thickness={4}
         {...props}
         value={100}
@@ -60,7 +60,7 @@ const CustomCircularProgress = (props) => {
             strokeLinecap: "round",
           },
         }}
-        size={180}
+        size={350}
         thickness={4}
         {...props}
         value={props.value}
