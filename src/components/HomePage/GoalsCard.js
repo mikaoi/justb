@@ -18,11 +18,6 @@ const GoalsCard = () => {
         boxShadow: theme.shadows[2],
       }}
     >
-      <img
-        src={goalsImg}
-        style={{width: "50px", height: "50px", position: "absolute"}}
-        alt={"goals"}
-      />
       <Box
         sx={{
           paddingTop: "10px",
@@ -31,6 +26,11 @@ const GoalsCard = () => {
           marginBottom: 4,
         }}
       >
+        <img
+        src={goalsImg}
+        style={{width: "50px", height: "50px", position: "absolute", top: '10px', left: '175px'}}
+        alt={"goals"}
+      />
         <Typography variant={"h2"} component={"span"} sx={{paddingLeft: "35px"}}>
           Weekly Challenges
         </Typography>

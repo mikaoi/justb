@@ -35,11 +35,6 @@ const MonthlyChallengesCard = () => {
         boxShadow: theme.shadows[2],
       }}
     >
-      <img
-        src={challengeImg}
-        style={{width: "50px", height: "50px", position: "absolute"}}
-        alt={"challenge"}
-      />
       <Box
         sx={{
           paddingTop: "10px",
@@ -48,6 +43,11 @@ const MonthlyChallengesCard = () => {
           marginBottom: "50px",
         }}
       >
+        <img
+        src={challengeImg}
+        style={{width: "50px", height: "50px", position: "absolute", top: '10px', left: '175px'}}
+        alt={"challenge"}
+      />
         <Typography variant={"h2"} component={"span"}>
           Monthly Challenges
         </Typography>
