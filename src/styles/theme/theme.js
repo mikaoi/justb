@@ -115,6 +115,11 @@ theme.typography.h5 = {
   fontSize: "30px",
 };
 
+theme.typography.h6 = {
+  fontFamily: "SchemeBk-Regular",
+  fontSize: "25px",
+};
+
 theme.typography.bold = {
   fontFamily: "SchemeRg-Bold",
   fontSize: "17px",

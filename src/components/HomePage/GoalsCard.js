@@ -71,10 +71,10 @@ const GoalsCard = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: "10px",
+            gap: "35px",
           }}
         >
-          <Typography variant={"h3"}>Weekly Move Minutes</Typography>
+          <Typography variant={"h6"}>Weekly Move Minutes</Typography>
           <CustomCircularProgress value={60}/>
         </Box>
       </Box>
