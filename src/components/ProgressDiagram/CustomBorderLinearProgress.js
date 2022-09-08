@@ -4,7 +4,7 @@ import BorderLinearProgress from "./BorderLinearProgress";
 
 const CustomBorderLinearProgress = (props) => {
   return (
-    <Box sx={{ position: "relative", width: props.width || "210px" }}>
+    <Box sx={{ position: "relative", width: props.width || "350px" }}>
       <Box
         sx={{
           top: "50%",

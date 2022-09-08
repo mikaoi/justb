@@ -52,11 +52,11 @@ const GoalsCard = () => {
             alignItems: "center",
           }}
         >
-          <Stack spacing={1} alignItems={"center"} sx={{marginBottom: "3px"}}>
+          <Stack spacing={1} alignItems={"center"} sx={{marginBottom: "20px"}}>
             <Typography variant={"h4"} component={"span"}>
               Classes Completed
             </Typography>
-            <Typography variant={"h4"} component={"span"}>
+            <Typography variant={"h2"} component={"span"}>
               12/15
             </Typography>
           </Stack>
