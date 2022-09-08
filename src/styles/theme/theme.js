@@ -111,7 +111,7 @@ theme.typography.h4 = {
 };
 
 theme.typography.h5 = {
-  fontFamily: "SchemeRg-Bold",
+  fontFamily: "SchemeBk-Regular",
   fontSize: "30px",
 };
 
