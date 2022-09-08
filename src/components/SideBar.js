@@ -199,7 +199,7 @@ export default function SideBar(props) {
               height: "100vh",
               borderRadius: "0 20px 20px 0",
               border: "none",
-              boxShadow: theme.shadows[3],
+              boxShadow: theme.shadows[5],
               position: "absolute",
               minHeight: "100%"
             },
