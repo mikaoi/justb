@@ -19,7 +19,7 @@ import HelpPage from "./pages/HelpPage";
 import SideBar from "./components/SideBar";
 import Category from "./pages/Category";
 import React, {useState} from "react";
-import bg from "./styles/images/bg.jpeg";
+import bg from "./styles/images/bg.png";
 
 const App = () => {
   const drawerWidth = 330;
