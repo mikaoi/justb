@@ -28,7 +28,7 @@ const ButtonsCard = () => {
       >
         <img
           src={scan}
-          style={{width: "50px", height: "auto", scale: "1.15"}}
+          style={{width: "50px", height: "auto", scale: "1.30"}}
           alt={"scan body"}
         />
         <Box sx={{display: "flex", gap: "10px", alignItems: "center"}}>
@@ -46,7 +46,7 @@ const ButtonsCard = () => {
       >
         <img
           src={find}
-          style={{width: "50px", height: "auto", scale: "1.19"}}
+          style={{width: "50px", height: "auto", scale: "1.30"}}
           alt={"find a class"}
         />
         <Box sx={{display: "flex", gap: "10px", alignItems: "center"}}>
