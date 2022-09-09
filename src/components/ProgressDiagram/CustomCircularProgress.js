@@ -24,8 +24,8 @@ const CustomCircularProgress = (props) => {
         <Box
           sx={{
             fontFamily: "SchemeLt-Regular",
-            fontSize: "60px",
-            color: "fontColor.dark",
+            fontSize: "30px",
+            color: "fontColor",
           }}
         >
           {props.value}
@@ -33,7 +33,7 @@ const CustomCircularProgress = (props) => {
         <Box
           sx={{
             fontFamily: "SchemeLt-Regular",
-            fontSize: "40px",
+            fontSize: "30px",
           }}
         >
           Minutes
@@ -44,8 +44,8 @@ const CustomCircularProgress = (props) => {
         sx={{
           color: "secondary.light",
         }}
-        size={300}
-        thickness={3.5}
+        size={200}
+        thickness={5}
         {...props}
         value={100}
       />
@@ -60,8 +60,8 @@ const CustomCircularProgress = (props) => {
             strokeLinecap: "round",
           },
         }}
-        size={300}
-        thickness={3.5}
+        size={200}
+        thickness={5}
         {...props}
         value={props.value}
       />

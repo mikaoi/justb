@@ -15,7 +15,7 @@ const Home = () => {
           display: "flex",
           flexDirection: "column",
           gap: "10px",
-          paddingX: {xs: 0, "3xl": "40px"}
+          paddingX: {xs: 1, "2xl": "100px"}
         }}
       >
         <Tooltip/>

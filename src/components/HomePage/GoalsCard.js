@@ -10,12 +10,14 @@ const GoalsCard = () => {
   return (
     <CardBox
       sx={{
+        alignContent:'center',
         paddingY: "14px",
         paddingX: {xs: "20px", "3xl": "32px"},
-        width: {xs: "100%", xl: "50%"},
+        width: "500px",
         display: "flex",
         flexDirection: "column",
         boxShadow: theme.shadows[2],
+        height: "550px"
       }}
     >
       <Box
@@ -24,14 +26,16 @@ const GoalsCard = () => {
           display: "flex",
           justifyContent: "center",
           marginBottom: 3,
+          alignContent: 'center',
+          textAlign: 'center'
         }}
       >
         <img
         src={goalsImg}
-        style={{width: "50px", height: "50px", position: "absolute", top: '10px', left: '125px'}}
+        style={{width: "50px", height: "50px", position: "relative", bottom:'10px'}}
         alt={"goals"}
       />
-        <Typography variant={"h5"} component={"span"} sx={{paddingLeft: "35px", }}>
+        <Typography variant={"h5"} component={"span"} sx={{paddingLeft: "20px", alignContent: 'center', textAlign: 'center', marginRight: '50px' }}>
           Weekly Challenges
         </Typography>
       </Box>
@@ -43,6 +47,8 @@ const GoalsCard = () => {
           alignItems: "center",
           height: "100%",
           gap: {xs: "25px", xl: "60px"},
+          alignContent: 'center',
+          textAlign: 'center'
         }}
       >
         <Box
@@ -53,10 +59,10 @@ const GoalsCard = () => {
           }}
         >
           <Stack spacing={1} alignItems={"center"} sx={{marginBottom: "20px"}}>
-            <Typography variant={"h4"} component={"span"}>
+            <Typography variant={"h6"} component={"span"}>
               Classes Completed
             </Typography>
-            <Typography variant={"h3"} component={"span"}>
+            <Typography variant={"h6"} component={"span"}>
               12/15
             </Typography>
           </Stack>
@@ -74,7 +80,7 @@ const GoalsCard = () => {
             gap: "35px",
           }}
         >
-          <Typography variant={"h5"} component={"span"} sx={{paddingLeft: "35px", }}>Weekly Move Minutes</Typography>
+          <Typography variant={"h6"} component={"span"} sx={{paddingLeft: "10px", }}>Weekly Move Minutes</Typography>
           <CustomCircularProgress value={60}/>
         </Box>
       </Box>

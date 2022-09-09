@@ -37,10 +37,14 @@ const MonthlyChallengesCard = () => {
   return (
     <CardBox
       sx={{
+        alignContent:'center',
         paddingY: "14px",
-        paddingLeft: {xs: "20px", "3xl": "32px"},
-        width: {xs: "100%", xl: "50%"},
+        paddingX: {xs: "20px", "3xl": "32px"},
+        width: "500px",
+        display: "flex",
+        flexDirection: "column",
         boxShadow: theme.shadows[2],
+        height: "550px"
       }}
     >
       <Box
@@ -53,7 +57,7 @@ const MonthlyChallengesCard = () => {
       >
         <img
         src={challengeImg}
-        style={{width: "50px", height: "50px", position: "absolute", top: '10px', left: '125px'}}
+        style={{width: "50px", height: "50px", position: "relative", right:'20px', bottom: '10px'}}
         alt={"challenge"}
       />
         <Typography variant={"h5"} component={"span"}>
@@ -95,7 +99,7 @@ const MonthlyChallengesCard = () => {
             id="standard"
             label="Teacher Challenge"
             variant="standard"
-            color="info" //need to change the text input field to #31476E
+            color={'fontColor'} //need to change the text input field to #31476E
             focused={true}
             placeholder="Enter your own custom challenge!"
             onKeyUp={(e) => onChallengeHandler(e)}
@@ -103,7 +107,7 @@ const MonthlyChallengesCard = () => {
           />
         }
       </Box>
-      {/* <img src={character} alt={"character"} style={{width: "200px", marginLeft: "400px", marginTop: "50px"}}/> */}
+      <img src={character} alt={"character"} style={{width: "200px", marginLeft: "250px", marginTop: "20px"}}/>
     </CardBox>
   );
 };
