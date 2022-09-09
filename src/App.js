@@ -39,7 +39,7 @@ const App = () => {
           minWidth: "100%",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: 'center',
+          backgroundPosition: 'top 0px left 150px',
           display: "flex",
           fontFamily: "Scheme",
           position: "relative"

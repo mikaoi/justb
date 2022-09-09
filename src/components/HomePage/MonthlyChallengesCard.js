@@ -32,7 +32,9 @@ const MonthlyChallengesCard = () => {
     if (e.key === "Enter") {
       setTeacherChallenge(e.target.value)
     }
+    
   }
+  
 
   return (
     <CardBox
