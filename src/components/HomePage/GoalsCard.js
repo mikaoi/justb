@@ -20,10 +20,10 @@ const GoalsCard = () => {
     >
       <Box
         sx={{
-          paddingTop: "10px",
+          paddingTop: "5px",
           display: "flex",
           justifyContent: "center",
-          marginBottom: 4,
+          marginBottom: 3,
         }}
       >
         <img
@@ -31,7 +31,7 @@ const GoalsCard = () => {
         style={{width: "50px", height: "50px", position: "absolute", top: '10px', left: '125px'}}
         alt={"goals"}
       />
-        <Typography variant={"h5"} component={"span"} sx={{paddingLeft: "35px"}}>
+        <Typography variant={"h5"} component={"span"} sx={{paddingLeft: "35px", }}>
           Weekly Challenges
         </Typography>
       </Box>
@@ -56,7 +56,7 @@ const GoalsCard = () => {
             <Typography variant={"h4"} component={"span"}>
               Classes Completed
             </Typography>
-            <Typography variant={"h2"} component={"span"}>
+            <Typography variant={"h3"} component={"span"}>
               12/15
             </Typography>
           </Stack>
@@ -74,7 +74,7 @@ const GoalsCard = () => {
             gap: "35px",
           }}
         >
-          <Typography variant={"h6"}>Weekly Move Minutes</Typography>
+          <Typography variant={"h5"} component={"span"} sx={{paddingLeft: "35px", }}>Weekly Move Minutes</Typography>
           <CustomCircularProgress value={60}/>
         </Box>
       </Box>

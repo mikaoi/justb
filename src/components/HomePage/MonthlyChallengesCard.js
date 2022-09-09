@@ -103,7 +103,7 @@ const MonthlyChallengesCard = () => {
           />
         }
       </Box>
-      <img src={character} alt={"character"} style={{width: "275px", marginLeft: "-45px", marginTop: "50px"}}/>
+      {/* <img src={character} alt={"character"} style={{width: "200px", marginLeft: "400px", marginTop: "50px"}}/> */}
     </CardBox>
   );
 };

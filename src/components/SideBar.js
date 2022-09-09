@@ -148,8 +148,8 @@ export default function SideBar(props) {
               <span>{link.text}</span>
             </Link>
           ))}
-          <Box sx={{width: {xs: "140px", "2xl": "180px"}}}>
-            <img src={character} alt={"Character"} style={{width: "100%"}}/>
+          <Box sx={{width: {xs: "140px", "2xl": "180px", display: 'flex', }, ml: '30px', mb: '-20px'}}>
+            <img src={character} alt={"Character"} style={{width: "100%",}} />
           </Box>
           <CustomBorderLinearProgress
             variant="determinate"
@@ -160,8 +160,9 @@ export default function SideBar(props) {
           <Typography sx={{
             display: "flex",
             textAlign: "center",
-            alignContent: "center"
-          }}>Classes Completed</Typography>
+            alignContent: "center", 
+            
+          }}>12/15 Classes Completed</Typography>
         </Box>
       </Box>
     </Box>

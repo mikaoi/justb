@@ -92,8 +92,9 @@ export const CustomSelect = styled(Select)(({theme}) => ({
 
 export const ListItem = styled(Box)(({theme}) => ({
   background: theme.palette.lightColor.light,
-  height: "40px",
-  borderRadius: "30px 0 0 30px",
+  height: "50px",
+  marginRight: '25px',
+  borderRadius: "30px 30px 30px 30px",
   padding: "15px 25px",
   color: theme.palette.fontColor.dark,
   display: "flex",
