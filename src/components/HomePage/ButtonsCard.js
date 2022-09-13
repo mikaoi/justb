@@ -12,7 +12,7 @@ const ButtonsCard = () => {
         paddingX: {xs: "20px", "3xl": "40px"},
         paddingY: "50px",
         display: "flex",
-        minHeight: "180px",
+        minHeight: "160px",
         flexDirection: {xs: "column", xl: "row"},
         alignItems: "center",
         justifyContent: "space-around",
@@ -23,7 +23,7 @@ const ButtonsCard = () => {
     >
       <CustomButton variant="outlined" href="bodyscan"
                     sx={{
-                      minWidth: {xs: "80%", xl: "260px", "3xl": "32%"},
+                      minWidth: {xs: "80%", xl: "260px", "3xl": "35%"},
                       borderColor: theme.palette.primary.main,
                     }}
       >
@@ -38,7 +38,7 @@ const ButtonsCard = () => {
       </CustomButton>
       <CustomButton variant="outlined" href="findaclass"
                     sx={{
-                      minWidth: {xs: "80%", xl: "260px", "3xl": "32%"},
+                      minWidth: {xs: "80%", xl: "260px", "3xl": "35%"},
                       borderColor: theme.palette.secondary.main,
                       "&:hover, &:active": {
                         borderColor: theme.palette.secondary.main,

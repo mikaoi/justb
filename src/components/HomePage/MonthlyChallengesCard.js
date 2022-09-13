@@ -49,28 +49,30 @@ const MonthlyChallengesCard = () => {
       sx={{
         alignContent: 'center',
         paddingY: "14px",
-        paddingX: {xs: "20px", "3xl": "32px"},
+        paddingX: "20px",
         width: {xs: "100%", xl: "50%"},
         display: "flex",
         flexDirection: "column",
         boxShadow: theme.shadows[2],
+        minHeight: "410px",
       }}
     >
-      <img
-        src={challengeImg}
-        style={{width: "45px", height: "45px", position: "absolute"}}
-        alt={"challenge"}
-      />
       <Box
         sx={{
-          paddingTop: "10px",
+          paddingTop: "5px",
           display: "flex",
           justifyContent: "center",
-          marginBottom: "30px",
-          paddingLeft: "30px",
+          marginBottom: 2,
+          alignContent: 'center',
+          textAlign: 'center'
         }}
       >
-      <Typography variant={"h5"} component={"span"} sx={{paddingLeft: "20px", alignContent: 'center', textAlign: 'center', marginRight: '50px' }}>
+        <img
+          src={challengeImg}
+          style={{width: "45px", height: "45px", position: "relative", bottom: '10px'}}
+          alt={"challenge"}
+        />
+        <Typography variant={"h5"} component={"span"} sx={{paddingLeft: "20px", alignContent: 'center', textAlign: 'center', marginRight: '50px'}}>
           Monthly Challenges
         </Typography>
       </Box>
@@ -128,7 +130,9 @@ const MonthlyChallengesCard = () => {
           onKeyUp={(e) => onChallengeHandler(e)}
         />
       </Box>
-      <img src={character} alt={"character"} style={{width: "170px", marginLeft: "-45px"}}/>
+      <Box sx={{position: "absolute", top: "calc(100% - 160px)", right: "10px"}}>
+        <img src={character} alt={"character"} style={{width: "165px", marginLeft: "auto"}}/>
+      </Box>
     </CardBox>
   );
 };

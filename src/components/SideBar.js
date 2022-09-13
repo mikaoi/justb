@@ -69,7 +69,7 @@ export default function SideBar(props) {
         bgcolor={"primary.main"}
         sx={{
           backgroundColor: theme.palette.background,
-          height: {xs: "150px", lg: "170px", "2xl": "190px"},
+          height: {xs: "150px", lg: "170px"},
           backgroundImage: `url(${bg})`,
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
@@ -80,7 +80,7 @@ export default function SideBar(props) {
           <Avatar
             src={logo}
             sx={{
-              height: {xs: "50px", "3xl": "60px"},
+              height: {xs: "50px", "3xl": "55px"},
               width: "auto",
               position: "absolute",
               top: "16px",
@@ -91,10 +91,10 @@ export default function SideBar(props) {
         <Avatar
           src={avatar}
           sx={{
-            height: {xs: "120px", lg: "140px", "2xl": "150px"},
+            height: {xs: "125px", "3xl": "145px"},
             width: "auto",
             position: "absolute",
-            top: "40%",
+            top: {xs: "45%", "3xl": "40%"},
             left: "50%",
             transform: "translateX(-50%)",
           }}
@@ -119,7 +119,7 @@ export default function SideBar(props) {
       }}>
         <Box
           sx={{
-            padding: {xs: "20px 0 0 20px", "2xl": "20px 0 0 35px"},
+            padding: {xs: "15px 0 0 20px", "2xl": "15px 0 0 35px"},
             display: "flex",
             flexDirection: "column",
           }}
@@ -127,7 +127,7 @@ export default function SideBar(props) {
           <Box sx={{
             display: "flex",
             flexDirection: "column",
-            gap: "10px",
+            gap: "9px",
           }}>
             {linkInfo.map((link, index) => (
               <Link
@@ -141,7 +141,7 @@ export default function SideBar(props) {
                     ? ""
                     : link.text.replace(/\s/g, "").toLowerCase()
                 }`}
-                sx={{fontSize: {xs: "16px", lg: "18px", "3xl": "20px"}}}
+                sx={{fontSize: {xs: "16px", lg: "18px"}}}
               >
                 <img
                   src={link.icon}
@@ -152,19 +152,23 @@ export default function SideBar(props) {
               </Link>
             ))}
           </Box>
-          <Box sx={{paddingLeft: "15px"}}>
-            <Box sx={{width: {xs: "140px", "2xl": "170px"}, marginLeft: "20px"}}>
-              <img src={character} alt={"Character"} style={{width: "100%"}}/>
-            </Box>
-            <Box sx={{textAlign: "center", maxWidth: "210px"}}>
-              <CustomBorderLinearProgress
-                variant="determinate"
-                value={80}
-                showvalue={"true"}
-                sx={{marginBottom: "10px"}}
-              />
-              <Typography variant={"h3"}>12/15 classes completed</Typography>
-            </Box>
+        </Box>
+        <Box
+          sx={{display: "flex", flexDirection: "column", alignItems: "center"}}
+        >
+          <Box
+            sx={{width: {xs: "140px", "2xl": "165px"}}}
+          >
+            <img src={character} alt={"Character"} style={{width: "100%"}}/>
+          </Box>
+          <Box sx={{textAlign: "center", maxWidth: "210px"}}>
+            <CustomBorderLinearProgress
+              variant="determinate"
+              value={80}
+              showvalue={"true"}
+              sx={{marginBottom: "10px"}}
+            />
+            <Typography variant={"h3"}>12/15 classes completed</Typography>
           </Box>
         </Box>
       </Box>

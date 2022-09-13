@@ -10,7 +10,7 @@ const GoalsCard = () => {
   return (
     <CardBox
       sx={{
-        alignContent:'center',
+        alignContent: 'center',
         paddingY: "14px",
         paddingX: {xs: "20px", "3xl": "32px"},
         display: "flex",
@@ -30,11 +30,11 @@ const GoalsCard = () => {
         }}
       >
         <img
-        src={goalsImg}
-        style={{width: "50px", height: "50px", position: "relative", bottom:'10px'}}
-        alt={"goals"}
-      />
-        <Typography variant={"h5"} component={"span"} sx={{paddingLeft: "20px", alignContent: 'center', textAlign: 'center', marginRight: '50px' }}>
+          src={goalsImg}
+          style={{width: "45px", height: "45px", position: "relative", bottom: '10px'}}
+          alt={"goals"}
+        />
+        <Typography variant={"h5"} component={"span"} sx={{paddingLeft: "20px", alignContent: 'center', textAlign: 'center', marginRight: '50px'}}>
           Weekly Challenges
         </Typography>
       </Box>
@@ -43,9 +43,9 @@ const GoalsCard = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          justifyContent: "space-between",
           height: "100%",
-          gap: {xs: "25px", xl: "40px"},
-          alignContent: 'center',
+          gap: "10px",
           textAlign: 'center'
         }}
       >
@@ -68,6 +68,7 @@ const GoalsCard = () => {
             variant="determinate"
             value={80}
             showvalue={"true"}
+            width={"250px"}
           />
         </Box>
         <Box
@@ -75,10 +76,10 @@ const GoalsCard = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: "25px",
+            gap: "20px",
           }}
         >
-          <Typography variant={"h6"} component={"span"} sx={{paddingLeft: "10px", }}>Weekly Move Minutes</Typography>
+          <Typography variant={"h6"} component={"span"} sx={{paddingLeft: "10px",}}>Weekly Move Minutes</Typography>
           <CustomCircularProgress value={60}/>
         </Box>
       </Box>

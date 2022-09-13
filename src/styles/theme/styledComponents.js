@@ -13,7 +13,7 @@ export const CustomButton = styled(Button)(({theme}) => ({
   textTransform: "none",
   fontFamily: "SchemeRg-Regular",
   borderWidth: '3px',
-  fontSize: "26px",
+  fontSize: "24px",
   borderRadius: "50px",
   display: "flex",
   gap: "35px",
