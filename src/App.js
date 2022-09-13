@@ -18,9 +18,9 @@ import Settings from "./pages/Settings";
 import HelpPage from "./pages/HelpPage";
 import SideBar from "./components/SideBar";
 import Category from "./pages/Category";
-import React, {useState} from "react";
-import bg from "./styles/images/Blue-01.png";
 import BodyScan from "./pages/BodyScan";
+import React, {useState} from "react";
+import bg from "./styles/images/Blue.png";
 
 const App = () => {
   const drawerWidth = 330;
@@ -33,17 +33,16 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline/>
       <Container
-        sx={{
-          padding: {xs: "0", "2xl": "0"},
-          backgroundImage: `url(${bg})`,
+        style={{
+          padding: "0",
           minHeight: "100vh",
           minWidth: "100%",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: {xs: "center", "2xl": "top 0px left 150px"},
           display: "flex",
           fontFamily: "Scheme",
           position: "relative",
+          backgroundImage: `url(${bg})`,
+          backgroundSize: "cover",
+          backgroundPosition:"300px",
         }}
       >
         <SideBar
@@ -56,12 +55,10 @@ const App = () => {
           sx={{
             width: "100%",
             position:"relative",
-            // left: "-10px",
             backgroundImage: `url(${bg})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}
-
         >
           <AppBar
             sx={{

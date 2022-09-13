@@ -100,6 +100,7 @@ theme.typography.h2 = {
 
 theme.typography.h3 = {
   fontFamily: "SchemeBk-Regular",
+  color: theme.palette.fontColor.main,
   fontSize: "18px",
   fontWeight: 400,
   [theme.breakpoints.down("3xl")]: {
@@ -114,12 +115,12 @@ theme.typography.h4 = {
 
 theme.typography.h5 = {
   fontFamily: "SchemeBk-Regular",
-  fontSize: "26px",
+  fontSize: "24px",
 };
 
 theme.typography.h6 = {
   fontFamily: "SchemeBk-Regular",
-  fontSize: "23px",
+  fontSize: "22px",
 };
 
 theme.typography.bold = {
