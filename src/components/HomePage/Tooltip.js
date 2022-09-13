@@ -38,15 +38,12 @@ const Tooltip = () => {
       sx={{
         padding: {xs: "12px 16px", md: "16px 24px"},
         background: theme.palette.lightColor.light,
-        maxWidth: "340px",
+        maxWidth: "350px",
         borderRadius: "20px",
       }}
     >
       <Typography variant={"subtitle2"}>
-        {month + " " + today + ", " + year + ", Let’s get "}
-        <Box sx={{color: "fontColor.main", fontStyle:'bold'}} component={"span"}>
-          moving!
-        </Box>
+        {month + " " + today + ", " + year + ", Let’s get moving!"}
       </Typography>
     </Box>
   );

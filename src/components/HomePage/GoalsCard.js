@@ -13,11 +13,10 @@ const GoalsCard = () => {
         alignContent:'center',
         paddingY: "14px",
         paddingX: {xs: "20px", "3xl": "32px"},
-        width: "500px",
         display: "flex",
+        width: {xs: "100%", xl: "50%"},
         flexDirection: "column",
         boxShadow: theme.shadows[2],
-        height: "550px"
       }}
     >
       <Box
@@ -25,7 +24,7 @@ const GoalsCard = () => {
           paddingTop: "5px",
           display: "flex",
           justifyContent: "center",
-          marginBottom: 3,
+          marginBottom: 2,
           alignContent: 'center',
           textAlign: 'center'
         }}
@@ -41,12 +40,11 @@ const GoalsCard = () => {
       </Box>
       <Box
         sx={{
-        
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           height: "100%",
-          gap: {xs: "25px", xl: "60px"},
+          gap: {xs: "25px", xl: "40px"},
           alignContent: 'center',
           textAlign: 'center'
         }}
@@ -77,7 +75,7 @@ const GoalsCard = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: "35px",
+            gap: "25px",
           }}
         >
           <Typography variant={"h6"} component={"span"} sx={{paddingLeft: "10px", }}>Weekly Move Minutes</Typography>

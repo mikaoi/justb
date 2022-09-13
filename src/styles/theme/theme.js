@@ -9,6 +9,7 @@ const breakpoints = {
     xl: 767,
     "2xl": 991,
     "3xl": 1199,
+    "4xl": 1439
   },
 };
 
@@ -21,6 +22,7 @@ export const theme = createTheme({
     primary: {
       light: "#FFCC1259",
       main: "#FFCB12",
+      dark:"#FFC263",
     },
     secondary: {
       light: "#F5D0C5",
@@ -112,12 +114,12 @@ theme.typography.h4 = {
 
 theme.typography.h5 = {
   fontFamily: "SchemeBk-Regular",
-  fontSize: "30px",
+  fontSize: "26px",
 };
 
 theme.typography.h6 = {
   fontFamily: "SchemeBk-Regular",
-  fontSize: "25px",
+  fontSize: "23px",
 };
 
 theme.typography.bold = {

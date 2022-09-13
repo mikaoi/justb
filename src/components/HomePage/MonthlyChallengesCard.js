@@ -7,62 +7,70 @@ import {theme} from "../../styles/theme/theme";
 import {ReactComponent as ListMark} from "../../styles/images/listMark.svg";
 import {ReactComponent as Close} from "../../styles/images/navImg/closeBtn.svg";
 import {TextField} from "@mui/material";
+import {v4 as uuidv4} from "uuid";
 import GoalList from "./GoalList";
 
-
-const styles = theme => ({
-  textFieldColor:{
-      color:'#31476E'
-  }
-});
-
-
 const MonthlyChallengesCard = () => {
-  const [teacherChallenge, setTeacherChallenge] = useState('')
+  const [todos, setTodos] = useState([])
+  const [todo, setTodo] = useState('')
 
   useEffect(() => {
-    setTeacherChallenge(window.sessionStorage.getItem("teacherChallenge"));
+    function getFromLocalStorage() {
+      let todos;
+      const reference = localStorage.getItem('todos');
+      if (reference?.length > 0) {
+        todos = JSON.parse(reference);
+        setTodos(todos);
+      }
+    }
+
+    getFromLocalStorage();
   }, []);
 
   useEffect(() => {
-    window.sessionStorage.setItem("teacherChallenge", teacherChallenge);
-  }, [teacherChallenge]);
+    window.localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos]);
+
 
   const onChallengeHandler = (e) => {
     if (e.key === "Enter") {
-      setTeacherChallenge(e.target.value)
+      setTodos([...todos, {todo: e.target.value, id: uuidv4()}])
+      setTodo('')
     }
-    
   }
-  
 
+  const onTodoDeleteHandler = (id) => {
+    const objWithIdIndex = todos.findIndex((obj) => obj.id === id);
+    todos.splice(objWithIdIndex, 1);
+    setTodos([...todos])
+  }
   return (
     <CardBox
       sx={{
-        alignContent:'center',
+        alignContent: 'center',
         paddingY: "14px",
         paddingX: {xs: "20px", "3xl": "32px"},
-        width: "500px",
+        width: {xs: "100%", xl: "50%"},
         display: "flex",
         flexDirection: "column",
         boxShadow: theme.shadows[2],
-        height: "550px"
       }}
     >
+      <img
+        src={challengeImg}
+        style={{width: "45px", height: "45px", position: "absolute"}}
+        alt={"challenge"}
+      />
       <Box
         sx={{
           paddingTop: "10px",
           display: "flex",
           justifyContent: "center",
-          marginBottom: "50px",
+          marginBottom: "30px",
+          paddingLeft: "30px",
         }}
       >
-        <img
-        src={challengeImg}
-        style={{width: "50px", height: "50px", position: "relative", right:'20px', bottom: '10px'}}
-        alt={"challenge"}
-      />
-        <Typography variant={"h5"} component={"span"}>
+      <Typography variant={"h5"} component={"span"} sx={{paddingLeft: "20px", alignContent: 'center', textAlign: 'center', marginRight: '50px' }}>
           Monthly Challenges
         </Typography>
       </Box>
@@ -70,7 +78,7 @@ const MonthlyChallengesCard = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: "30px",
+          gap: "20px",
           mb: "5px",
         }}
       >
@@ -81,35 +89,46 @@ const MonthlyChallengesCard = () => {
             </ListItem>
           );
         })}
-        {teacherChallenge
-          ? <ListItem>
-            <ListMark/>
-            <Typography variant={"h2"} component={"span"}>
-              {teacherChallenge}
-            </Typography>
-            <Close onClick={() => setTeacherChallenge('')}
-                   style={{
-                     cursor: "pointer",
-                     marginLeft: "auto",
-                     width: "15px",
-                     height: "15px",
-                     fill: theme.palette.fontColor.main,
-                   }}
-            />
-          </ListItem>
-          : <TextField
-            id="standard"
-            label="Teacher Challenge"
-            variant="standard"
-            color={'fontColor'} //need to change the text input field to #31476E
-            focused={true}
-            placeholder="Enter your own custom challenge!"
-            onKeyUp={(e) => onChallengeHandler(e)}
-          
-          />
-        }
+        {todos.length > 0 && <Box sx={{
+          display: "flex",
+          flexDirection: "column", maxHeight: "40px", overflowY: "scroll", gap: "20px"
+        }}>
+          {todos.map((item, i) => {
+            return <div key={i}>
+              {(item.todo !== null) &&
+              <ListItem>
+                <ListMark/>
+                <Typography variant={"h2"} component={"span"}>
+                  {item.todo}
+                </Typography>
+                <Close
+                  onClick={() => onTodoDeleteHandler(item.id)}
+                  style={{
+                    cursor: "pointer",
+                    marginLeft: "auto",
+                    width: "15px",
+                    height: "15px",
+                    fill: theme.palette.secondary.main,
+                  }}
+                />
+              </ListItem>
+              }
+            </div>
+          })}
+        </Box>}
+        <TextField
+          id="standard"
+          label="Teacher Challenge"
+          variant="standard"
+          color={"fontColor"}
+          focused={true}
+          value={todo}
+          placeholder="Enter your own custom challenge!"
+          onChange={(e) => setTodo(e.target.value)}
+          onKeyUp={(e) => onChallengeHandler(e)}
+        />
       </Box>
-      <img src={character} alt={"character"} style={{width: "200px", marginLeft: "250px", marginTop: "20px"}}/>
+      <img src={character} alt={"character"} style={{width: "170px", marginLeft: "-45px"}}/>
     </CardBox>
   );
 };

@@ -13,20 +13,20 @@ export const CustomButton = styled(Button)(({theme}) => ({
   textTransform: "none",
   fontFamily: "SchemeRg-Regular",
   borderWidth: '3px',
-  fontSize: "30px",
+  fontSize: "26px",
   borderRadius: "50px",
   display: "flex",
-  gap: "40px",
+  gap: "35px",
   color: "inherit",
   justifyContent: "flex-start",
-  padding: 0,
+  padding: "0 20px 0 0",
   "&:hover, &:active": {
     opacity: 0.8,
     borderWidth: "3px",
     backgroundColor: "transparent",
   },
   [theme.breakpoints.down("3xl")]: {
-    fontSize: "18px",
+    fontSize: "20px",
   },
   [theme.breakpoints.down("xl")]: {
     textAlign: "center",
@@ -92,7 +92,7 @@ export const CustomSelect = styled(Select)(({theme}) => ({
 
 export const ListItem = styled(Box)(({theme}) => ({
   background: theme.palette.lightColor.light,
-  height: "50px",
+  height: "40px",
   marginRight: '25px',
   borderRadius: "30px 30px 30px 30px",
   padding: "15px 25px",

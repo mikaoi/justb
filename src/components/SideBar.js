@@ -80,7 +80,7 @@ export default function SideBar(props) {
           <Avatar
             src={logo}
             sx={{
-              height: {xs: "50px", "3xl": "70px"},
+              height: {xs: "50px", "3xl": "60px"},
               width: "auto",
               position: "absolute",
               top: "16px",
@@ -115,54 +115,57 @@ export default function SideBar(props) {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        gap: "10px",
         height: "calc(100vh - 300px)"
       }}>
         <Box
           sx={{
-            padding: {xs: "20px 0 0 20px", "2xl": "25px 0 0 35px"},
+            padding: {xs: "20px 0 0 20px", "2xl": "20px 0 0 35px"},
             display: "flex",
             flexDirection: "column",
-            gap: {xs: "10px", lg: "15px", "3xl": "20px"},
           }}
         >
-          {linkInfo.map((link, index) => (
-            <Link
-              component={MyNavLink}
-              key={index}
-              className={classes.link}
-              activeClassName={classes.activeLink}
-              disablePadding
-              to={`/${
-                link.text === "Home"
-                  ? ""
-                  : link.text.replace(/\s/g, "").toLowerCase()
-              }`}
-              sx={{fontSize: {xs: "16px", lg: "18px", "3xl": "20px"}}}
-            >
-              <img
-                src={link.icon}
-                alt={link.text}
-                style={{width: "30px"}}
-              />
-              <span>{link.text}</span>
-            </Link>
-          ))}
-          <Box sx={{width: {xs: "140px", "2xl": "180px", display: 'flex', }, ml: '30px', mb: '-20px'}}>
-            <img src={character} alt={"Character"} style={{width: "100%",}} />
-          </Box>
-          <CustomBorderLinearProgress
-            variant="determinate"
-            value={80}
-            showvalue={"true"}
-            width={250}
-          />
-          <Typography sx={{
+          <Box sx={{
             display: "flex",
-            textAlign: "center",
-            alignContent: "center", 
-            
-          }}>12/15 Classes Completed</Typography>
+            flexDirection: "column",
+            gap: "10px",
+          }}>
+            {linkInfo.map((link, index) => (
+              <Link
+                component={MyNavLink}
+                key={index}
+                className={classes.link}
+                activeClassName={classes.activeLink}
+                disablePadding
+                to={`/${
+                  link.text === "Home"
+                    ? ""
+                    : link.text.replace(/\s/g, "").toLowerCase()
+                }`}
+                sx={{fontSize: {xs: "16px", lg: "18px", "3xl": "20px"}}}
+              >
+                <img
+                  src={link.icon}
+                  alt={link.text}
+                  style={{width: "30px"}}
+                />
+                <span>{link.text}</span>
+              </Link>
+            ))}
+          </Box>
+          <Box sx={{paddingLeft: "15px"}}>
+            <Box sx={{width: {xs: "140px", "2xl": "170px"}, marginLeft: "20px"}}>
+              <img src={character} alt={"Character"} style={{width: "100%"}}/>
+            </Box>
+            <Box sx={{textAlign: "center", maxWidth: "210px"}}>
+              <CustomBorderLinearProgress
+                variant="determinate"
+                value={80}
+                showvalue={"true"}
+                sx={{marginBottom: "10px"}}
+              />
+              <Typography variant={"h3"}>12/15 classes completed</Typography>
+            </Box>
+          </Box>
         </Box>
       </Box>
     </Box>
@@ -212,7 +215,7 @@ export default function SideBar(props) {
               height: "100vh",
               borderRadius: "0 20px 20px 0",
               border: "none",
-              boxShadow: theme.shadows[5],
+              boxShadow: theme.shadows[3],
               position: "absolute",
               minHeight: "100%"
             },
