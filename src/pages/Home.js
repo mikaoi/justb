@@ -4,10 +4,11 @@ import GoalsCard from "../components/HomePage/GoalsCard";
 import {Box} from "@mui/material";
 import MonthlyChallengesCard from "../components/HomePage/MonthlyChallengesCard";
 import Tooltip from "../components/HomePage/Tooltip";
+import MainLayout from "../components/MainLayout/MainLayout";
 
 const Home = () => {
   return (
-    <>
+    <MainLayout>
       <Box
         sx={{
           width: "100%",
@@ -32,7 +33,7 @@ const Home = () => {
           <MonthlyChallengesCard/>
         </Box>
       </Box>
-    </>
+    </MainLayout>
   );
 };
 
