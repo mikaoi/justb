@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material/styles";
+import {createTheme} from "@mui/material/styles";
 
 const breakpoints = {
   values: {
@@ -18,15 +18,17 @@ export const theme = createTheme({
   palette: {
     background: {
       paper: "#F3F1F4",
+      default: "#FFECB3"
     },
     primary: {
       light: "#FFCC1259",
       main: "#FFCB12",
-      dark:"#FFC263",
+      dark: "#FFC263",
     },
     secondary: {
       light: "#F5D0C5",
       main: "#F05656",
+      dark: "#FC5454",
     },
     lightColor: {
       light: "#fff",
@@ -65,7 +67,7 @@ export const theme = createTheme({
     MuiInputLabel: {
       variants: [
         {
-          props: { variant: "outlined" },
+          props: {variant: "outlined"},
           style: {
             marginTop: "-5px",
             fontSize: "17px",
@@ -155,3 +157,4 @@ theme.typography.subtitle2 = {
 theme.shadows[1] = "0px 4px 4px rgba(0, 0, 0, 0.25)";
 theme.shadows[2] = "0px 12px 20px rgba(0, 0, 0, 0.25)";
 theme.shadows[3] = "0px 30px 20px rgba(0, 0, 0, 0.25)";
+theme.shadows[4] = "0px 0px 6px rgba(0, 0, 0, 0.16)";

@@ -36,6 +36,36 @@ export const CustomButton = styled(Button)(({theme}) => ({
     width: "100%"
   },
 }));
+
+export const LandingButton = styled(Button)(({theme}) => ({
+  textTransform: "uppercase",
+  fontFamily: "Roboto",
+  fontWeight: "700",
+  borderWidth: '3px',
+  fontSize: "24px",
+  borderRadius: "12px",
+  display: "flex",
+  minWidth: "210px",
+  textAlign: "center",
+  justifyContent: "center",
+  boxShadow: theme.shadows[4],
+  color: "#fff",
+  padding: "0",
+  "&:hover, &:active": {
+    opacity: 0.8,
+  },
+  [theme.breakpoints.down("3xl")]: {
+    fontSize: "20px",
+  },
+  [theme.breakpoints.down("xl")]: {
+    textAlign: "center",
+  },
+  [theme.breakpoints.down("md")]: {
+    gap: "20px",
+    width: "100%"
+  },
+}));
+
 export const UnStyledButton = styled(Button)(({theme}) => ({
   color: "transparent",
   backgroundColor: "transparent",
@@ -101,7 +131,7 @@ export const ListItem = styled(Box)(({theme}) => ({
   gap: "35px",
   alignItems: "center",
   [theme.breakpoints.down("md")]: {
-  gap: "10px",
-  fontSize: "18px",
-},
+    gap: "10px",
+    fontSize: "18px",
+  },
 }));

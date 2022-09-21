@@ -4,19 +4,19 @@ import Drawer from "@mui/material/Drawer";
 import Link from "@mui/material/Link";
 import {createStyles, makeStyles} from "@mui/styles";
 import {NavLink} from "react-router-dom";
-import avatar from "../styles/images/navImg/avatar.svg";
-import logo from "../styles/images/logo.svg";
-import {ReactComponent as Close} from "../styles/images/navImg/closeBtn.svg";
-import bg from "../styles/images/navImg/navShapes.svg";
-import home from "../styles/images/navImg/home.png";
-import find from "../styles/images/navImg/class.png";
-import fav from "../styles/images/navImg/fav.png";
-import settings from "../styles/images/navImg/settings.png";
-import help from "../styles/images/navImg/help.png";
-import character from '../styles/images/navImg/yellowCharacter.png'
+import avatar from "../../styles/images/navImg/avatar.svg";
+import logo from "../../styles/images/logo.svg";
+import {ReactComponent as Close} from "../../styles/images/navImg/closeBtn.svg";
+import bg from "../../styles/images/navImg/navShapes.svg";
+import home from "../../styles/images/navImg/home.png";
+import find from "../../styles/images/navImg/class.png";
+import fav from "../../styles/images/navImg/fav.png";
+import settings from "../../styles/images/navImg/settings.png";
+import help from "../../styles/images/navImg/help.png";
+import character from '../../styles/images/navImg/yellowCharacter.png'
 import {Typography, Button, Avatar, Stack} from "@mui/material";
-import {theme} from "../styles/theme/theme";
-import CustomBorderLinearProgress from "./ProgressDiagram/CustomBorderLinearProgress";
+import {theme} from "../../styles/theme/theme";
+import CustomBorderLinearProgress from "../ProgressDiagram/CustomBorderLinearProgress";
 
 const MyNavLink = React.forwardRef((props, ref) => (
   <NavLink
@@ -76,7 +76,7 @@ export default function SideBar(props) {
           position: "relative",
         }}
       >
-        <NavLink to={"/"}>
+        <NavLink to={"/landing"}>
           <Avatar
             src={logo}
             sx={{

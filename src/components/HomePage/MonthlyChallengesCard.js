@@ -91,11 +91,11 @@ const MonthlyChallengesCard = () => {
             </ListItem>
           );
         })}
-        {todos.length > 0 && <Box sx={{
+        {todos?.length > 0 && <Box sx={{
           display: "flex",
           flexDirection: "column", maxHeight: "40px", overflowY: "scroll", gap: "20px"
         }}>
-          {todos.map((item, i) => {
+          {todos?.map((item, i) => {
             return <div key={i}>
               {(item.todo !== null) &&
               <ListItem>
@@ -118,6 +118,7 @@ const MonthlyChallengesCard = () => {
             </div>
           })}
         </Box>}
+        {todos?.length < 1 &&
         <TextField
           id="standard"
           label="Teacher Challenge"
@@ -129,6 +130,7 @@ const MonthlyChallengesCard = () => {
           onChange={(e) => setTodo(e.target.value)}
           onKeyUp={(e) => onChallengeHandler(e)}
         />
+        }
       </Box>
       <Box sx={{position: "absolute", top: "calc(100% - 160px)", right: "10px"}}>
         <img src={character} alt={"character"} style={{width: "165px", marginLeft: "auto"}}/>
