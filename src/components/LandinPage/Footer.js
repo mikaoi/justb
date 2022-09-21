@@ -12,7 +12,7 @@ const Footer = () => {
     <Box sx={{ height: "1000px", width: "100%", marginTop: "-200px" }}>
       <Box
         sx={{
-          padding: "100px 10px",
+          padding: "100px 50px",
           height: "100%",
           width: "100%",
           display: "flex",
@@ -22,7 +22,9 @@ const Footer = () => {
           backgroundImage: `url(${blueBg})`,
           backgroundSize: "cover",
           color: "lightColor.light",
-          gap: "100px",
+          gap: "150px",
+          backgroundColor: "#F2F2F2",
+
          
         }}
       >

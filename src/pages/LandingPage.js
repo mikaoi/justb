@@ -18,7 +18,7 @@ const LandingPage = () => {
         sx={{
           padding: "0 120px",
           minHeight: "85vh",
-          minWidth: "100%",
+          minWidth: "50%",
           display: "flex",
           position: "relative",
           backgroundImage: `url(${bg})`,

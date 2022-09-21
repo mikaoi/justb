@@ -69,6 +69,16 @@ const MoveWithUsSection = () => {
           Explore a few of justb's most popular classes for free!
         </Typography>
         <img src={page} alt={"Page"} width={"90%"} />
+        <Typography
+          sx={{
+            fontSize: "30px",
+            maxWidth: "1000px",
+            textAlign: "center",
+            marginTop: '50px'
+          }}
+        >
+      Explore over 70 sensory friendly movement videos kids love!
+      </Typography>
       </Box>
     </Box>
   );
