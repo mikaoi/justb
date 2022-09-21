@@ -21,7 +21,7 @@ const LandingPage = () => {
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
         alignItems: "center",
-        color: "lightColor.light"
+        color: "lightColor.main"
       }}>
         <NavLink to={"/"}>
           <Avatar
