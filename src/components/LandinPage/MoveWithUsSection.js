@@ -49,14 +49,14 @@ const MoveWithUsSection = () => {
             justifyContent: "space-between",
           }}
         >
-          <Box sx={{ ...imgBoxStyles }}>
+          {/* <Box sx={{ ...imgBoxStyles }}>
             <Box sx={{ ...imgContainer, top: "calc(-165px)" }}>
               <img src={cognitive} alt={"Cognitive"} width={"100%"}  />
             </Box>
             <Box sx={{ ...imgContainer, right: 0, top: "calc(-165px)" }}>
               <img src={physical} alt={"Physical"} width={"100%"} />
             </Box>
-          </Box>
+          </Box> */}
         </Box>
         <Typography
           sx={{
