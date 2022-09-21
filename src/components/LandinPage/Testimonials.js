@@ -10,7 +10,7 @@ const Testimonials = () => {
   return (
     <Box sx={{display: "flex", justifyContent: "space-between", padding:"50px"}}>
       {reviews.map((review, i) => {
-        return <Box key={i} sx={{width: "400px"}}>
+        return <Box key={i} sx={{width: "75%"}}>
           <img src={review} alt={review} width={"100%"}/>
         </Box>
       })}

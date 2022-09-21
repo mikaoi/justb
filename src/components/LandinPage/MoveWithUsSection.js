@@ -68,7 +68,7 @@ const MoveWithUsSection = () => {
         >
           Explore a few of justb's most popular classes for free!
         </Typography>
-        <img src={page} alt={"Page"} width={"100%"} />
+        <img src={page} alt={"Page"} width={"90%"} />
       </Box>
     </Box>
   );
