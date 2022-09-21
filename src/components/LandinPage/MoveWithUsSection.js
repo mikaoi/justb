@@ -26,7 +26,7 @@ const MoveWithUsSection = () => {
   return (
     <Box sx={{height: "1342px", width: "100%", marginTop: "-110px"}}>
       <Box sx={{
-        padding: "160px 10px",
+        padding: "160px 100px",
         height: "100%",
         width: "100%",
         display: "flex",
