@@ -35,7 +35,7 @@ const LandingPage = () => {
             }}
           />
         </NavLink>
-        <Box sx={{width: "50%", marginLeft: "20px"}}>
+        <Box sx={{width: "50%", marginLeft: "50px"}}>
           <Typography sx={{fontWeight: 700, color: "inherit", fontSize: "55px", marginBottom: "25px"}}>
             Inclusive and joyful movement videos for kids and teachers
           </Typography>
@@ -46,7 +46,7 @@ const LandingPage = () => {
             <LandingButton sx={{backgroundColor: "primary.main"}}>Learn More</LandingButton>
           </Box>
         </Box>
-        <Box sx={{maxWidth: "680px"}}>
+        <Box sx={{maxWidth: "800px"}}>
           <img src={appImg} alt={"App"} width={"100%"}/>
         </Box>
       </Box>

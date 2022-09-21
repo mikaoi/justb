@@ -60,7 +60,7 @@ const MoveWithUsSection = () => {
         <Typography sx={{fontSize: "30px", maxWidth: "750px", textAlign: "center", marginBottom: "10px"}}>
           Explore over 70 sensory friendly movement videos kids love!
         </Typography>
-        <img src={page} alt={"Page"}/>
+        <img src={page} alt={"Page"} width={"100%"}/>
       </Box>
     </Box>
   );
