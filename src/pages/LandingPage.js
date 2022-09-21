@@ -8,6 +8,7 @@ import {NavLink} from "react-router-dom";
 import {LandingButton} from "../styles/theme/styledComponents";
 import MoveWithUsSection from "../components/LandinPage/MoveWithUsSection";
 import Testimonials from "../components/LandinPage/Testimonials";
+import Footer from "../components/LandinPage/Footer"
 
 const LandingPage = () => {
   return (
@@ -52,6 +53,7 @@ const LandingPage = () => {
       </Box>
       <MoveWithUsSection/>
       <Testimonials/>
+      <Footer />
     </Box>
   );
 };
