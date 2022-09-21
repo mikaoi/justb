@@ -4,7 +4,8 @@ import blueBg from "../../styles/images/langingImg/blueBg.svg";
 import page from "../../styles/images/langingImg/page.png";
 import footerCharacter from "../../styles/images/langingImg/footerCharacter.png"
 import {LandingButton} from "../../styles/theme/styledComponents";
-import Socials from "../../styles/images/langingImg/socials.svg"
+
+import footerLink from "../../styles/images/langingImg/footerLinks.png"
 
 const Footer = () => {
   return (
@@ -35,8 +36,20 @@ const Footer = () => {
         >
            <img src={footerCharacter} alt={"Characters"} width={"100%"}/>
         </Box>
-        <Box>
+        <Box sx={{
+             display: "flex",
+             flexDirection: "column",
+             alignItems: "center",
+        }}>
         <LandingButton sx={{backgroundColor: "primary.main", color: "#31476E", padding: '15px'}}>Get Moving</LandingButton>
+        <Box 
+        sx={{
+            marginTop:"100px"
+        }}
+        >
+        <img src={footerLink} alt={"Page"} width={"100%"}/>
+        </Box>
+        
         </Box>
       </Box>
     </Box>
