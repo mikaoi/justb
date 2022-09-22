@@ -29,13 +29,15 @@ const AccordionControlled = () => {
           id="controlled-panel-header-1"
           aria-controls="controlled-panel-content-1"
         >
-          <Typography>Accordion 1</Typography>
+          <Typography>What is justb?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Wafer sesame snaps chocolate bar candy canes halvah. Cupcake sesame
-            snaps sweet tart dessert biscuit. Topping soufflé tart sweet
-            croissant.
+            justb creates inclusive movement videos for extraordinary teachers,
+            kids, and classrooms. justb is designed through the lens of
+            neurodivergent students to create movement breaks that support as
+            many students as possible. Meaningful movement is essential for kids
+            physical health but also for their social and cognitive functioning.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -49,13 +51,17 @@ const AccordionControlled = () => {
           id="controlled-panel-header-2"
           aria-controls="controlled-panel-content-2"
         >
-          <Typography>Accordion 2</Typography>
+          <Typography>What is required to use justb?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Sugar plum sesame snaps caramels. Cake pie tart fruitcake sesame
-            snaps donut cupcake macaroon. Gingerbread pudding cheesecake pie ice
-            cream.
+            justb is designed for use in the average classroom or home. All the
+            user needs is: <br>
+            </br>- A computer with up to date browsers. <br>
+            </br>- A broadband
+            internet connection. <br>
+            </br>- A screen that all students can see (e.g., a
+            projector, interactive whiteboard, or big monitor).
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -69,7 +75,7 @@ const AccordionControlled = () => {
           id="controlled-panel-header-3"
           aria-controls="controlled-panel-content-3"
         >
-          <Typography>Accordion 3</Typography>
+          <Typography>When should I use justb?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
