@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent'
 import MuiCard from '@mui/material/Card'
 import InputAdornment from '@mui/material/InputAdornment'
 import MuiTextField from '@mui/material/TextField'
+import AccordionControlled from './AccordionControlled'
 
 // ** Icons Imports
 import Magnify from 'mdi-material-ui/Magnify'
@@ -12,7 +13,8 @@ import Magnify from 'mdi-material-ui/Magnify'
 // Styled Card component
 const Card = styled(MuiCard)(({ theme }) => ({
   border: 0,
-  boxShadow: 'none',
+  borderRadius: '20px',
+  boxShadow: 4,
   backgroundSize: 'cover',
   backgroundImage:
     theme.palette.mode === 'light'
@@ -40,15 +42,19 @@ const FaqHeader = props => {
   }
 
   return (
-    <Card>
-      <CardContent sx={{ pt: 23, textAlign: 'center', pb: theme => `${theme.spacing(23)} !important` }}>
-        <Typography variant='h5' sx={{ mb: 1.5, color: 'primary.main', fontSize: '1.5rem !important' }}>
-          Hello, how can we help?
+    <Card 
+    sx={{
+      paddingBottom: '50px'
+    }}>
+      <CardContent sx={{ pt: 10, textAlign: 'center', pb: theme => `${theme.spacing(23)} !important` }}>
+        <Typography variant='h1' sx={{ mb: 1.5, color: 'fontColor.main',  }}>
+          justb Help Center
         </Typography>
         <Typography variant='body2' sx={{ mb: 7 }}>
           or choose a category to quickly find the help you need
         </Typography>
-        <TextField
+        <TextField sx={{
+        }}
           value={searchTerm}
           placeholder='Ask a question....'
           onChange={e => handleFaqFilter(e)}
@@ -61,6 +67,7 @@ const FaqHeader = props => {
           }}
         />
       </CardContent>
+      
     </Card>
   )
 }
