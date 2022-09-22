@@ -7,12 +7,12 @@ import {
 import Home from "./pages/Home";
 import FindAClass from "./pages/FindAClass";
 import Favorites from "./pages/Favorites";
-import Settings from "./pages/Settings";
+
 import HelpPage from "./pages/HelpPage";
 import Category from "./pages/Category";
 import BodyScan from "./pages/BodyScan";
 import LandingPage from "./pages/LandingPage";
-
+import Settings from './pages/Settings'
 const App = () => {
 
   return (
@@ -27,6 +27,7 @@ const App = () => {
         <Route path={"/bodyscan"} element={<BodyScan/>}/>
         <Route path={"/landing"} element={<LandingPage/>}/>
         <Route path={"/favorites/:category"} element={<Category/>}/>
+        
       </Routes>
     </ThemeProvider>
   );
