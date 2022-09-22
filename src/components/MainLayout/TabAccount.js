@@ -45,7 +45,7 @@ const ResetButtonStyled = styled(Button)(({ theme }) => ({
     marginTop: theme.spacing(4)
   }
 }))
-
+// Image needs to be able to be changed 
 const TabAccount = () => {
   // ** State
   const [openAlert, setOpenAlert] = useState(true)
@@ -89,10 +89,10 @@ const TabAccount = () => {
           </Grid>
 
           <Grid item xs={12} sm={6}>
-            <TextField fullWidth label='Username' placeholder='johnDoe' defaultValue='johnDoe' />
+            <TextField fullWidth label='Username' placeholder='m.wilson13' defaultValue='' />
           </Grid>
           <Grid item xs={12} sm={6}>
-            <TextField fullWidth label='Name' placeholder='John Doe' defaultValue='John Doe' />
+            <TextField fullWidth label='Name' placeholder='John Doe' defaultValue='' />
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
@@ -100,7 +100,7 @@ const TabAccount = () => {
               type='email'
               label='Email'
               placeholder='johnDoe@example.com'
-              defaultValue='johnDoe@example.com'
+              defaultValue=''
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -108,9 +108,7 @@ const TabAccount = () => {
               <InputLabel>Role</InputLabel>
               <Select label='Role' defaultValue='admin'>
                 <MenuItem value='admin'>Admin</MenuItem>
-                <MenuItem value='author'>Author</MenuItem>
-                <MenuItem value='editor'>Editor</MenuItem>
-                <MenuItem value='maintainer'>Maintainer</MenuItem>
+                <MenuItem value='teacher'>Teacher</MenuItem>
                 <MenuItem value='subscriber'>Subscriber</MenuItem>
               </Select>
             </FormControl>
@@ -126,7 +124,7 @@ const TabAccount = () => {
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <TextField fullWidth label='Company' placeholder='ABC Pvt. Ltd.' defaultValue='ABC Pvt. Ltd.' />
+            <TextField fullWidth label='School' placeholder='School.' defaultValue='' />
           </Grid>
 
           {openAlert ? (
