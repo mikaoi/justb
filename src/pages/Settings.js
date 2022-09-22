@@ -2,28 +2,12 @@ import React from "react";
 import MainLayout from "../components/MainLayout/MainLayout";
 import TabAccount from "../components/MainLayout/TabAccount";
 import Card from "@mui/material/Card";
-import TabList from "@mui/lab/TabList";
+
 import TabPanel from "@mui/lab/TabPanel";
 import TabContext from "@mui/lab/TabContext";
 import { styled } from "@mui/material/styles";
-import MuiTab from "@mui/material/Tab";
-import { Box } from "mdi-material-ui";
+
 import { useState } from "react";
-
-import TabInfo from "../components/MainLayout/TabInfo";
-
-import TabNotifications from "../components/MainLayout/TabNotifications";
-
-import { AccountOutline } from "mdi-material-ui";
-
-const Tab = styled(MuiTab)(({ theme }) => ({
-  [theme.breakpoints.down("md")]: {
-    minWidth: 100,
-  },
-  [theme.breakpoints.down("sm")]: {
-    minWidth: 67,
-  },
-}));
 
 const TabName = styled("span")(({ theme }) => ({
   lineHeight: 1.71,
