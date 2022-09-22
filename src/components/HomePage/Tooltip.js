@@ -38,7 +38,7 @@ const Tooltip = () => {
       sx={{
         padding: {xs: "12px 16px", md: "16px 24px"},
         background: theme.palette.lightColor.light,
-        maxWidth: "350px",
+        maxWidth: "360px",
         borderRadius: "20px",
       }}
     >

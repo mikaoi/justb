@@ -36,21 +36,40 @@ export const CustomButton = styled(Button)(({theme}) => ({
     width: "100%"
   },
 }));
+export const YellowButton = styled(Button)(({theme}) => ({
+  textTransform: "none",
+  fontFamily: "SchemeRg-Regular",
+  background: theme.palette.primary.main,
+  fontSize: "22px",
+  borderRadius: "20px",
+  boxShadow: "0px 4px 0px #BE9500",
+  display: "flex",
+  gap: "10px",
+  color: "inherit",
+  justifyContent: "flex-start",
+  padding: "6px 25px",
+  [theme.breakpoints.down("3xl")]: {
+    fontSize: "18px",
+  },
+  [theme.breakpoints.down("xl")]: {
+    justifyContent: "center",
+  },
+}));
 
 export const LandingButton = styled(Button)(({theme}) => ({
   textTransform: "uppercase",
   fontFamily: "Roboto",
   fontWeight: "700",
   borderWidth: '3px',
-  fontSize: "24px",
+  fontSize: "18px",
   borderRadius: "12px",
   display: "flex",
-  minWidth: "210px",
+  minWidth: "190px",
   textAlign: "center",
   justifyContent: "center",
   boxShadow: theme.shadows[4],
-  color: "#fff",
-  padding: "0",
+  color: theme.palette.fontColor.main,
+  padding: "3px",
   "&:hover, &:active": {
     opacity: 0.8,
   },
