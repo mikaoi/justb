@@ -36,6 +36,25 @@ export const CustomButton = styled(Button)(({theme}) => ({
     width: "100%"
   },
 }));
+export const YellowButton = styled(Button)(({theme}) => ({
+  textTransform: "none",
+  fontFamily: "SchemeRg-Regular",
+  background: theme.palette.primary.main,
+  fontSize: "22px",
+  borderRadius: "20px",
+  boxShadow: "0px 4px 0px #BE9500",
+  display: "flex",
+  gap: "10px",
+  color: "inherit",
+  justifyContent: "flex-start",
+  padding: "6px 25px",
+  [theme.breakpoints.down("3xl")]: {
+    fontSize: "18px",
+  },
+  [theme.breakpoints.down("xl")]: {
+    justifyContent: "center",
+  },
+}));
 
 export const LandingButton = styled(Button)(({theme}) => ({
   textTransform: "uppercase",

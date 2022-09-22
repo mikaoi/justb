@@ -1,16 +1,22 @@
 import React from "react";
 import bg from "../styles/images/langingImg/heroBg.png";
-import { Box, Typography} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 import appImg from "../styles/images/langingImg/app.png";
 import {LandingButton} from "../styles/theme/styledComponents";
-import MoveWithUsSection from "../components/LandinPage/MoveWithUsSection";
-import Testimonials from "../components/LandinPage/Testimonials";
-import Footer from "../components/LandinPage/Footer";
-import Header from "../components/LandinPage/Header";
+import MoveWithUsSection from "../components/LandingPage/MoveWithUsSection";
+import Testimonials from "../components/LandingPage/Testimonials";
+import Footer from "../components/LandingPage/Footer";
+import Header from "../components/LandingPage/Header";
 
 const LandingPage = () => {
   return (
-    <Box sx={{maxWidth: "1200px", margin: "0 auto", overflow: "hidden", color: "lightColor.main", backgroundColor: "#F2F2F2"}}>
+    <Box sx={{
+      maxWidth: "1200px",
+      margin: "0 auto",
+      overflow: "hidden",
+      color: "lightColor.main",
+      backgroundColor: "#F2F2F2"
+    }}>
       <Header/>
       <Box
         sx={{
@@ -53,13 +59,20 @@ const LandingPage = () => {
               An inclusive and interactive movement platform for teachers, kids,
               and classrooms
             </Typography>
-            <LandingButton sx={{ padding:"10px", backgroundColor: "primary.main"}}>
+            <LandingButton sx={{padding: "10px", backgroundColor: "primary.main"}}>
               get moving
             </LandingButton>
           </Box>
           <Box sx={{maxWidth: "800px"}}>
             <img src={appImg} alt={"App"} width={"100%"}/>
-            <Typography sx={{textAlign: "center", marginTop: "-16px", fontSize: "15px", color: "inherit"}}>Designed by Olympic athletes OT’s, teachers, and kids!</Typography>
+            <Typography sx={{
+              textAlign: "center",
+              marginTop: "-16px",
+              fontSize: "15px",
+              color: "inherit"
+            }}>
+              Designed by Olympic athletes OT’s, teachers, and kids!
+            </Typography>
           </Box>
         </Box>
       </Box>
