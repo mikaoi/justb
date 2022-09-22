@@ -6,6 +6,7 @@ import MuiCard from '@mui/material/Card'
 import InputAdornment from '@mui/material/InputAdornment'
 import MuiTextField from '@mui/material/TextField'
 import AccordionControlled from './AccordionControlled'
+import bg from "../../styles/images/bg.png"
 
 // ** Icons Imports
 import Magnify from 'mdi-material-ui/Magnify'
@@ -16,10 +17,7 @@ const Card = styled(MuiCard)(({ theme }) => ({
   borderRadius: '20px',
   boxShadow: 4,
   backgroundSize: 'cover',
-  backgroundImage:
-    theme.palette.mode === 'light'
-      ? 'url(/images/pages/tree-cone-cube-bg-light.png)'
-      : 'url(/images/pages/tree-cone-cube-bg-dark.png)'
+  backgroundImage: `url(${bg})`,
 }))
 
 // Styled TextField component
