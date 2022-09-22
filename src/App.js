@@ -12,7 +12,6 @@ import HelpPage from "./pages/HelpPage";
 import Category from "./pages/Category";
 import BodyScan from "./pages/BodyScan";
 import LandingPage from "./pages/LandingPage";
-
 const App = () => {
 
   return (
