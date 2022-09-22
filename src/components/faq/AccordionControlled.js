@@ -127,6 +127,68 @@ const AccordionControlled = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
+      <Accordion
+        expanded={expanded === "panel6"}
+        onChange={handleChange("panel6")}
+      >
+        <AccordionSummary
+          expandIcon={<ChevronDown />}
+          id="controlled-panel-header-6"
+          aria-controls="controlled-panel-content-6"
+        >
+          <Typography>How to turn on closed captions</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+        <Typography variant="subtitle2">
+            
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion
+        expanded={expanded === "panel7"}
+        onChange={handleChange("panel7")}
+      >
+        <AccordionSummary
+          expandIcon={<ChevronDown />}
+          id="controlled-panel-header-7"
+          aria-controls="controlled-panel-content-7"
+        >
+          <Typography>Content Standards</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+        <Typography variant="subtitle2">
+        All justb content added must adhere to the following standards:
+<br></br>
+- Our content is school-appropriate.
+<br></br>
+<br></br>
+- Our content is age appropriate for kids, age 5 to 12.
+<br></br>
+- Our content is designed to be inclusive of many students different learning needs while recognizing that it currently does not meet the individual needs of every student.
+<br></br>
+- Our content is positive and empowering in tone.
+<br></br>
+- Our content promotes a healthy lifestyle. It never promotes drug or alcohol use, violence, inappropriate language, bullying, or sexual activity.
+<br></br>
+- Our content is fun for kids.
+<br></br>
+- Our content always encourages kids to move and practice healthy holistic habits.
+<br></br>
+- Our content never includes specific endorsements of religious or political views.
+<br></br>
+
+When creating or curating content, our standards are identical to those used by the MPAA in rating television or movie content. We're committed to keeping justb "G-rated."
+<br></br>
+
+*According to the MPAA, a "G-rated motion picture contains nothing in theme, language, nudity, sex, violence or other matters that, in the view of the Rating Board, would offend parents whose younger children view the motion picture."*
+
+**Content Appropriateness**
+<br></br>
+
+While justb holds all content accountable to the standards above, content appropriateness is ultimately subjective. Adults are encouraged to make their own decisions about which justb activities they feel are appropriate and avoid those they do not feel comfortable using.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
     </div>
   );
 };
