@@ -17,6 +17,7 @@ import IconButton from '@mui/material/IconButton'
 import CardContent from '@mui/material/CardContent'
 import FormControl from '@mui/material/FormControl'
 import Button from '@mui/material/Button'
+import avatar from "../../styles/images/navImg/avatar.svg";
 
 // ** Icons Imports
 import Close from 'mdi-material-ui/Close'
@@ -44,11 +45,11 @@ const ResetButtonStyled = styled(Button)(({ theme }) => ({
     marginTop: theme.spacing(4)
   }
 }))
-
+// Image needs to be able to be changed 
 const TabAccount = () => {
   // ** State
   const [openAlert, setOpenAlert] = useState(true)
-  const [imgSrc, setImgSrc] = useState('/images/avatars/1.png')
+  const [imgSrc, setImgSrc] = useState('../../styles/images/navImg/avatar.svg')
 
   const onChange = file => {
     const reader = new FileReader()
@@ -65,7 +66,7 @@ const TabAccount = () => {
         <Grid container spacing={7}>
           <Grid item xs={12} sx={{ mt: 4.8, mb: 3 }}>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <ImgStyled src={imgSrc} alt='Profile Pic' />
+              <ImgStyled src={avatar} alt='Profile Pic' />
               <Box>
                 <ButtonStyled component='label' variant='contained' htmlFor='account-settings-upload-image'>
                   Upload New Photo
@@ -88,10 +89,10 @@ const TabAccount = () => {
           </Grid>
 
           <Grid item xs={12} sm={6}>
-            <TextField fullWidth label='Username' placeholder='johnDoe' defaultValue='johnDoe' />
+            <TextField fullWidth label='Username' placeholder='m.wilson13' defaultValue='' />
           </Grid>
           <Grid item xs={12} sm={6}>
-            <TextField fullWidth label='Name' placeholder='John Doe' defaultValue='John Doe' />
+            <TextField fullWidth label='Name' placeholder='John Doe' defaultValue='' />
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
@@ -99,7 +100,7 @@ const TabAccount = () => {
               type='email'
               label='Email'
               placeholder='johnDoe@example.com'
-              defaultValue='johnDoe@example.com'
+              defaultValue=''
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -107,9 +108,7 @@ const TabAccount = () => {
               <InputLabel>Role</InputLabel>
               <Select label='Role' defaultValue='admin'>
                 <MenuItem value='admin'>Admin</MenuItem>
-                <MenuItem value='author'>Author</MenuItem>
-                <MenuItem value='editor'>Editor</MenuItem>
-                <MenuItem value='maintainer'>Maintainer</MenuItem>
+                <MenuItem value='teacher'>Teacher</MenuItem>
                 <MenuItem value='subscriber'>Subscriber</MenuItem>
               </Select>
             </FormControl>
@@ -125,7 +124,7 @@ const TabAccount = () => {
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <TextField fullWidth label='Company' placeholder='ABC Pvt. Ltd.' defaultValue='ABC Pvt. Ltd.' />
+            <TextField fullWidth label='School' placeholder='School.' defaultValue='' />
           </Grid>
 
           {openAlert ? (
