@@ -7,26 +7,25 @@ import MoveWithUsSection from "../components/LandingPage/MoveWithUsSection";
 import Testimonials from "../components/LandingPage/Testimonials";
 import Footer from "../components/LandingPage/Footer";
 import Header from "../components/LandingPage/Header";
+import IconsBox from "../components/LandingPage/IconsBox";
 
 const LandingPage = () => {
   return (
     <Box sx={{
-      maxWidth: "1200px",
-      margin: "0 auto",
-      overflow: "hidden",
       color: "lightColor.main",
+      overflow: "hidden",
       backgroundColor: "#F2F2F2"
     }}>
       <Header/>
       <Box
         sx={{
-          padding: "0 120px",
-          minHeight: "95vh",
+          paddingTop: "130px",
+          paddingX: "120px",
+          minHeight: "calc(100vh + 100px)",
           display: "flex",
           position: "relative",
           backgroundImage: `url(${bg})`,
           backgroundSize: "cover",
-          alignItems: "center",
         }}
       >
         <Box
@@ -34,7 +33,7 @@ const LandingPage = () => {
             display: "flex",
             position: "relative",
             alignItems: "center",
-            marginTop: "-110px"
+            height: "100%"
           }}
         >
           <Box sx={{marginLeft: "50px"}}>
@@ -77,6 +76,7 @@ const LandingPage = () => {
         </Box>
       </Box>
       <MoveWithUsSection/>
+      <IconsBox/>
       <Testimonials/>
       <Footer/>
     </Box>

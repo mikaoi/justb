@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Link} from "@mui/material";
+import {Box, Link, Typography} from "@mui/material";
 import blueBg from "../../styles/images/langingImg/blueBg.svg";
 import footerCharacter from "../../styles/images/langingImg/footerCharacter.png"
 import {ReactComponent as FacebookIcon} from "../../styles/images/footerImg/facebookIcon.svg";
@@ -39,14 +39,15 @@ const Footer = () => {
             flexDirection: "column",
             alignItems: "center",
             gap: "60px",
+            marginTop: "250px"
           }}
         >
+          <Typography variant={"h3"} fontSize={"24px"}>justb supports kids</Typography>
           <Box
             sx={{
               display: "flex",
               width: "65%",
               justifyContent: "space-between",
-              marginTop: "250px"
             }}
           >
             <img src={footerCharacter} alt={"Characters"} width={"100%"}/>
@@ -57,7 +58,7 @@ const Footer = () => {
           display: "flex",
           width: "100%",
           alignItems: "end",
-          gap: "100px"
+          gap: "150px"
         }}>
           <Box sx={{
             display: "flex",
