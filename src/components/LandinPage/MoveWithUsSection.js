@@ -1,32 +1,24 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
-import yellowBg from "../../styles/images/langingImg/yellowBg.svg";
-import sensory from "../../styles/images/langingImg/sensory.png";
-import professional from "../../styles/images/langingImg/professional.png";
-import inclusive from "../../styles/images/langingImg/inclusive.png";
-import holistic from "../../styles/images/langingImg/holistic.png";
+import {Box, Typography} from "@mui/material";
+import {ReactComponent as BgY} from "../../styles/images/langingImg/yellowBg.svg";
+import {ReactComponent as IconsBlock} from "../../styles/images/langingImg/iconsBlock.svg";
+import icons from "../../styles/images/langingImg/icons.png";
 import page from "../../styles/images/langingImg/page.png";
-import { theme } from "../../styles/theme/theme";
-import cognitive from "../../styles/images/langingImg/cognitive.png";
-import physical from "../../styles/images/langingImg/physical.png";
+import {LandingButton} from "../../styles/theme/styledComponents";
 
 
 const MoveWithUsSection = () => {
-  const imgBoxStyles = {
-    position: "relative",
-    backgroundColor: "#F2F2F2",
-    borderRadius: "80px",
-    boxShadow: theme.shadows[1],
-    height: "50px",
-    minWidth: "400px",
-  };
-  const imgContainer = {
-    width: "200px",
-    height: "200px",
-    position: "absolute",
-  };
   return (
-    <Box sx={{ height: "1342px", width: "100%", marginTop: "-110px", }}>
+    <Box sx={{maxHeight: "1200px", height: "100%", width: "100%", marginTop: "-110px", position: "relative"}}>
+      <Box sx={{position: "absolute", left: "-10%", width: "120%", height: "100%"}}>
+        <BgY style={{width: "100%", height: "100%"}}/>
+      </Box>
+      <Box sx={{position: "absolute", width: "70%", height: "200px"}}>
+        <IconsBlock style={{width: "100%", height: "100%"}}/>
+      </Box>
+      <Box sx={{position: "absolute", left: "50px", top: "-100px", height: "250px"}}>
+        <img src={icons} style={{width: "100%", height: "100%"}} alt={"Icons"}/>
+      </Box>
       <Box
         sx={{
           padding: "150px 200px",
@@ -36,10 +28,9 @@ const MoveWithUsSection = () => {
           flexDirection: "column",
           alignItems: "center",
           position: "relative",
-          backgroundImage: `url(${yellowBg})`,
-          backgroundSize: "cover",
           color: "lightColor.light",
           gap: "35px",
+          zIndex: 20
         }}
       >
         <Box
@@ -49,36 +40,22 @@ const MoveWithUsSection = () => {
             justifyContent: "space-between",
           }}
         >
-          {/* <Box sx={{ ...imgBoxStyles }}>
-            <Box sx={{ ...imgContainer, top: "calc(-165px)" }}>
-              <img src={cognitive} alt={"Cognitive"} width={"100%"}  />
-            </Box>
-            <Box sx={{ ...imgContainer, right: 0, top: "calc(-165px)" }}>
-              <img src={physical} alt={"Physical"} width={"100%"} />
-            </Box>
-          </Box> */}
         </Box>
         <Typography
+          variant={"h3"}
           sx={{
-            fontSize: "30px",
-            maxWidth: "750px",
+            fontSize: "28px",
+            width: "100%",
             textAlign: "center",
             marginBottom: "10px",
           }}
         >
           Explore a few of justb's most popular classes for free!
         </Typography>
-        <img src={page} alt={"Page"} width={"90%"} />
-        <Typography
-          sx={{
-            fontSize: "30px",
-            maxWidth: "1000px",
-            textAlign: "center",
-            marginTop: '50px'
-          }}
-        >
-      Explore over 70 sensory friendly movement videos kids love!
-      </Typography>
+        <img src={page} alt={"Page"} width={"110%"}/>
+        <LandingButton sx={{ padding:"10px", backgroundColor: "fontColor.main", color:"lightColor.light", maxWidth:"250px", width:"100%"}}>
+          Lets get moving
+        </LandingButton>
       </Box>
     </Box>
   );
