@@ -26,10 +26,10 @@ const MoveWithUsSection = () => {
     position: "absolute",
   };
   return (
-    <Box sx={{ height: "1342px", width: "100%", marginTop: "-110px" }}>
+    <Box sx={{ height: "1342px", width: "100%", marginTop: "-110px", }}>
       <Box
         sx={{
-          padding: "160px 100px",
+          padding: "150px 200px",
           height: "100%",
           width: "100%",
           display: "flex",

@@ -62,10 +62,10 @@ const LandingPage = () => {
             and classrooms
           </Typography>
           <Box sx={{ display: "flex", gap: "60px" }}>
-            <LandingButton sx={{ backgroundColor: "secondary.dark" }}>
+            <LandingButton  sx={{ backgroundColor: "secondary.dark" }}>
               Sign Up
             </LandingButton>
-            <LandingButton sx={{ backgroundColor: "primary.main" }}>
+            <LandingButton href="https://movewithjustb.com/the-people"sx={{ backgroundColor: "primary.main" }}>
               Learn More
             </LandingButton>
           </Box>
