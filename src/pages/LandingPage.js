@@ -16,14 +16,18 @@ const LandingPage = () => {
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        width: "100%",
-        overflow: 'hidden' // keeps page from scrolling
+        backgroundRepeat: "repeat",
+        height: '100vh',
+        overflow: "hidden"
+        
+        
+        
+         // keeps page from scrolling
       }}
     >
-     
+    
       <BlankLayout>
-        <Box sx={{ flexGrow: 1 }}>
+        {/* <Box sx={{ flexGrow: 1 }}>
           <AppBar position="static">
             <Toolbar>
               <IconButton
@@ -41,20 +45,26 @@ const LandingPage = () => {
               <Button color="inherit">Login</Button>
             </Toolbar>
           </AppBar>
-        </Box>
-        <Box className="content-center">
+        </Box> */}
+        <Box className="content-center" sx={{
+          height: 'fit-content(20em)'
+
+        }}>
           <CardBox
             sx={{
-              paddingTop: { xs: "30px", "2xl": "40px" },
+             
+              paddingTop: { xs: "20px", "2xl": "40px" },
               paddingBottom: "15px",
               paddingX: { xs: "30px", "2xl": "40px", "3xl": "50px" },
               display: "flex",
-              flexDirection: "column",
+              flexDirection: "row",
               gap: { xs: "40px", "2xl": "20px" },
               justifyContent: "space-between",
               width: "50%",
-              height: "100%",
-              boxShadow: 2,
+              
+              boxShadow: 20,
+             
+              
             }}
           >
             <Box>

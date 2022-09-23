@@ -22,10 +22,14 @@ import MenuItem from "@mui/material/MenuItem";
 import Radio from '@mui/material/Radio'
 import RadioGroup from '@mui/material/RadioGroup'
 import FormControlLabel from '@mui/material/FormControlLabel'
+import { Avatar } from "@mui/material";
+import logo from "../../../styles/images/logo.svg"
+
 
 // ** Icons Imports
 import EyeOutline from "mdi-material-ui/EyeOutline";
 import EyeOffOutline from "mdi-material-ui/EyeOffOutline";
+import { height } from "@mui/system";
 
 const FormLayoutsBasic = () => {
   // ** States
@@ -66,16 +70,30 @@ const FormLayoutsBasic = () => {
 
 
   return (
-    <Card style={{ border: "none", boxShadow: "none" }}>
+    <Card style={{ border: "none", boxShadow: "none", height: "100%" }}>
+      <Grid container spacing={0}>
+      <a href="https://movewithjustb.com/">
+          <Avatar
+            src={logo}
+            sx={{
+              height: { xs: "50px", "3xl": "55px" },
+              width: "auto",
+              position: "absolute",
+              top: "16px",
+              left: "16px",
+            }}
+          />
+        </a>
+      </Grid>
       <Typography
-        sx={{ alignContent: "center", textAlign: "center", fontSize: "40px" }}
+        sx={{ alignContent: "center", textAlign: "center", fontSize: "34px" }}
       >
         justb
       </Typography>
       <CardHeader
         title="Register your personal account"
         titleTypographyProps={{
-          variant: "h2",
+          variant: "h4",
           alignContent: "center",
           textAlign: "center",
           color: "#31476E",
@@ -83,7 +101,7 @@ const FormLayoutsBasic = () => {
       />
       <CardContent>
         <form onSubmit={(e) => e.preventDefault()}>
-          <Grid container spacing={5}>
+          <Grid container spacing={3}>
             <Grid item xs={12}>
               <TextField fullWidth label="Username" placeholder="mwilson12" />
             </Grid>
@@ -223,7 +241,9 @@ const FormLayoutsBasic = () => {
                   justifyContent: "space-between",
                 }}
               >
-                <Button type="submit" variant="contained" size="large">
+                <Button type="submit" variant="contained" size="large" sx={{
+                  borderRadius: '50px'
+                }}>
                   Get Started!
                 </Button>
                 <Box sx={{ display: "flex", alignItems: "center" }}>
