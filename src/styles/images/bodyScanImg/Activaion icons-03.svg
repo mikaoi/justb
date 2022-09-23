@@ -1,4 +1,6 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 720 720">
+<svg id="Layer_1"  data-name="Layer 1"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="200 0 300 700">
     <defs>
         <style>
             .cls-1,.cls-2,.cls-3,.cls-4{stroke:#c2b678;stroke-miterlimit:10;}.cls-1{fill:url(#linear-gradient);}.cls-2,.cls-3,.cls-4,.cls-5{fill:#c2b678;}.cls-3{opacity:0.25;}.cls-4{opacity:0.07;}.cls-5{font-size:27px;font-family:SchemeRg-Regular,
@@ -24,14 +26,4 @@
     <path class="cls-2" d="M411.11,84.32h-9.82v178.3H325.1V84.32h-9.82A54.44,54.44,0,0,1,362.79,56a55.88,55.88,0,0,1,44.67,22.32A44.21,44.21,0,0,1,411.11,84.32Z"/>
     <rect class="cls-3" x="325.1" y="263.38" width="76.19" height="200.86"/>
     <path class="cls-4" d="M410.53,648c-.92,1.38-17.65,25.43-48.68,25-30-.39-46-23.33-47.1-25H325.1V465h76.19V648Z"/>
-    <text class="cls-5" transform="translate(308.22 38.2)">Activ
-        <tspan class="cls-6" x="58.35" y="0">a</tspan>
-        <tspan class="cls-7" x="71.09" y="0">t</tspan>
-        <tspan x="81.16" y="0">ed</tspan>
-    </text>
-    <text class="cls-5" transform="translate(293.14 705.38)">Deactiv
-        <tspan class="cls-6" x="88.5" y="0">a</tspan>
-        <tspan class="cls-7" x="101.25" y="0">t</tspan>
-        <tspan x="111.32" y="0">ed</tspan>
-    </text>
 </svg>
