@@ -18,7 +18,7 @@ const LandingPage = () => {
         backgroundSize: "cover",
         backgroundRepeat: "repeat",
         height: '100vh',
-        overflow: "hidden"
+        
         
         
         
