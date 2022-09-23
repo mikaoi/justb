@@ -25,7 +25,7 @@ const App = () => {
         <Route path={"/settings"} element={<Settings/>}/>
         <Route path={"/help&resources"} element={<HelpPage/>}/>
         <Route path={"/bodyscan"} element={<BodyScan/>}/>
-        <Route path={"/landing"} element={<LandingPage/>}/>
+        <Route path={"/signup"} element={<LandingPage/>}/>
         <Route path={"/favorites/:category"} element={<Category/>}/>
         
       </Routes>
