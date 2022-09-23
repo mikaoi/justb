@@ -8,6 +8,7 @@ import { Toolbar } from "@mui/material";
 import { Button } from "@mui/material";
 import { IconButton } from "@mui/material";
 import { MenuItem } from "@mui/material";
+import FooterIllustrationsV1 from '../views/pages/auth/FooterIllustrationsV1'
 
 const LandingPage = () => {
   return (
@@ -20,6 +21,7 @@ const LandingPage = () => {
         overflow: 'hidden' // keeps page from scrolling
       }}
     >
+     
       <BlankLayout>
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position="static">
@@ -58,8 +60,10 @@ const LandingPage = () => {
             <Box>
               <FormLayoutsBasic />
             </Box>
+         
           </CardBox>
         </Box>
+       
       </BlankLayout>
     </div>
   );

@@ -17,6 +17,11 @@ import FormControl from "@mui/material/FormControl";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputAdornment from "@mui/material/InputAdornment";
 import FormHelperText from "@mui/material/FormHelperText";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import Radio from '@mui/material/Radio'
+import RadioGroup from '@mui/material/RadioGroup'
+import FormControlLabel from '@mui/material/FormControlLabel'
 
 // ** Icons Imports
 import EyeOutline from "mdi-material-ui/EyeOutline";
@@ -57,32 +62,87 @@ const FormLayoutsBasic = () => {
     event.preventDefault();
   };
 
+  
+
+
   return (
     <Card style={{ border: "none", boxShadow: "none" }}>
-      <Typography sx={{alignContent: "center", textAlign: "center",fontSize:'40px'}}>justb</Typography>
+      <Typography
+        sx={{ alignContent: "center", textAlign: "center", fontSize: "40px" }}
+      >
+        justb
+      </Typography>
       <CardHeader
-        title="Register your account"
+        title="Register your personal account"
         titleTypographyProps={{
           variant: "h2",
           alignContent: "center",
           textAlign: "center",
-          color:'#31476E'
+          color: "#31476E",
         }}
       />
       <CardContent>
         <form onSubmit={(e) => e.preventDefault()}>
           <Grid container spacing={5}>
             <Grid item xs={12}>
-              <TextField fullWidth label="Name" placeholder="Leonard Carter" />
+              <TextField fullWidth label="Username" placeholder="mwilson12" />
             </Grid>
             <Grid item xs={12}>
-              <TextField 
+              <TextField
                 fullWidth
                 type="email"
                 label="Email"
                 placeholder="carterleonard@gmail.com"
                 helperText="You can use letters, numbers & periods"
               />
+            </Grid>
+
+            <Grid item xs={6}>
+              <InputLabel
+                sx={{ pb: 2 }}
+                id="demo-simple-select-filled-label"
+              >
+                Who are you?
+              </InputLabel>
+              <Select
+                label="Age"
+                defaultValue="10"
+                id='demo-simple-select-filled'
+                labelId="demo-simple-select-filled-label"
+                
+              >
+                <MenuItem value="Age">
+                  <em>None</em>
+                </MenuItem>
+                <MenuItem value={10}>Student</MenuItem>
+                <MenuItem value={20}>Parent</MenuItem>
+                <MenuItem value={30}>Therapist</MenuItem>
+                <MenuItem value={40}>Teacher</MenuItem>
+                <MenuItem value={50}>Other</MenuItem>
+              </Select>
+            </Grid>
+            <Grid item xs={6}>
+              <InputLabel
+                sx={{ pb: 2 }}
+                id="demo-simple-select-outlined-autoWidth-label"
+              >
+                How old is the child?
+              </InputLabel>
+              <TextField
+                type="number"
+                label="age"
+                id="form-props-number"
+                InputLabelProps={{ shrink: true }}
+              />
+            </Grid>
+            <Grid item xs={12}>
+            <FormControl sx={{ flexWrap: 'wrap', flexDirection: 'row' }}>
+      <RadioGroup name='simple-radio'  aria-label='simple-radio'>
+        <Typography>Does the child (children) have a learning difference (e.g. Autism or ADHD)?</Typography>
+        <FormControlLabel value='checked' control={<Radio />} label='Yes' />
+        <FormControlLabel value='unchecked' control={<Radio />} label='No' />
+      </RadioGroup>
+      </FormControl>
             </Grid>
             <Grid item xs={12}>
               <FormControl fullWidth>
