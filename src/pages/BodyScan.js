@@ -11,13 +11,16 @@ import VideoCard from "../components/FavoritePage/VideoCard";
 import MainLayout from "../components/MainLayout/MainLayout";
 import {NavLink} from "react-router-dom";
 import {makeStyles} from "@mui/styles";
+import Scale from '../components/Scale';
 
 const BodyScan = () => {
   const activationInfo = ["Activated", "Centered", "De-activated"]
+  const [isShown, setIsShown] = useState(false);
 
   const [activation, setActivation] = useState(0)
   const [scanning, setScanning] = useState(true)
 
+  console.log(isShown);
   const position = useMemo(() => {
     if (activation === 1) {
       return 'start'
@@ -96,10 +99,10 @@ const BodyScan = () => {
               paddingTop: "20px",
               flexDirection: 'column',
               gap: "10px",
-              marginRight: {xs: "10px", "4xl": "60px"}
-            }}
-            >
-              <Box className={classes.outerDiv} onClick={() => setActivation(1)}>
+              // marginRight: {xs: "10px", "4xl": "60px"}
+            }}>
+              <Box className={classes.outerDiv} onClick={() => setActivation(1)}   onMouseEnter={() => setIsShown(true)}
+                   onMouseLeave={() => setIsShown(false)}>
                 <Activated className={classes.activation}/>
                 <Typography sx={{textShadow: "0px 3px 4px rgba(150, 150, 150, 1)"}}>Activated</Typography>
               </Box>
@@ -112,9 +115,7 @@ const BodyScan = () => {
                 <Typography sx={{textShadow: "0px 3px 4px rgba(150, 150, 150, 1)"}}>De-activated</Typography>
               </Box>
             </Box>
-            <img src={scale} alt={"Scale"}
-                 style={{maxHeight: "730px", height: "100%", marginTop: "-20px", paddingTop: "40px"}}
-            />
+          <Scale/>
             <Box>
               <Box sx={{
                 backgroundColor: "lightColor.light",
