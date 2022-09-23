@@ -43,7 +43,7 @@ const HelpPage = () => {
       >
         <Typography
           sx={{
-            fontSize: "30px",
+            fontSize: "10px",
             textAlign: "center",
             marginTop: "50px",
           }}
