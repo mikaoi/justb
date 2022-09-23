@@ -60,7 +60,7 @@ export default function SideBar(props) {
     {text: "Find a class", icon: find},
     {text: "Favorites", icon: fav},
     {text: "Settings", icon: settings},
-    {text: "Help & Resources", icon: help},
+    
   ];
 
   const drawer = (
