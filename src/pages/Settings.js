@@ -28,8 +28,7 @@ const Settings = () => {
 
   return (
     <MainLayout>
-      Settings
-      <Card>
+      <Card sx={{borderRadius: '20px'}}>
         <TabContext value={value}>
           <TabPanel sx={{ p: 0 }} value="account">
             <TabAccount />

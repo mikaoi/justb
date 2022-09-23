@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent'
 import MuiCard from '@mui/material/Card'
 import InputAdornment from '@mui/material/InputAdornment'
 import MuiTextField from '@mui/material/TextField'
-import AccordionControlled from './AccordionControlled'
+
 import bg from "../../styles/images/bg.png"
 
 // ** Icons Imports
@@ -42,7 +42,7 @@ const FaqHeader = props => {
   return (
     <Card 
     sx={{
-      paddingBottom: '50px'
+      
     }}>
       <CardContent sx={{ pt: 10, textAlign: 'center', pb: theme => `${theme.spacing(23)} !important` }}>
         <Typography variant='h1' sx={{ mb: 1.5, color: 'fontColor.main',  }}>

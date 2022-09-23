@@ -32,7 +32,7 @@ const AccordionControlled = () => {
           <Typography>What is justb?</Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <Typography variant="subtitle2">
+          <Typography variant="subtitle2">
             justb creates inclusive movement videos for extraordinary teachers,
             kids, and classrooms. justb is designed through the lens of
             neurodivergent students to create movement breaks that support as
@@ -54,7 +54,7 @@ const AccordionControlled = () => {
           <Typography>What is required to use justb?</Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <Typography variant="subtitle2">
+          <Typography variant="subtitle2">
             justb is designed for use in the average classroom or home. All the
             user needs is: <br></br>- A computer with up to date browsers.{" "}
             <br></br>- A broadband internet connection. <br></br>- A screen that
@@ -76,7 +76,7 @@ const AccordionControlled = () => {
           <Typography>When should I use justb?</Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <Typography variant="subtitle1">
+          <Typography variant="subtitle1">
             justb is designed to be used at the discrepancy of our users. It’s
             available to be used 24/7.
             <Typography variant="subtitle2">
@@ -116,7 +116,7 @@ const AccordionControlled = () => {
           <Typography>Share Links to Videos</Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <Typography variant="subtitle2">
+          <Typography variant="subtitle2">
             You can share links to specific videos with your students in your
             virtual classrooms or through emails by using our share feature.
             These share links will allow others to view specific GoNoodle videos
@@ -139,9 +139,7 @@ const AccordionControlled = () => {
           <Typography>How to turn on closed captions</Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <Typography variant="subtitle2">
-            
-          </Typography>
+          <Typography variant="subtitle2"></Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion
@@ -156,36 +154,38 @@ const AccordionControlled = () => {
           <Typography>Content Standards</Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <Typography variant="subtitle2">
-        All justb content added must adhere to the following standards:
-<br></br>
-- Our content is school-appropriate.
-<br></br>
-<br></br>
-- Our content is age appropriate for kids, age 5 to 12.
-<br></br>
-- Our content is designed to be inclusive of many students different learning needs while recognizing that it currently does not meet the individual needs of every student.
-<br></br>
-- Our content is positive and empowering in tone.
-<br></br>
-- Our content promotes a healthy lifestyle. It never promotes drug or alcohol use, violence, inappropriate language, bullying, or sexual activity.
-<br></br>
-- Our content is fun for kids.
-<br></br>
-- Our content always encourages kids to move and practice healthy holistic habits.
-<br></br>
-- Our content never includes specific endorsements of religious or political views.
-<br></br>
-
-When creating or curating content, our standards are identical to those used by the MPAA in rating television or movie content. We're committed to keeping justb "G-rated."
-<br></br>
-
-*According to the MPAA, a "G-rated motion picture contains nothing in theme, language, nudity, sex, violence or other matters that, in the view of the Rating Board, would offend parents whose younger children view the motion picture."*
-
-**Content Appropriateness**
-<br></br>
-
-While justb holds all content accountable to the standards above, content appropriateness is ultimately subjective. Adults are encouraged to make their own decisions about which justb activities they feel are appropriate and avoid those they do not feel comfortable using.
+          <Typography variant="subtitle2">
+            All justb content added must adhere to the following standards:
+            <br></br>- Our content is school-appropriate.
+            <br></br>
+            <br></br>- Our content is age appropriate for kids, age 5 to 12.
+            <br></br>- Our content is designed to be inclusive of many students
+            different learning needs while recognizing that it currently does
+            not meet the individual needs of every student.
+            <br></br>- Our content is positive and empowering in tone.
+            <br></br>- Our content promotes a healthy lifestyle. It never
+            promotes drug or alcohol use, violence, inappropriate language,
+            bullying, or sexual activity.
+            <br></br>- Our content is fun for kids.
+            <br></br>- Our content always encourages kids to move and practice
+            healthy holistic habits.
+            <br></br>- Our content never includes specific endorsements of
+            religious or political views.
+            <br></br>
+            When creating or curating content, our standards are identical to
+            those used by the MPAA in rating television or movie content. We're
+            committed to keeping justb "G-rated."
+            <br></br>
+            *According to the MPAA, a "G-rated motion picture contains nothing
+            in theme, language, nudity, sex, violence or other matters that, in
+            the view of the Rating Board, would offend parents whose younger
+            children view the motion picture."* **Content Appropriateness**
+            <br></br>
+            While justb holds all content accountable to the standards above,
+            content appropriateness is ultimately subjective. Adults are
+            encouraged to make their own decisions about which justb activities
+            they feel are appropriate and avoid those they do not feel
+            comfortable using.
           </Typography>
         </AccordionDetails>
       </Accordion>
