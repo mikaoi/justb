@@ -25,7 +25,7 @@ const Testimonials = () => {
     }];
 
   return (
-    <Box sx={{display: "flex", flexDirection: "column", gap: "60px", padding: "50px 200px"}}>
+    <Box sx={{display: "flex", flexDirection: "column", gap: "80px", padding: "100px 200px"}}>
       <Typography variant={"h3"} fontSize={"24px"} textAlign={"center"}>What is the justb community saying?</Typography>
       <Box sx={{width: "100%", display: "flex", justifyContent: "space-between"}}>
         {reviews.map((value, i) => {

@@ -3,20 +3,17 @@ import {Box, Stack, Typography} from "@mui/material";
 import {ReactComponent as ArrowIcon} from "../styles/images/btnImages/arrow.svg";
 import {theme} from "../styles/theme/theme";
 import {CardBox, YellowButton} from "../styles/theme/styledComponents";
-import activated from '../styles/images/bodyScanImg/activated.png';
-import centered from '../styles/images/bodyScanImg/centered.png';
-import deactivated from '../styles/images/bodyScanImg/deactivated.png';
+import {ReactComponent as Activated} from '../styles/images/bodyScanImg/activated.svg';
+import {ReactComponent as Centered} from '../styles/images/bodyScanImg/centered.svg';
+import {ReactComponent as Deactivated} from '../styles/images/bodyScanImg/deactivated.svg';
 import scale from '../styles/images/bodyScanImg/scale.png'
 import VideoCard from "../components/FavoritePage/VideoCard";
 import MainLayout from "../components/MainLayout/MainLayout";
 import {NavLink} from "react-router-dom";
+import {makeStyles} from "@mui/styles";
 
 const BodyScan = () => {
-  const activationInfo = [
-    {character: activated, text: "Activated"},
-    {character: centered, text: "Centered"},
-    {character: deactivated, text: "De-activated"}
-  ];
+  const activationInfo = ["Activated", "Centered", "De-activated"]
 
   const [activation, setActivation] = useState(0)
   const [scanning, setScanning] = useState(true)
@@ -30,6 +27,24 @@ const BodyScan = () => {
       return "end"
     }
   }, [activation])
+
+  const useStyles = makeStyles(theme => ({
+    outerDiv: {
+      textAlign: "center",
+      cursor: "pointer",
+      '&:hover': {
+        "& $activation": {
+          fill: "#c2b678",
+          transform: "scale(1.1)"
+        }
+      }
+    },
+    activation: (props) => ({
+      fill: theme.palette.grey[400],
+      width: "200px"
+    })
+  }));
+  const classes = useStyles();
 
 
   return (
@@ -84,12 +99,18 @@ const BodyScan = () => {
               marginRight: {xs: "10px", "4xl": "60px"}
             }}
             >
-              {activationInfo.map((item, i) => {
-                return <Box key={i} sx={{textAlign: "center", cursor: "pointer"}} onClick={() => setActivation(i + 1)}>
-                  <img src={item.character} alt={"Activated"} style={{maxHeight: "190px"}}/>
-                  <Typography sx={{textShadow: "0px 3px 4px rgba(150, 150, 150, 1)"}}>{item.text}</Typography>
-                </Box>
-              })}
+              <Box className={classes.outerDiv} onClick={() => setActivation(1)}>
+                <Activated className={classes.activation}/>
+                <Typography sx={{textShadow: "0px 3px 4px rgba(150, 150, 150, 1)"}}>Activated</Typography>
+              </Box>
+              <Box className={classes.outerDiv} onClick={() => setActivation(2)}>
+                <Centered className={classes.activation}/>
+                <Typography sx={{textShadow: "0px 3px 4px rgba(150, 150, 150, 1)"}}>Centered</Typography>
+              </Box>
+              <Box className={classes.outerDiv} onClick={() => setActivation(3)}>
+                <Deactivated className={classes.activation}/>
+                <Typography sx={{textShadow: "0px 3px 4px rgba(150, 150, 150, 1)"}}>De-activated</Typography>
+              </Box>
             </Box>
             <img src={scale} alt={"Scale"}
                  style={{maxHeight: "730px", height: "100%", marginTop: "-20px", paddingTop: "40px"}}
@@ -125,7 +146,7 @@ const BodyScan = () => {
                   background: theme.palette.lightColor.light,
                   boxShadow: "-2px 12px 20px rgba(0, 0, 0, 0.25)"
                 }}>
-                  <Typography>Get moving with a {activation !== 0 && activationInfo[activation - 1].text.toLowerCase()} class</Typography>
+                  <Typography>Get moving with a {activation !== 0 && activationInfo[activation - 1].toLowerCase()} class</Typography>
                   <Box sx={{
                     display: "flex",
                     gap: "40px"
@@ -140,7 +161,7 @@ const BodyScan = () => {
                     </Stack>
                   </Box>
                   <YellowButton to={'/favorites/:category'} sx={{fontSize: "18px"}} component={NavLink}>
-                    More {activation !== 0 && activationInfo[activation - 1].text} Classes
+                    More {activation !== 0 && activationInfo[activation - 1]} Classes
                     <ArrowIcon/>
                   </YellowButton>
                 </Box>
