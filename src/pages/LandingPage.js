@@ -73,14 +73,14 @@ const LandingPage = () => {
             }}
           >
             <Box>
-              <Typography sx={{fontSize: '40px', textAlign: 'center'}}>Are you a School or Indiviual?</Typography>
+              <Typography sx={{fontSize: '40px', textAlign: 'center'}}>justb signup</Typography>
             </Box>
 
             <Box>
               <Signup/>
               {/* First component will go here */}
             </Box>
-
+            
           </CardBox>
         </Box>
       </BlankLayout>{" "}
