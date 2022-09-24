@@ -70,7 +70,7 @@ const FormLayoutsBasic = () => {
 
 
   return (
-    <Card style={{ border: "none", boxShadow: "none", height: "100%" }}>
+    <Card style={{ border: "none", boxShadow: "none", height: "100%", minHeight: '100%' }}>
       <Grid container spacing={0}>
       <a href="https://movewithjustb.com/">
           <Avatar
@@ -101,7 +101,7 @@ const FormLayoutsBasic = () => {
       />
       <CardContent>
         <form onSubmit={(e) => e.preventDefault()}>
-          <Grid container spacing={3}>
+          <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField fullWidth label="Username" placeholder="mwilson12" />
             </Grid>

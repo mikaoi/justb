@@ -75,7 +75,7 @@ export default function SideBar(props) {
           position: "relative",
         }}
       >
-        <a href="https://movewithjustb.com/">
+        <NavLink to="/signup">
           <Avatar
             src={logo}
             sx={{
@@ -86,7 +86,7 @@ export default function SideBar(props) {
               left: "16px",
             }}
           />
-        </a>
+        </NavLink>
         <Avatar
           src={avatar}
           sx={{

@@ -1,31 +1,36 @@
-import React from "react";
+import { React, useState } from "react";
 import bg from "../styles/images/langingImg/heroBg.png";
 import { AppBar, Box, Typography } from "@mui/material";
 import FormLayoutsBasic from "../views/forms/form-layouts/FormLayoutsBasic";
 import { CardBox } from "../styles/theme/styledComponents";
 import BlankLayout from "../components/MainLayout/BlankLayout";
-import { Toolbar } from "@mui/material";
-import { Button } from "@mui/material";
-import { IconButton } from "@mui/material";
-import { MenuItem } from "@mui/material";
-import FooterIllustrationsV1 from '../views/pages/auth/FooterIllustrationsV1'
+import VideoCard from "../components/FavoritePage/VideoCard";
+
+import Signup from "../components/Signup/Signup";
+
+import School from "../styles/images/school.png";
+import Indiviual from "../styles/images/woman.png";
+
+// ** MUI Imports
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
+import FormControl from "@mui/material/FormControl";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import { Grid } from "mdi-material-ui";
+import { Person } from "@mui/icons-material";
 
 const LandingPage = () => {
   return (
     <div
       style={{
-        backgroundImage: `url(${bg})`,
+        // backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
         backgroundRepeat: "repeat",
-        height: '100vh',
-        overflow: "hidden"
-        
-        
-        
-         // keeps page from scrolling
+        height: "100vh",
+
+        // keeps page from scrolling
       }}
     >
-    
       <BlankLayout>
         {/* <Box sx={{ flexGrow: 1 }}>
           <AppBar position="static">
@@ -46,35 +51,40 @@ const LandingPage = () => {
             </Toolbar>
           </AppBar>
         </Box> */}
-        <Box className="content-center" sx={{
-          height: 'fit-content(20em)'
-
-        }}>
+        <Box
+          className="content-center"
+          sx={{
+            flexGrow: 1,
+            height: "fit-content(20em)",
+          }}
+        >
           <CardBox
             sx={{
-             
               paddingTop: { xs: "20px", "2xl": "40px" },
               paddingBottom: "15px",
               paddingX: { xs: "30px", "2xl": "40px", "3xl": "50px" },
               display: "flex",
-              flexDirection: "row",
+              flexDirection: "column",
               gap: { xs: "40px", "2xl": "20px" },
               justifyContent: "space-between",
               width: "50%",
-              
-              boxShadow: 20,
-             
-              
+              height: "100%",
+              boxShadow: 2,
             }}
           >
             <Box>
-              <FormLayoutsBasic />
+              <Typography sx={{fontSize: '40px', textAlign: 'center'}}>justb signup</Typography>
             </Box>
-         
+
+            <Box>
+              <Signup/>
+              {/* First component will go here */}
+            </Box>
+            
           </CardBox>
         </Box>
-       
-      </BlankLayout>
+      </BlankLayout>{" "}
+      {/* Blank Page */}
     </div>
   );
 };
