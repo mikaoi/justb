@@ -4,12 +4,7 @@ import { AppBar, Box, Typography } from "@mui/material";
 import FormLayoutsBasic from "../views/forms/form-layouts/FormLayoutsBasic";
 import { CardBox } from "../styles/theme/styledComponents";
 import BlankLayout from "../components/MainLayout/BlankLayout";
-import { Toolbar } from "@mui/material";
-import { Button } from "@mui/material";
-import { IconButton } from "@mui/material";
-import { MenuItem } from "@mui/material";
-import FooterIllustrationsV1 from "../views/pages/auth/FooterIllustrationsV1";
-import { fontSize } from "@mui/system";
+import VideoCard from "../components/FavoritePage/VideoCard";
 
 import School from "../styles/images/school.png";
 import Indiviual from "../styles/images/woman.png";
@@ -23,13 +18,6 @@ import { Grid } from "mdi-material-ui";
 import { Person } from "@mui/icons-material";
 
 const LandingPage = () => {
-  // ** State
-  const [value, setValue] = useState("controlled-checked");
-
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-
   return (
     <div
       style={{
@@ -79,14 +67,21 @@ const LandingPage = () => {
               justifyContent: "space-between",
               width: "50%",
               height: "100%",
-              boxShadow: 20,
+              boxShadow: 2,
             }}
           >
-            
-          
+            <Box>
+              <Typography sx={{fontSize: '40px', textAlign: 'center'}}>Are you a School or Indiviual?</Typography>
+            </Box>
+
+            <Box>
+              {/* First component will go here */}
+            </Box>
+
           </CardBox>
         </Box>
-      </BlankLayout>
+      </BlankLayout>{" "}
+      {/* Blank Page */}
     </div>
   );
 };
