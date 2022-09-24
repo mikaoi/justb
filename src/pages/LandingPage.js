@@ -33,7 +33,7 @@ const LandingPage = () => {
   return (
     <div
       style={{
-        backgroundImage: `url(${bg})`,
+        // backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
         backgroundRepeat: "repeat",
         height: "100vh",
@@ -105,7 +105,7 @@ const LandingPage = () => {
                 value={value}
                 onChange={handleChange}
               >
-                <Box >
+                <Box>
                   <Box>
                     <img src={School} alt="Hear" width="200px" height="200px" />
                   </Box>
