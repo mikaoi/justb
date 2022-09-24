@@ -23,7 +23,7 @@ const Signup = () => {
         marginBottom: { xs: "20px", "3xl": "35px" },
       }}
     >
-      <CustomButton
+      <CustomButton disableRipple
         sx={{
           width: "200px",
           borderColor: theme.palette.primary.main,
@@ -40,7 +40,7 @@ const Signup = () => {
           <Typography>Indiviual</Typography>
         </Box>
       </CustomButton>
-      <CustomButton
+      <CustomButton disableRipple
         sx={{
           width: "200px",
           borderColor: theme.palette.primary.main,
