@@ -7,7 +7,7 @@ import {theme} from "../../styles/theme/theme";
 
 const ButtonsCard = () => {
   return (
-    <CardBox
+    <CardBox 
       sx={{
         paddingX: {xs: "20px", "3xl": "40px"},
         paddingY: "50px",
@@ -16,7 +16,7 @@ const ButtonsCard = () => {
         flexDirection: {xs: "column", xl: "row"},
         alignItems: "center",
         justifyContent: "space-around",
-        boxShadow: theme.shadows[1],
+        
         gap: "30px",
         marginBottom: {xs: "20px", "3xl": "35px"},
       }}

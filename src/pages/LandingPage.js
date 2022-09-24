@@ -6,6 +6,8 @@ import { CardBox } from "../styles/theme/styledComponents";
 import BlankLayout from "../components/MainLayout/BlankLayout";
 import VideoCard from "../components/FavoritePage/VideoCard";
 
+import Signup from "../components/Signup/Signup";
+
 import School from "../styles/images/school.png";
 import Indiviual from "../styles/images/woman.png";
 
@@ -75,6 +77,7 @@ const LandingPage = () => {
             </Box>
 
             <Box>
+              <Signup/>
               {/* First component will go here */}
             </Box>
 
