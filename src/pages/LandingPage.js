@@ -82,57 +82,8 @@ const LandingPage = () => {
               boxShadow: 20,
             }}
           >
-            <Typography
-              sx={{ textAlign: "center", fontSize: "35px", display: "flex" }}
-            >
-              {" "}
-              Hi there. Are you a School or Individual?
-            </Typography>
-
-            <Box
-              sx={{
-                pl: "200px",
-                display: "flex",
-                alignContent: "center",
-                justifyContent: "space-between",
-                flexDirection: "column",
-              }}
-            >
-              <RadioGroup
-                row
-                aria-label="controlled"
-                name="controlled"
-                value={value}
-                onChange={handleChange}
-              >
-                <Box>
-                  <Box>
-                    <img src={School} alt="Hear" width="200px" height="200px" />
-                  </Box>
-
-                  <FormControlLabel
-                    value="controlled-checked"
-                    control={<Radio />}
-                    label="School"
-                  />
-                </Box>
-                <Box>
-                  <Box>
-                    <img
-                      src={Indiviual}
-                      alt="Hear"
-                      width="200px"
-                      height="200px"
-                    />
-                  </Box>
-                  <FormControlLabel
-                    value="controlled-unchecked"
-                    control={<Radio />}
-                    label="Individual"
-                  />
-                </Box>
-              </RadioGroup>
-            </Box>
+            
+          
           </CardBox>
         </Box>
       </BlankLayout>
