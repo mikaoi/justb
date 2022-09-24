@@ -5,9 +5,9 @@ import FormLayoutsBasic from "../views/forms/form-layouts/FormLayoutsBasic";
 import { CardBox } from "../styles/theme/styledComponents";
 import BlankLayout from "../components/MainLayout/BlankLayout";
 import VideoCard from "../components/FavoritePage/VideoCard";
-
+import Stepper from '../components/Signup/Stepper'
 import Signup from "../components/Signup/Signup";
-
+import AccountType from "../components/Signup/AccountType";
 import School from "../styles/images/school.png";
 import Indiviual from "../styles/images/woman.png";
 
@@ -23,7 +23,7 @@ const LandingPage = () => {
   return (
     <div
       style={{
-        // backgroundImage: `url(${bg})`,
+        backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
         backgroundRepeat: "repeat",
         height: "100vh",
@@ -77,7 +77,9 @@ const LandingPage = () => {
             </Box>
 
             <Box>
-              <Signup/>
+              <Stepper/>
+              <Typography sx={{fontSize: '40px', textAlign: 'center'}}>Are you a Indiviual or School?</Typography>
+              <AccountType/>
               {/* First component will go here */}
             </Box>
             
