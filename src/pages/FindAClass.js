@@ -13,8 +13,8 @@ import {
   MenuItem,
 } from "@mui/material";
 import VideoCard from "../components/FavoritePage/VideoCard";
-import {ReactComponent as SelectArrow} from "../styles/images/selectArrow.svg";
-import {theme} from "../styles/theme/theme";
+import { ReactComponent as SelectArrow } from "../styles/images/selectArrow.svg";
+import { theme } from "../styles/theme/theme";
 import MainLayout from "../components/MainLayout/MainLayout";
 
 const FindAClass = () => {
@@ -40,19 +40,19 @@ const FindAClass = () => {
     <MainLayout>
       <CardBox
         sx={{
-          paddingTop: {xs: "30px", "2xl": "40px"},
+          paddingTop: { xs: "30px", "2xl": "40px" },
           paddingBottom: "15px",
-          paddingX: {xs: "30px", "2xl": "40px", "3xl": "50px"},
+          paddingX: { xs: "30px", "2xl": "40px", "3xl": "50px" },
           display: "flex",
           flexDirection: "column",
-          gap: {xs: "40px", "2xl": "20px"},
+          gap: { xs: "40px", "2xl": "20px" },
           justifyContent: "space-between",
           width: "100%",
           height: "100%",
           boxShadow: 2,
         }}
       >
-        <SearchInput placeholder={"Search"} sx={{alignSelf: "center"}}/>
+        <SearchInput placeholder={"Search"} sx={{ alignSelf: "center" }} />
         <Stack>
           <Typography variant={"bold"} marginBottom={"10px"}>
             Filters
@@ -60,23 +60,23 @@ const FindAClass = () => {
           <Box
             sx={{
               display: "flex",
-              gap: {xs: 2, "3xl": 3},
-              flexDirection: {xs: "column", md: "row"},
+              gap: { xs: 2, "3xl": 3 },
+              flexDirection: { xs: "column", md: "row" },
             }}
           >
             <Box
               sx={{
                 width: "100%",
                 display: "flex",
-                gap: {xs: 2, "3xl": 3},
-                flexDirection: {xs: "column", "3xl": "row"},
+                gap: { xs: 2, "3xl": 3 },
+                flexDirection: { xs: "column", "3xl": "row" },
               }}
             >
-              <Box sx={{maxWidth: "350px", width: "100%"}}>
+              <Box sx={{ maxWidth: "350px", width: "100%" }}>
                 <FormControl fullWidth focused={false}>
                   <InputLabel
                     variant={"outlined"}
-                    sx={{display: duration && "none"}}
+                    sx={{ display: duration && "none" }}
                   >
                     Duration
                   </InputLabel>
@@ -86,17 +86,18 @@ const FindAClass = () => {
                     onChange={handleDurationChange}
                     IconComponent={() => (
                       <SelectArrow
-                        style={{fill: theme.palette.fontColor.main}}
+                        style={{ fill: theme.palette.fontColor.main }}
                       />
                     )}
                   >
-                    <MenuItem value={1}>Option 1</MenuItem>
-                    <MenuItem value={2}>Option 2</MenuItem>
-                    <MenuItem value={3}>Option 3</MenuItem>
+                    <MenuItem value={1}>Under 5 Minutes</MenuItem>
+                    <MenuItem value={2}>5-10 Minutes</MenuItem>
+                    <MenuItem value={3}>10-15 Minutes</MenuItem>
+                    <MenuItem value={4}>15+ Minutes</MenuItem>
                   </CustomSelect>
                 </FormControl>
               </Box>
-              <Box sx={{maxWidth: "350px", width: "100%"}}>
+              <Box sx={{ maxWidth: "350px", width: "100%" }}>
                 <FormControl fullWidth focused={false}>
                   <InputLabel
                     variant={"outlined"}
@@ -112,13 +113,13 @@ const FindAClass = () => {
                     onChange={handleActivationChange}
                     IconComponent={() => (
                       <SelectArrow
-                        style={{fill: theme.palette.fontColor.main}}
+                        style={{ fill: theme.palette.fontColor.main }}
                       />
                     )}
                   >
-                    <MenuItem value={1}>Option 1</MenuItem>
-                    <MenuItem value={2}>Option 2</MenuItem>
-                    <MenuItem value={3}>Option 3</MenuItem>
+                    <MenuItem value={1}>Activating </MenuItem>
+                    <MenuItem value={2}>Centered</MenuItem>
+                    <MenuItem value={3}>Deactivating</MenuItem>
                   </CustomSelect>
                 </FormControl>
               </Box>
@@ -127,15 +128,15 @@ const FindAClass = () => {
               sx={{
                 width: "100%",
                 display: "flex",
-                gap: {xs: 2, "3xl": 3},
-                flexDirection: {xs: "column", "3xl": "row"},
+                gap: { xs: 2, "3xl": 3 },
+                flexDirection: { xs: "column", "3xl": "row" },
               }}
             >
-              <Box sx={{maxWidth: "350px", width: "100%"}}>
+              <Box sx={{ maxWidth: "350px", width: "100%" }}>
                 <FormControl fullWidth focused={false}>
                   <InputLabel
                     variant={"outlined"}
-                    sx={{display: skills && "none"}}
+                    sx={{ display: skills && "none" }}
                   >
                     Skills
                   </InputLabel>
@@ -145,17 +146,18 @@ const FindAClass = () => {
                     onChange={handleSkillsChange}
                     IconComponent={() => (
                       <SelectArrow
-                        style={{fill: theme.palette.fontColor.main}}
+                        style={{ fill: theme.palette.fontColor.main }}
                       />
                     )}
                   >
-                    <MenuItem value={1}>Option 1</MenuItem>
-                    <MenuItem value={2}>Option 2</MenuItem>
-                    <MenuItem value={3}>Option 3</MenuItem>
+                    <MenuItem value={1}>Balance</MenuItem>
+                    <MenuItem value={2}>Mindfulness</MenuItem>
+                    <MenuItem value={3}>Bilateral Coordination</MenuItem>
+                    <MenuItem value={4}>Crossing the midline</MenuItem>
                   </CustomSelect>
                 </FormControl>
               </Box>
-              <Box sx={{maxWidth: "350px", width: "100%"}}>
+              <Box sx={{ maxWidth: "350px", width: "100%" }}>
                 <FormControl fullWidth focused={false}>
                   <InputLabel
                     variant={"outlined"}
@@ -173,7 +175,7 @@ const FindAClass = () => {
                     onChange={handleRestrictionsChange}
                     IconComponent={() => (
                       <SelectArrow
-                        style={{fill: theme.palette.lightColor.light}}
+                        style={{ fill: theme.palette.lightColor.light }}
                       />
                     )}
                     sx={{
@@ -181,9 +183,8 @@ const FindAClass = () => {
                       color: "lightColor.light",
                     }}
                   >
-                    <MenuItem value={1}>Option 1</MenuItem>
-                    <MenuItem value={2}>Option 2</MenuItem>
-                    <MenuItem value={3}>Option 3</MenuItem>
+                    <MenuItem value={1}>Limited floor space </MenuItem>
+                    <MenuItem value={2}>No jumping or stomping</MenuItem>
                   </CustomSelect>
                 </FormControl>
               </Box>
@@ -206,13 +207,13 @@ const FindAClass = () => {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: {xs: "center", xl: "space-between"},
+                  justifyContent: { xs: "center", xl: "space-between" },
                   flexWrap: "wrap",
                   gap: "20px",
                 }}
               >
                 {[1, 2, 3, 4, 5, 6].map((v, i) => {
-                  return <VideoCard key={i}/>;
+                  return <VideoCard key={i} />;
                 })}
               </Box>
             </Stack>
