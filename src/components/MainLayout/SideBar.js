@@ -132,7 +132,7 @@ export default function SideBar(props) {
             sx={{
               display: "flex",
               flexDirection: "column",
-              gap: "9px",
+              gap: "35px",
             }}
           >
             {linkInfo.map((link, index) => (
