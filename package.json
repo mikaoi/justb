@@ -14,6 +14,7 @@
     "@testing-library/user-event": "^13.2.1",
     "bit": "^1.0.20",
     "bit-bin": "^14.8.8",
+    "clerk-react": "^0.1.9",
     "mdi-material-ui": "^7.5.0",
     "react": "^18.2.0",
     "react-axios": "^2.0.6",

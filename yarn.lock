@@ -5727,6 +5727,13 @@ cleargraph@^5.4.0, cleargraph@^5.6.0:
     graphlib "^2.1.8"
     lodash "^4.17.15"
 
+clerk-react@^0.1.9:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/clerk-react/-/clerk-react-0.1.9.tgz#090c7af1ebbc1adb05c0b51f182e49a9e8dbc361"
+  integrity sha512-xM0vRSW+aiUO9CklWTEaFO9SQL+rJs1hOPMvTibJFSFktYSJmUFxdSZTv6eUF10LthpQcitMnoQSX7oHAyQokw==
+  dependencies:
+    core-js "^3.2.1"
+
 cli-color@^1.1.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/cli-color/-/cli-color-1.4.0.tgz#7d10738f48526824f8fe7da51857cb0f572fe01f"
@@ -6149,6 +6156,11 @@ core-js@^3.19.2:
   version "3.25.0"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.25.0.tgz#be71d9e0dd648ffd70c44a7ec2319d039357eceb"
   integrity sha512-CVU1xvJEfJGhyCpBrzzzU1kjCfgsGUxhEvwUV2e/cOedYWHdmluamx+knDnmhqALddMG16fZvIqvs9aijsHHaA==
+
+core-js@^3.2.1:
+  version "3.25.3"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.25.3.tgz#cbc2be50b5ddfa7981837bd8c41639f27b166593"
+  integrity sha512-y1hvKXmPHvm5B7w4ln1S4uc9eV/O5+iFExSRUimnvIph11uaizFR8LFMdONN8hG3P2pipUfX4Y/fR8rAEtcHcQ==
 
 core-util-is@1.0.2:
   version "1.0.2"
