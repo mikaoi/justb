@@ -8,8 +8,21 @@ import Home from "./pages/Home";
 import FindAClass from "./pages/FindAClass";
 import Favorites from "./pages/Favorites";
 
+// Used for Clerkjs
+import { useNavigate } from "react-router-dom";
+
 // Clerk API sign up
-import { ClerkProvider } from "@clerk/clerk-react";
+// Import ClerkProvider
+import {
+  ClerkProvider,
+  SignedIn,
+  SignedOut,
+  UserButton,
+  useUser,
+  RedirectToSignIn,
+} from "@clerk/clerk-react";
+
+// Get the Frontend API from the environment
 
 import HelpPage from "./pages/HelpPage";
 import Category from "./pages/Category";
@@ -17,14 +30,20 @@ import BodyScan from "./pages/BodyScan";
 import LandingPage from "./pages/LandingPage";
 import Settings from './pages/Settings'
 
+
+
 // Signup API
-const frontendApi = process.env.REACT_APP_CLERK_FRONTEND_API;
+const frontendApi = 'clerk.central.zebra-47.lcl.dev';
+
+
 
 const App = () => {
 
+  const navigate = useNavigate();
+
   return (
     <ThemeProvider theme={theme}>
-       <ClerkProvider frontendApi={frontendApi}>
+       <ClerkProvider frontendApi={frontendApi} navigate={(to) => navigate(to)}>
       <CssBaseline/>
       <Routes>
      

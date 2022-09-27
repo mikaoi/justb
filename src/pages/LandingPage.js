@@ -11,6 +11,9 @@ import AccountType from "../components/Signup/AccountType";
 import School from "../styles/images/school.png";
 import Indiviual from "../styles/images/woman.png";
 
+import { ClerkProvider, SignUp } from "@clerk/clerk-react";
+
+
 // ** MUI Imports
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
@@ -77,9 +80,11 @@ const LandingPage = () => {
             </Box>
 
             <Box>
+            <SignUp/>
               <Stepper/>
               <Typography sx={{fontSize: '40px', textAlign: 'center'}}>Are you a Indiviual or School?</Typography>
               <AccountType/>
+              
               {/* First component will go here */}
             </Box>
             
