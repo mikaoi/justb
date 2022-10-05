@@ -9,6 +9,20 @@ export const CardBox = styled(Box)(({theme}) => ({
   margin: "0px",
 }));
 
+export const SignUpBox = styled(Box)(({theme}) => ({
+  backgroundColor: "#F6FBF9",
+  borderRadius: "32px",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  maxWidth: "900px",
+  width: "100%",
+  minHeight: "600px",
+  height: "100%",
+  padding: "40px",
+  color: "rgba(19, 48, 96, 0.72)",
+}));
+
 export const CustomButton = styled(Button)(({theme}) => ({
   textTransform: "none",
   fontFamily: "SchemeRg-Regular",

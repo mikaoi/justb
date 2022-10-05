@@ -7,12 +7,13 @@ import {
 import Home from "./pages/Home";
 import FindAClass from "./pages/FindAClass";
 import Favorites from "./pages/Favorites";
-
 import HelpPage from "./pages/HelpPage";
 import Category from "./pages/Category";
 import BodyScan from "./pages/BodyScan";
 import LandingPage from "./pages/LandingPage";
 import Settings from './pages/Settings'
+import SignUp from "./pages/SignUp";
+import PersonalAccountForm from "./components/SignUp/PersonalAccountForm";
 const App = () => {
 
   return (
@@ -25,7 +26,8 @@ const App = () => {
         <Route path={"/settings"} element={<Settings/>}/>
         <Route path={"/help&resources"} element={<HelpPage/>}/>
         <Route path={"/bodyscan"} element={<BodyScan/>}/>
-        <Route path={"/signup"} element={<LandingPage/>}/>
+        <Route path={"/signup"} element={<SignUp/>}/>
+        <Route path={"/signup/personal"} element={<PersonalAccountForm/>}/>
         <Route path={"/favorites/:category"} element={<Category/>}/>
         
       </Routes>

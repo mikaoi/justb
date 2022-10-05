@@ -42,6 +42,7 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: ["Scheme", "-apple-system", "Roboto", "sans-serif"].join(","),
+    color: "inherit"
   },
   components: {
     MuiCssBaseline: {
