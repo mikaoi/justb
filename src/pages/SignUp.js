@@ -99,8 +99,8 @@ const SignUp = () => {
               </Typography>
             </>
           }
-          {variant === 1 && <PersonalAccountForm/>}
-          {variant === 2 && <SchoolCodeForm/>}
+          {variant === 1 && <PersonalAccountForm returnToFirst={setVariant}/>}
+          {variant === 2 && <SchoolCodeForm returnToFirst={setVariant}/>}
         </SignUpBox>
       </Box>
     </Box>

@@ -14,70 +14,93 @@ const breakpoints = {
 };
 
 export const theme = createTheme({
-  breakpoints: breakpoints,
-  palette: {
-    background: {
-      paper: "#F3F1F4",
-      default: "#FFF"
-    },
-    primary: {
-      light: "#FFCC1259",
-      main: "#FFCB12",
-      dark: "#FFC263",
-    },
-    secondary: {
-      light: "#F5D0C5",
-      main: "#F05656",
-      dark: "#FC5454",
-    },
-    lightColor: {
-      light: "#fff",
-      main: "#F3F1F4",
-      dark: "#EAEAEA",
-    },
-    fontColor: {
-      main: "#31476E",
-      dark: "#000",
-    },
-  },
-  typography: {
-    fontFamily: ["Scheme", "-apple-system", "Roboto", "sans-serif"].join(","),
-    color: "inherit"
-  },
-  components: {
-    MuiCssBaseline: {
-      styleOverrides: {
-        body: {
-          margin: "0",
-          minHeight: "100vh",
-          minWidth: "100vw",
-          color: "#31476E",
-          fontSize: "20px",
-          fontFamily: "Scheme",
-        },
+    breakpoints: breakpoints,
+    palette: {
+      background: {
+        paper: "#F3F1F4",
+        default: "#FFF"
+      },
+      primary: {
+        light: "#FFCC1259",
+        main: "#FFCB12",
+        dark: "#FFC263",
+      },
+      secondary: {
+        light: "#F5D0C5",
+        main: "#F05656",
+        dark: "#FC5454",
+      },
+      lightColor: {
+        light: "#fff",
+        main: "#F3F1F4",
+        dark: "#EAEAEA",
+      },
+      fontColor: {
+        light:"#adb5bd",
+        main: "#31476E",
+        dark: "#000",
       },
     },
-    MuiLink: {
-      styleOverrides: {
-        root: {
-          textDecoration: "none",
-          color: "#31476E",
-        },
-      },
+    typography: {
+      fontFamily: ["Scheme", "-apple-system", "Roboto", "sans-serif"].join(","),
+      color: "inherit"
     },
-    MuiInputLabel: {
-      variants: [
-        {
-          props: {variant: "outlined"},
-          style: {
-            marginTop: "-5px",
-            fontSize: "17px",
+    components: {
+      MuiCssBaseline: {
+        styleOverrides: {
+          body: {
+            margin: "0",
+            minHeight: "100vh",
+            minWidth: "100vw",
+            color: "#31476E",
+            fontSize: "20px",
+            fontFamily: "Scheme",
           },
         },
-      ],
+      },
+      MuiLink: {
+        styleOverrides: {
+          root: {
+            textDecoration: "none",
+            color: "#31476E",
+          },
+        },
+      },
+      MuiInputBase: {
+        "&::placeholder": {
+          color: "red"
+        },
+        styleOverrides: {
+          root: {
+            border: "1px solid rgba(0, 0, 0, 0.1)",
+            borderRadius: "10px",
+            color: "rgba(0, 0, 0, 0.5)",
+            padding: "18px 20px",
+            fontSize: "18px",
+            background: "white",
+            width: "100%",
+            input: {
+              "::placeholder": {
+                color: "black",
+              },
+            }
+          }
+        }
+      },
+      MuiInputLabel: {
+        variants: [
+          {
+            props: {variant: "outlined"},
+            style: {
+              marginTop: "-5px",
+              fontSize: "17px",
+            },
+          },
+        ],
+      },
     },
-  },
-});
+  })
+;
 
 theme.typography.body1 = {
   fontFamily: "SchemeRg-Regular",
@@ -130,6 +153,7 @@ theme.typography.bold = {
   fontFamily: "SchemeRg-Bold",
   fontSize: "17px",
 };
+
 
 theme.typography.caption = {
   color: theme.palette.fontColor.main,
