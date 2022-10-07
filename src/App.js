@@ -13,7 +13,8 @@ import BodyScan from "./pages/BodyScan";
 import LandingPage from "./pages/LandingPage";
 import Settings from './pages/Settings'
 import SignUp from "./pages/SignUp";
-import PersonalAccountForm from "./components/SignUp/PersonalAccountForm";
+import Login from './pages/Login'
+
 const App = () => {
 
   return (
@@ -27,7 +28,7 @@ const App = () => {
         <Route path={"/help&resources"} element={<HelpPage/>}/>
         <Route path={"/bodyscan"} element={<BodyScan/>}/>
         <Route path={"/signup"} element={<SignUp/>}/>
-        <Route path={"/signup/personal"} element={<PersonalAccountForm/>}/>
+        <Route path={"/login"} element={<Login/>}/>
         <Route path={"/favorites/:category"} element={<Category/>}/>
         
       </Routes>
