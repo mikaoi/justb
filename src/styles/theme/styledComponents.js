@@ -9,6 +9,20 @@ export const CardBox = styled(Box)(({theme}) => ({
   margin: "0px",
 }));
 
+export const SignUpBox = styled(Box)(({theme}) => ({
+  backgroundColor: "#F6FBF9",
+  borderRadius: "32px",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  maxWidth: "900px",
+  width: "100%",
+  minHeight: "600px",
+  height: "100%",
+  padding: "40px",
+  color: "rgba(19, 48, 96, 0.72)",
+}));
+
 export const CustomButton = styled(Button)(({theme}) => ({
   textTransform: "none",
   fontFamily: "SchemeRg-Regular",
@@ -96,6 +110,20 @@ export const UnStyledButton = styled(Button)(({theme}) => ({
   },
 }));
 
+export const FormButton = styled(Button)(({theme}) => ({
+  textTransform: "unset",
+  fontFamily: "Karla, sans-serif",
+  fontSize: "22px",
+  fontWeight: 700,
+  borderRadius: "15px",
+  padding: "15px",
+  minWidth: "260px",
+  "&:hover": {
+    boxShadow: theme.shadows[4],
+    color: "inherit"
+  },
+}));
+
 export const SearchInput = styled(TextField)(({theme}) => ({
   outline: "none",
   border: "none",
@@ -153,4 +181,21 @@ export const ListItem = styled(Box)(({theme}) => ({
     gap: "10px",
     fontSize: "18px",
   },
+}));
+
+export const VariantItem = styled(Box)(({theme}) => ({
+  border: "1px solid rgba(0, 0, 0, 0.1)",
+  display: "flex",
+  fontFamily: "SchemeRg-Regular",
+  justifyContent: "center",
+  alignItems: "center",
+  lineHeight: "1.3",
+  fontWeight: "500",
+  borderRadius: "10px",
+  color: "rgba(0, 0, 0, 0.5)",
+  padding: "20px",
+  fontSize: "18px",
+  background: "white",
+  width: "100%",
+  cursor: "pointer"
 }));
