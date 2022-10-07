@@ -8,6 +8,7 @@ const Login = () => {
     <Box sx={{
       background: "white",
       minHeight: "100vh",
+      padding: "0 20px",
       display: "flex",
       width: "100%",
       justifyContent: "center",
@@ -16,6 +17,7 @@ const Login = () => {
     >
       <Box sx={{
         display: "flex",
+        justifyContent: "center",
         border: "1px solid #E6E9FA",
         borderRadius: "24px",
         maxWidth: "1200px",
@@ -23,7 +25,13 @@ const Login = () => {
         width: "100%",
         height: "100%"
       }}>
-        <Box sx={{width: "70%", display: "flex", alignItems: "center", justifyContent: "center"}}>
+        <Box sx={{
+          width: "70%",
+          display: {xs: "none", "xl": "flex"},
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+        >
           <Avatar
             src={logo}
             sx={{
