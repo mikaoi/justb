@@ -7,20 +7,17 @@ import {
 import Home from "./pages/Home";
 import FindAClass from "./pages/FindAClass";
 import Favorites from "./pages/Favorites";
-import HelpPage from "./pages/HelpPage";
-import Category from "./pages/Category";
-import BodyScan from "./pages/BodyScan";
-import LandingPage from "./pages/LandingPage";
-import Settings from './pages/Settings'
-import SignUp from "./pages/SignUp";
-import Login from './pages/Login'
 
 const App = () => {
 
+  const navigate = useNavigate();
+
   return (
     <ThemeProvider theme={theme}>
+       <ClerkProvider frontendApi={frontendApi} navigate={(to) => navigate(to)}>
       <CssBaseline/>
       <Routes>
+     
         <Route path={"/"} element={<Home/>}/>
         <Route path={"/findaclass"} element={<FindAClass/>}/>
         <Route path={"/favorites"} element={<Favorites/>}/>
@@ -28,10 +25,11 @@ const App = () => {
         <Route path={"/help&resources"} element={<HelpPage/>}/>
         <Route path={"/bodyscan"} element={<BodyScan/>}/>
         <Route path={"/signup"} element={<SignUp/>}/>
-        <Route path={"/login"} element={<Login/>}/>
+        <Route path={"/signup/personal"} element={<PersonalAccountForm/>}/>
         <Route path={"/favorites/:category"} element={<Category/>}/>
         
       </Routes>
+      </ClerkProvider>
     </ThemeProvider>
   );
 };
