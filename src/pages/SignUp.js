@@ -13,15 +13,26 @@ const SignUp = () => {
 
   const accountVariantStyles = {
     borderRadius: "20px",
+
+    padding: {xs: "15px 40px", "xl": "25px 50px"},
+
     padding: "25px 50px",
+
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+
+    fontSize: {xs: "20px", "xl": "28px"},
+    fontWeight: "700",
+    color: "#F6FBF9",
+    width: {xs: "100%", "xl": "40%"},
+
     fontSize: "28px",
     fontWeight: "700",
     color: "#F6FBF9",
     width: "40%",
+
     height: "auto",
     textAlign: "center",
     lineHeight: "1.25",
@@ -42,13 +53,21 @@ const SignUp = () => {
     }}
     >
       <Box sx={{
+
+        padding: "10px",
+
         padding: "70px",
+
         width: "100%",
         height: "100%",
         display: "flex",
         justifyContent: "center"
       }}>
+
+        <SignUpBox sx={{justifyContent: "space-between", gap: "10px"}}>
+
         <SignUpBox sx={{justifyContent: "space-between"}}>
+
           {variant === 0 &&
             <>
               <Box sx={{
@@ -58,15 +77,25 @@ const SignUp = () => {
                 gap: "5px",
                 alignItems: "center"
               }}>
+
+                <Typography sx={{fontSize: {xs: "30px", "xl": "40px"}, lineHeight: "1.5"}}>Create An Account</Typography>
+
                 <Typography sx={{fontSize: "40px", lineHeight: "1.5"}}>Create An Account</Typography>
+
                 <Typography sx={{color: "inherit", fontSize: "20px", textAlign: "center"}}>
                   Create an account to enjoy all the services without any ads for free!
                 </Typography>
               </Box>
               <Box sx={{
                 display: "flex",
+
+                gap: {xs: "20px", "xl": "85px"},
+                justifyContent: "center",
+                flexDirection: {xs: "column", "xl": "row"}
+
                 gap: "85px",
                 justifyContent: "center"
+
               }}>
                 <Box sx={{
                   backgroundColor: "rgba(19, 48, 96, 0.72)",

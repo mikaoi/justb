@@ -4,6 +4,7 @@ import scan from "../../styles/images/btnImages/bodyScan.png";
 import find from "../../styles/images/btnImages/findAClass.png";
 import {CustomButton, CardBox} from "../../styles/theme/styledComponents";
 import {theme} from "../../styles/theme/theme";
+import {NavLink} from "react-router-dom";
 
 const ButtonsCard = () => {
   return (
@@ -21,7 +22,7 @@ const ButtonsCard = () => {
         marginBottom: {xs: "20px", "3xl": "35px"},
       }}
     >
-      <CustomButton variant="outlined" href="bodyscan"
+      <CustomButton component={NavLink} variant="outlined" to={"/bodyscan"}
                     sx={{
                       minWidth: {xs: "80%", xl: "260px", "3xl": "35%"},
                       borderColor: theme.palette.primary.main,
@@ -36,7 +37,7 @@ const ButtonsCard = () => {
           Do a Body Scan
         </Box>
       </CustomButton>
-      <CustomButton variant="outlined" href="findaclass"
+      <CustomButton component={NavLink} variant="outlined" to={"/findaclass"}
                     sx={{
                       minWidth: {xs: "80%", xl: "260px", "3xl": "35%"},
                       borderColor: theme.palette.secondary.main,
