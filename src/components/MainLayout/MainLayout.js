@@ -1,19 +1,20 @@
 import bg from "../../styles/images/Blue.png";
 import {AppBar, IconButton, Toolbar, Container, Box} from "@mui/material";
-import {NavLink} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import logo from "../../styles/images/logo.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import React, {Fragment, useState} from "react";
 import SideBar from "./SideBar";
+import DashboardFooter from "../HomePage/DashboardFooter";
 
 
 export default function MainLayout({children}) {
   const drawerWidth = 330;
+  const location = useLocation()
   const [mobileOpen, setMobileOpen] = useState(false);
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-
 
   return (
     <Fragment>
@@ -82,12 +83,14 @@ export default function MainLayout({children}) {
                   xs: "80px 20px 20px 20px",
                   "2xl": "15px 30px",
                 },
-                height: "100%",
-                marginLeft: "auto"
+                height: {xs: "max-content", xl: `${location.pathname === '/' ? "calc(100% - 50px)" : "100%"}`},
+                marginLeft: "auto",
+                marginBottom: {xs: `${location.pathname === '/' ? "20px" : "0px"}`, "2xl": "0px"},
               }}
             >
               {children}
             </Box>
+            {location.pathname === '/' && <DashboardFooter/>}
           </Box>
         </Container>
       </main>

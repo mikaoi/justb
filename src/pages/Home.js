@@ -7,6 +7,11 @@ import Tooltip from "../components/HomePage/Tooltip";
 import MainLayout from "../components/MainLayout/MainLayout";
 
 const Home = () => {
+
+  const date = new Date();
+  const today = date.getDate();
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
   return (
     <MainLayout>
       <Box
@@ -19,7 +24,10 @@ const Home = () => {
           paddingX: {xs: 0, "2xl": "30px", "3xl": "60px", "4xl": "90px"}
         }}
       >
-        <Tooltip/>
+        <Box sx={{display: "flex", justifyContent: "space-between"}}>
+          <Tooltip/>
+          <Box sx={{color: "white"}}>{`${today}.${month}.${year}`}</Box>
+        </Box>
         <ButtonsCard/>
         <Box
           sx={{

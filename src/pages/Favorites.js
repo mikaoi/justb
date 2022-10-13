@@ -10,9 +10,9 @@ import MainLayout from "../components/MainLayout/MainLayout";
 
 const Favorites = () => {
   const classes = [
-    "Deactivating Classes",
     "Activating Classes",
-    "Neutral Classes",
+    "Centered Classes",
+    "Deactivating Classes",
   ];
 
   return (

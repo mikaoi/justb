@@ -15,7 +15,7 @@ const SuccessRegistration = () => {
       alignItems: "center",
       gap: "40px"
     }}>
-      <Typography sx={{fontSize: "40px", textAlign: "center"}}>
+      <Typography sx={{fontSize: {xs: "29px", "xl": "40px"}, textAlign: "center"}}>
         Congratulations! Your account has been successfully created.
       </Typography>
       <NavLink to={"/login"} style={{color: "inherit", textDecoration: "none"}}>

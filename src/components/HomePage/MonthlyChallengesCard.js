@@ -118,19 +118,18 @@ const MonthlyChallengesCard = () => {
             </div>
           })}
         </Box>}
-        {todos?.length < 1 &&
         <TextField
           id="standard"
-          label="Teacher Challenge"
+          label="Add a custom challenge"
           variant="standard"
           color={"fontColor"}
+          sx={{gap: "10px", "& .MuiInput-root": {height: "40px", padding: "20px", marginTop: "20px"}}}
           focused={true}
           value={todo}
           placeholder="Enter your own custom challenge!"
           onChange={(e) => setTodo(e.target.value)}
           onKeyUp={(e) => onChallengeHandler(e)}
         />
-        }
       </Box>
       <Box sx={{position: "absolute", top: "calc(100% - 160px)", right: "10px"}}>
         <img src={character} alt={"character"} style={{width: "165px", marginLeft: "auto"}}/>

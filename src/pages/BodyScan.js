@@ -72,16 +72,19 @@ const BodyScan = () => {
             justifyContent: "space-between",
             alignItems: 'center'
           }}>
+            <Typography sx={{textAlign: "center", maxWidth: "600px"}}>Do a body scan to measure where your current energy level is.
+              Taking a moment to check-in with our body helps us understand our own body and our needs so we.
+            </Typography>
             <Box sx={{
               backgroundColor: "#BBBBBB",
-              width: "100%",
+              width: "90%",
               borderRadius: "40px",
               boxShadow: theme.shadows[1],
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
               height: "100%",
-              maxHeight: "600px"
+              maxHeight: "500px"
             }}>
               <Typography sx={{textTransform: "uppercase"}}>
                 Placeholder
@@ -101,7 +104,7 @@ const BodyScan = () => {
               gap: "10px",
               // marginRight: {xs: "10px", "4xl": "60px"}
             }}>
-              <Box className={classes.outerDiv} onClick={() => setActivation(1)}   onMouseEnter={() => setIsShown(true)}
+              <Box className={classes.outerDiv} onClick={() => setActivation(1)} onMouseEnter={() => setIsShown(true)}
                    onMouseLeave={() => setIsShown(false)}>
                 <Activated className={classes.activation}/>
                 <Typography sx={{textShadow: "0px 3px 4px rgba(150, 150, 150, 1)"}}>Activated</Typography>
@@ -115,7 +118,7 @@ const BodyScan = () => {
                 <Typography sx={{textShadow: "0px 3px 4px rgba(150, 150, 150, 1)"}}>De-activated</Typography>
               </Box>
             </Box>
-          <Scale/>
+            <Scale/>
             <Box>
               <Box sx={{
                 backgroundColor: "lightColor.light",
