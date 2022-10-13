@@ -17,6 +17,7 @@ export const SignUpBox = styled(Box)(({theme}) => ({
   alignItems: "center",
   maxWidth: "900px",
   width: "100%",
+
   height: "600px",
   padding: "40px",
   color: "rgba(19, 48, 96, 0.72)",
@@ -26,6 +27,12 @@ export const SignUpBox = styled(Box)(({theme}) => ({
     textAlign: "center",
     padding: "40px 20px"
   },
+
+  minHeight: "600px",
+  height: "100%",
+  padding: "40px",
+  color: "rgba(19, 48, 96, 0.72)",
+
 }));
 
 export const CustomButton = styled(Button)(({theme}) => ({
@@ -127,11 +134,14 @@ export const FormButton = styled(Button)(({theme}) => ({
     boxShadow: theme.shadows[4],
     color: "inherit"
   },
+
   [theme.breakpoints.down("xl")]: {
     fontSize: "18px",
     padding: "12px",
     minWidth: "220px"
   },
+
+
 }));
 
 export const SearchInput = styled(TextField)(({theme}) => ({

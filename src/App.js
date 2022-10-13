@@ -7,6 +7,7 @@ import {
 import Home from "./pages/Home";
 import FindAClass from "./pages/FindAClass";
 import Favorites from "./pages/Favorites";
+
 import Settings from "./pages/Settings";
 import BodyScan from "./pages/BodyScan";
 import HelpPage from "./pages/HelpPage";
@@ -14,6 +15,8 @@ import Category from "./pages/Category";
 import Login from "./pages/Login";
 import SignUp from './pages/SignUp'
 // import {ClerkProvider} from "@clerk/clerk-react";
+
+
 
 const App = () => {
 
@@ -31,7 +34,11 @@ const App = () => {
         <Route path={"/help&resources"} element={<HelpPage/>}/>
         <Route path={"/bodyscan"} element={<BodyScan/>}/>
         <Route path={"/signup"} element={<SignUp/>}/>
+
         <Route path={"/login"} element={<Login/>}/>
+
+        <Route path={"/signup/personal"} element={<PersonalAccountForm/>}/>
+
         <Route path={"/favorites/:category"} element={<Category/>}/>
       </Routes>
       {/*</ClerkProvider>*/}
